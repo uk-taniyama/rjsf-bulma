@@ -9,7 +9,6 @@ const IconButton = (props: IconButtonProps & ButtonProps) => {
   const { icon, iconType, className, uiSchema, ...otherProps } = props;
   return (
     <Button
-      block={iconType === "block"}
       {...otherProps}
       variant={props.variant || "light"}
       size="sm"

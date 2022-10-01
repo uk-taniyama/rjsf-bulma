@@ -64,7 +64,6 @@ const CheckboxesWidget = ({
               <Form.Check
                 key={option.value}
                 inline={inline}
-                custom
                 required={required}
                 checked={checked}
                 className="bg-transparent border-0"

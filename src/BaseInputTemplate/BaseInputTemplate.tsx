@@ -36,7 +36,7 @@ const BaseInputTemplate = ({
 
   // const classNames = [rawErrors.length > 0 ? "is-invalid" : "", type === 'file' ? 'custom-file-label': ""]
   return (
-    <Form.Group className="mb-0">
+    <Form.Group className="mb-0"><>
       <Form.Label
         htmlFor={id}
         className={rawErrors.length > 0 ? "text-danger" : ""}
@@ -70,6 +70,7 @@ const BaseInputTemplate = ({
             })}
         </datalist>
       ) : null}
+      </>
     </Form.Group>
   );
 };
