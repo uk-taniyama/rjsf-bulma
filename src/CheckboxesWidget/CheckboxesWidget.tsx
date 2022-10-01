@@ -1,6 +1,5 @@
-import React from "react";
-import Form from "react-bootstrap/Form";
 import { WidgetProps } from "@rjsf/utils";
+import { FieldGroup, FieldControl, FieldLabel } from "../BaseInputTemplate";
 
 const selectValue = (value: any, selected: any, all: any) => {
   const at = all.indexOf(value);
@@ -28,20 +27,21 @@ const CheckboxesWidget = ({
   onChange,
   onBlur,
   onFocus,
+  uiSchema,
 }: WidgetProps) => {
   const { enumOptions, enumDisabled, inline } = options;
 
   const _onChange =
     (option: any) =>
-    ({ target: { checked } }: React.ChangeEvent<HTMLInputElement>) => {
-      const all = (enumOptions as any).map(({ value }: any) => value);
+      ({ target: { checked } }: React.ChangeEvent<HTMLInputElement>) => {
+        const all = (enumOptions as any).map(({ value }: any) => value);
 
-      if (checked) {
-        onChange(selectValue(option.value, value, all));
-      } else {
-        onChange(deselectValue(option.value, value));
-      }
-    };
+        if (checked) {
+          onChange(selectValue(option.value, value, all));
+        } else {
+          onChange(deselectValue(option.value, value));
+        }
+      };
 
   const _onBlur = ({ target: { value } }: React.FocusEvent<HTMLInputElement>) =>
     onBlur(id, value);
@@ -51,8 +51,8 @@ const CheckboxesWidget = ({
 
   return (
     <>
-      <Form.Label htmlFor={id}>{label || schema.title}</Form.Label>
-      <Form.Group>
+      <FieldLabel id={id} label={label} schema={schema} required={required} uiSchema={uiSchema} />
+      <FieldControl>
         {Array.isArray(enumOptions) &&
           enumOptions.map((option, index: number) => {
             const checked = value.indexOf(option.value) !== -1;
@@ -61,25 +61,24 @@ const CheckboxesWidget = ({
               enumDisabled.indexOf(option.value) !== -1;
 
             return (
-              <Form.Check
-                key={option.value}
-                inline={inline}
-                required={required}
-                checked={checked}
-                className="bg-transparent border-0"
-                type={"checkbox"}
-                id={`${id}-${option.value}`}
-                name={id}
-                label={option.label}
-                autoFocus={autofocus && index === 0}
-                onChange={_onChange(option)}
-                onBlur={_onBlur}
-                onFocus={_onFocus}
-                disabled={disabled || itemDisabled || readonly}
-              />
+              <label className="radio" key={option.value}>
+                <input
+                  type="radio"
+                  checked={checked} autoFocus={autofocus && index === 0}
+                  required={required}
+                  className="bg-transparent border-0"
+                  id={`${id}-${option.value}`}
+                  name={id}
+                  onChange={_onChange(option)}
+                  onBlur={_onBlur}
+                  onFocus={_onFocus}
+                  disabled={disabled || itemDisabled || readonly}
+                />
+                {option.label}
+              </label>
             );
           })}
-      </Form.Group>
+      </FieldControl>
     </>
   );
 };

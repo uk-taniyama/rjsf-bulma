@@ -1,4 +1,31 @@
 import { getInputProps, getUiOptions, WidgetProps } from "@rjsf/utils";
+import { PropsWithChildren } from "react";
+
+export type FieldLabelProps = Pick<WidgetProps, "label" | "schema" | "id" | "required" | "uiSchema">;
+
+export const FieldGroup = ({ children }: PropsWithChildren) => {
+  return <div className="field">{children}</div>;
+};
+
+export const FieldLabel = ({ label, schema, id, required, uiSchema }: FieldLabelProps) => {
+  const uiOptions = getUiOptions(uiSchema);
+  const labelText = uiOptions.title || label || schema.title;
+
+  if (!labelText) {
+    return null;
+  }
+  return (
+    <label className="label is-small" htmlFor={id}>
+      {labelText}
+      {required && <span className="required">*</span>}
+    </label>
+  );
+};
+
+export const FieldControl = ({ children }: PropsWithChildren) => {
+  return <div className="control">{children}</div>;
+};
+
 
 const BaseInputTemplate = ({
   id,
@@ -21,7 +48,6 @@ const BaseInputTemplate = ({
   extraProps,
 }: WidgetProps) => {
   const inputProps = { ...extraProps, ...getInputProps(schema, type, options) };
-  const uiOptions = getUiOptions(uiSchema);
   const _onChange = ({
     target: { value },
   }: React.ChangeEvent<HTMLInputElement>) =>
@@ -31,20 +57,14 @@ const BaseInputTemplate = ({
   const _onFocus = ({
     target: { value },
   }: React.FocusEvent<HTMLInputElement>) => onFocus(id, value);
-  const labelText = uiOptions.title || label || schema.title;
 
   // const classNames = [rawErrors.length > 0 ? "is-invalid" : "", type === 'file' ? 'custom-file-label': ""]
   return (
     <div className="field">
       <div className={rawErrors.length > 0 ? "text-danger" : ""}>
-        {labelText && 
-          <label className="label is-small" htmlFor={id}>{labelText}
-          {uiOptions.title || label || schema.title}
-          {required && <span className="required">*</span>}
-          </label>
-        }
-        <div className="control">
-          <input className="input is-small" 
+        <FieldLabel id={id} label={label} schema={schema} uiSchema={uiSchema} required={required} />
+        <FieldControl>
+          <input className="input is-small"
             id={id}
             name={id}
             placeholder={placeholder}
@@ -59,7 +79,7 @@ const BaseInputTemplate = ({
             onBlur={_onBlur}
             onFocus={_onFocus}
           />
-        </div>
+        </FieldControl>
         {children}
         {schema.examples ? (
           <datalist id={`examples_${id}`}>

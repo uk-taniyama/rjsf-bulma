@@ -1,8 +1,5 @@
-import React from "react";
-
-import Form from "react-bootstrap/Form";
-
-import { WidgetProps, getUiOptions } from "@rjsf/utils";
+import { WidgetProps } from "@rjsf/utils";
+import { FieldGroup, FieldControl, FieldLabel } from "../BaseInputTemplate";
 
 const RadioWidget = ({
   id,
@@ -19,7 +16,6 @@ const RadioWidget = ({
   uiSchema,
 }: WidgetProps) => {
   const { enumOptions, enumDisabled } = options;
-  const uiOptions = getUiOptions(uiSchema);
 
   const _onChange = ({
     target: { value },
@@ -31,14 +27,12 @@ const RadioWidget = ({
     target: { value },
   }: React.FocusEvent<HTMLInputElement>) => onFocus(id, value);
 
-  const inline = Boolean(options && options.inline);
+  // const inline = Boolean(options && options.inline);
 
   return (
-    <Form.Group className="mb-0">
-      <Form.Label className="d-block">
-        {uiOptions.title || schema.title || label}
-        {(label || uiOptions.title || schema.title) && required ? "*" : null}
-      </Form.Label>
+    <FieldGroup>
+      <FieldLabel id={id} label={label} schema={schema} required={required} uiSchema={uiSchema} />
+      <FieldControl>
       {Array.isArray(enumOptions) &&
         enumOptions.map((option) => {
           const itemDisabled =
@@ -47,25 +41,28 @@ const RadioWidget = ({
           const checked = option.value == value;
 
           const radio = (
-            <Form.Check
-              inline={inline}
-              label={option.label}
-              id={`${id}-${option.value}`}
-              key={option.value}
-              name={id}
-              type="radio"
-              disabled={disabled || itemDisabled || readonly}
-              checked={checked}
-              required={required}
-              value={option.value}
-              onChange={_onChange}
-              onBlur={_onBlur}
-              onFocus={_onFocus}
-            />
+            <label className="radio is-small" key={option.value}>
+              <input
+                className="radio"
+                id={`${id}-${option.value}`}
+                name={id}
+                type="radio"
+                disabled={disabled || itemDisabled || readonly}
+                checked={checked}
+                required={required}
+                value={option.value}
+                onChange={_onChange}
+                onBlur={_onBlur}
+                onFocus={_onFocus}
+              />
+              {option.label}
+            </label>
           );
           return radio;
         })}
-    </Form.Group>
+
+      </FieldControl>
+    </FieldGroup>
   );
 };
 
