@@ -1,5 +1,3 @@
-import React from "react";
-import Form from "react-bootstrap/Form";
 import { getInputProps, getUiOptions, WidgetProps } from "@rjsf/utils";
 
 const BaseInputTemplate = ({
@@ -33,34 +31,35 @@ const BaseInputTemplate = ({
   const _onFocus = ({
     target: { value },
   }: React.FocusEvent<HTMLInputElement>) => onFocus(id, value);
+  const labelText = uiOptions.title || label || schema.title;
 
   // const classNames = [rawErrors.length > 0 ? "is-invalid" : "", type === 'file' ? 'custom-file-label': ""]
   return (
-    <Form.Group className="mb-0">
-      <>
-        <Form.Label
-          htmlFor={id}
-          className={rawErrors.length > 0 ? "text-danger" : ""}
-        >
+    <div className="field">
+      <div className={rawErrors.length > 0 ? "text-danger" : ""}>
+        {labelText && 
+          <label className="label is-small" htmlFor={id}>{labelText}
           {uiOptions.title || label || schema.title}
-          {(label || uiOptions.title) && required ? "*" : null}
-        </Form.Label>
-        <Form.Control
-          id={id}
-          name={id}
-          placeholder={placeholder}
-          autoFocus={autofocus}
-          required={required}
-          disabled={disabled}
-          readOnly={readonly}
-          className={rawErrors.length > 0 ? "is-invalid" : ""}
-          list={schema.examples ? `examples_${id}` : undefined}
-          {...inputProps}
-          value={value || value === 0 ? value : ""}
-          onChange={_onChange}
-          onBlur={_onBlur}
-          onFocus={_onFocus}
-        />
+          {required && <span className="required">*</span>}
+          </label>
+        }
+        <div className="control">
+          <input className="input is-small" 
+            id={id}
+            name={id}
+            placeholder={placeholder}
+            autoFocus={autofocus}
+            required={required}
+            disabled={disabled}
+            readOnly={readonly}
+            list={schema.examples ? `examples_${id}` : undefined}
+            {...inputProps}
+            value={value || value === 0 ? value : ""}
+            onChange={_onChange}
+            onBlur={_onBlur}
+            onFocus={_onFocus}
+          />
+        </div>
         {children}
         {schema.examples ? (
           <datalist id={`examples_${id}`}>
@@ -71,8 +70,8 @@ const BaseInputTemplate = ({
               })}
           </datalist>
         ) : null}
-      </>
-    </Form.Group>
+      </div>
+    </div>
   );
 };
 

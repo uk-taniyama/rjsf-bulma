@@ -1,6 +1,5 @@
-import React from "react";
 import { FieldTemplateProps, getTemplate, getUiOptions } from "@rjsf/utils";
-import Form from "react-bootstrap/Form";
+import clsx from "clsx";
 
 const FieldTemplate = ({
   id,
@@ -41,18 +40,16 @@ const FieldTemplate = ({
       uiSchema={uiSchema}
       registry={registry}
     >
-      <Form.Group>
+      <div className="form-group">
         {children}
         {displayLabel && rawDescription && (
-          <Form.Text
-            className={rawErrors.length > 0 ? "text-danger" : "text-muted"}
-          >
+          <div className={clsx("form-text", rawErrors.length > 0 ? "text-danger" : "text-muted")}>
             {rawDescription}
-          </Form.Text>
+          </div>
         )}
         {errors}
         {help}
-      </Form.Group>
+      </div>
     </WrapIfAdditionalTemplate>
   );
 };
