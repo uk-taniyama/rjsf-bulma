@@ -1,2 +1,5 @@
-dist
-node_modules
+/dist
+/node_modules
+/e2e/out
+/src/e2e/__image_snapshots__
+*.log
