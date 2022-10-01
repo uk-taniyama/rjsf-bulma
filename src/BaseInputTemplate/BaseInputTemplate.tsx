@@ -1,4 +1,4 @@
-import { getInputProps, getUiOptions, WidgetProps } from "@rjsf/utils";
+import { getInputProps, WidgetProps } from "@rjsf/utils";
 import { FieldGroup, FieldLabel, FieldControl } from "../ui";
 
 const BaseInputTemplate = ({
@@ -34,7 +34,7 @@ const BaseInputTemplate = ({
 
   // const classNames = [rawErrors.length > 0 ? "is-invalid" : "", type === 'file' ? 'custom-file-label': ""]
   return (
-    <div className="field">
+    <FieldGroup>
       <div className={rawErrors.length > 0 ? "text-danger" : ""}>
         <FieldLabel id={id} label={label} schema={schema} uiSchema={uiSchema} required={required} />
         <FieldControl>
@@ -65,7 +65,7 @@ const BaseInputTemplate = ({
           </datalist>
         ) : null}
       </div>
-    </div>
+    </FieldGroup>
   );
 };
 

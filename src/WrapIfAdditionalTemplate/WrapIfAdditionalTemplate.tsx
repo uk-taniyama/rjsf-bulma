@@ -2,7 +2,7 @@ import {
   ADDITIONAL_PROPERTY_FLAG,
   WrapIfAdditionalTemplateProps,
 } from "@rjsf/utils";
-import { FieldGroup, FieldLabel } from "../ui";
+import { FieldGroup, FieldLabel, FieldControl, Row, Col } from "../ui";
 
 const WrapIfAdditionalTemplate = ({
   classNames,
@@ -20,38 +20,38 @@ const WrapIfAdditionalTemplate = ({
 }: WrapIfAdditionalTemplateProps) => {
   // Button templates are not overridden in the uiSchema
   const { RemoveButton } = registry.templates.ButtonTemplates;
-  const keyLabel = `${label} Key`; // i18n ?
+  const keyLabel = "Key"; // i18n ?
   const additional = ADDITIONAL_PROPERTY_FLAG in schema;
 
   if (!additional) {
     return <div className={classNames}>{children}</div>;
   }
 
-  const handleBlur = ({ target }: React.FocusEvent<HTMLInputElement>) =>
-    onKeyChange(target.value);
+  const handleBlur = ({ target }: React.FocusEvent<HTMLInputElement>) => onKeyChange(target.value);
   const keyId = `${id}-key`;
 
   return (
     <Row key={keyId}>
-      <Col n={5}>
+      <Col n={3}>
         <FieldGroup>
           <FieldLabel id={keyId} label={keyLabel} schema={{}} required={required} />
-          {/* <FieldControl
-            required={required}
-            defaultValue={label}
-            disabled={disabled || readonly}
-            id={keyId}
-            name={keyId}
-            onBlur={!readonly ? handleBlur : undefined}
-            type="text"
-          /> */}
+          <FieldControl>
+            <input
+              className="input is-small"
+              defaultValue={label}
+              disabled={disabled || readonly}
+              id={keyId}
+              name={keyId}
+              onBlur={!readonly ? handleBlur : undefined}
+              type="text"
+            />
+          </FieldControl>
         </FieldGroup>
       </Col>
-      <Col n={5}>{children}</Col>
-      <Col n={2}>
+      <Col n={8}>{children}</Col>
+      <Col n={1}>
         <RemoveButton
           iconType="block"
-          className="w-100"
           disabled={disabled || readonly}
           onClick={onDropPropertyClick(label)}
           uiSchema={uiSchema}

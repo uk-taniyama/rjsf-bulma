@@ -1,4 +1,4 @@
-import { getUiOptions, WidgetProps } from "@rjsf/utils";
+import { WidgetProps } from "@rjsf/utils";
 import { FieldGroup, FieldControl, FieldLabel } from "../ui";
 
 type CustomWidgetProps = WidgetProps & {
@@ -40,6 +40,7 @@ const TextareaWidget = ({
         <textarea
           id={id}
           name={id}
+          className="textarea is-small"
           placeholder={placeholder}
           disabled={disabled}
           readOnly={readonly}
