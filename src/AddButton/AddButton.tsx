@@ -1,19 +1,10 @@
-import React from "react";
 import { IconButtonProps } from "@rjsf/utils";
 import { BsPlus } from "@react-icons/all-files/bs/BsPlus";
 
-const AddButton: React.ComponentType<IconButtonProps> = ({
-  uiSchema,
-  ...props
-}) => (
-  <button
-    {...props}
-    style={{ width: "100%" }}
-    className={`ml-1 ${props.className}`}
-    title="Add Item"
-  >
-    <BsPlus />
-  </button>
-);
+import IconButton from '../IconButton';
+
+function AddButton({ uiSchema, ...props }: IconButtonProps) {
+  return <IconButton title="Add Item" {...props} className="is-info" icon={<BsPlus />} />;
+}
 
 export default AddButton;

@@ -1,7 +1,7 @@
 import { getUiOptions, WidgetProps } from "@rjsf/utils";
-import { PropsWithChildren } from "react";
+import { CSSProperties, PropsWithChildren } from "react";
 
-export const Row = ({ children }: PropsWithChildren) => <div className="columns is-gapless">{children}</div>;
+export const Row = ({ style, children }: PropsWithChildren<{ style?: CSSProperties }>) => <div className="columns is-gapless" style={style}>{children}</div>;
 export const Col = ({ n, children }: PropsWithChildren<{ n: number }>) => <div className={`column is-${n}`}>{children}</div>;
 
 export type FieldLabelProps = Pick<WidgetProps, "label" | "schema" | "id" | "required" | "uiSchema">;
@@ -29,15 +29,15 @@ export const FieldControl = ({ children }: PropsWithChildren) => {
   return <div className="control">{children}</div>;
 };
 
-export const Card = ({ children }:PropsWithChildren) => {
+export const Card = ({ children }: PropsWithChildren) => {
   return <div className="card is-danger">{children}</div>;
 };
 
-export const CardHeader = ({ children }:PropsWithChildren) => {
+export const CardHeader = ({ children }: PropsWithChildren) => {
   return <div className="card-header"><div className="card-header-title">{children}</div></div>;
 };
 
-export const CardContent = ({ children }:PropsWithChildren) => {
+export const CardContent = ({ children }: PropsWithChildren) => {
   return <div className="card-content">{children}</div>;
 };
 

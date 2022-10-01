@@ -5,22 +5,20 @@ import { AiOutlineArrowDown } from "@react-icons/all-files/ai/AiOutlineArrowDown
 import clsx from "clsx";
 
 const IconButton = (props: IconButtonProps) => {
-  const { icon, className, iconType } = props;
+  const { icon, className, iconType, ...other } = props;
   console.log(iconType);
   // <Button {...otherProps} variant={props.variant || "light"} size="sm">
   //   {icon}
   // </Button>
   return (
-    <button className={clsx('button', className)}>{icon}</button>
+    <button className={clsx('button is-fullwidth is-small', className)} {...other}>{icon}</button>
   );
 };
 
 export default IconButton;
 
 export function MoveDownButton(props: IconButtonProps) {
-  return (
-    <IconButton title="Move down" {...props} icon={<AiOutlineArrowDown />} />
-  );
+  return <IconButton title="Move down" {...props} icon={<AiOutlineArrowDown />} />;
 }
 
 export function MoveUpButton(props: IconButtonProps) {

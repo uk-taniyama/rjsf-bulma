@@ -19,51 +19,36 @@ const ArrayFieldItemTemplate = (props: ArrayFieldTemplateItemType) => {
   } = props;
   const { MoveDownButton, MoveUpButton, RemoveButton } =
     registry.templates.ButtonTemplates;
-  const btnStyle: CSSProperties = {
-    flex: 1,
-    paddingLeft: 6,
-    paddingRight: 6,
-    fontWeight: "bold",
-  };
   return (
-    <Row>
+    <Row style={{ alignItems: 'flex-end' }}>
       <Col n={9}>
         {children}
       </Col>
       <Col n={3}>
         {hasToolbar && (
-          <div className="d-flex flex-row">
-            {(hasMoveUp || hasMoveDown) && (
-              <div className="m-0 p-0">
-                <MoveUpButton
-                  className="array-item-move-up"
-                  style={btnStyle}
-                  disabled={disabled || readonly || !hasMoveUp}
-                  onClick={onReorderClick(index, index - 1)}
-                  uiSchema={uiSchema}
-                />
-              </div>
-            )}
-            {(hasMoveUp || hasMoveDown) && (
-              <div className="m-0 p-0">
-                <MoveDownButton
-                  style={btnStyle}
-                  disabled={disabled || readonly || !hasMoveDown}
-                  onClick={onReorderClick(index, index + 1)}
-                  uiSchema={uiSchema}
-                />
-              </div>
-            )}
-            {hasRemove && (
-              <div className="m-0 p-0">
-                <RemoveButton
-                  style={btnStyle}
-                  disabled={disabled || readonly}
-                  onClick={onDropIndexClick(index)}
-                  uiSchema={uiSchema}
-                />
-              </div>
-            )}
+          <div className="field has-addons">
+            <p className="control" style={{ width: '100%' }}>
+              <MoveUpButton
+                className="array-item-move-up"
+                disabled={disabled || readonly || !hasMoveUp}
+                onClick={onReorderClick(index, index - 1)}
+                uiSchema={uiSchema}
+              />
+            </p>
+            <p className="control" style={{ width: '100%' }}>
+              <MoveDownButton
+                disabled={disabled || readonly || !hasMoveDown}
+                onClick={onReorderClick(index, index + 1)}
+                uiSchema={uiSchema}
+              />
+            </p>
+            <p className="control" style={{ width: '100%' }}>
+              <RemoveButton
+                disabled={disabled || readonly}
+                onClick={onDropIndexClick(index)}
+                uiSchema={uiSchema}
+              />
+            </p>
           </div>
         )}
       </Col>
