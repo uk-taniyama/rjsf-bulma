@@ -33,8 +33,7 @@
   "peerDependencies": {
     "@rjsf/core": "^5.0.0-beta.1",
     "@rjsf/utils": "^5.0.0-beta.1",
-    "react": "^16.14.0 || >=17",
-    "react-bootstrap": "^2.5.0"
+    "react": "^16.14.0 || >=17"
   },
   "engineStrict": false,
   "engines": {
@@ -61,11 +60,11 @@
     "@types/react-test-renderer": "^18.0.0",
     "babel-loader": "^8.2.5",
     "bulma": "^0.9.4",
+    "bulma-extensions": "^6.2.7",
     "dts-cli": "^1.6.0",
     "eslint": "^8.24.0",
     "lint-staged": "^13.0.3",
     "react": "^18.2.0",
-    "react-bootstrap": "^2.5.0",
     "react-dom": "^18.2.0",
     "react-test-renderer": "^18.2.0",
     "rimraf": "^3.0.2",
@@ -93,6 +92,7 @@
   "license": "MIT",
   "dependencies": {
     "@react-icons/all-files": "^4.1.0",
+    "bootstrap-sass": "^3.4.3",
     "clsx": "^1.2.1"
   }
 }

@@ -1,13 +1,10 @@
-import React from "react";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Container from "react-bootstrap/Container";
 import {
   ArrayFieldTemplateItemType,
   ArrayFieldTemplateProps,
   getTemplate,
   getUiOptions,
 } from "@rjsf/utils";
+import { Row, Col, CardContent } from "../ui";
 
 const ArrayFieldTemplate = (props: ArrayFieldTemplateProps) => {
   const {
@@ -46,8 +43,8 @@ const ArrayFieldTemplate = (props: ArrayFieldTemplateProps) => {
   } = registry.templates;
   return (
     <div>
-      <Row className="p-0 m-0">
-        <Col className="p-0 m-0">
+      <Row>
+        <Col n={12}>
           <ArrayFieldTitleTemplate
             idSchema={idSchema}
             title={uiOptions.title || title}
@@ -63,20 +60,18 @@ const ArrayFieldTemplate = (props: ArrayFieldTemplateProps) => {
               registry={registry}
             />
           )}
-          <Container
-            fluid
+          <div className="fluid p-0 m-0"
             key={`array-item-list-${idSchema.$id}`}
-            className="p-0 m-0"
           >
             {items &&
               items.map(({ key, ...itemProps }: ArrayFieldTemplateItemType) => (
                 <ArrayFieldItemTemplate key={key} {...itemProps} />
               ))}
             {canAdd && (
-              <Container className="">
-                <Row className="mt-2">
-                  <Col xs={9}></Col>
-                  <Col xs={3} className="py-4 col-lg-3 col-3">
+              <div className="Container">
+                <Row>
+                  <Col n={9}></Col>
+                  <Col n={3}>
                     <AddButton
                       className="array-item-add"
                       onClick={onAddClick}
@@ -85,9 +80,9 @@ const ArrayFieldTemplate = (props: ArrayFieldTemplateProps) => {
                     />
                   </Col>
                 </Row>
-              </Container>
+              </div>
             )}
-          </Container>
+          </div>
         </Col>
       </Row>
     </div>

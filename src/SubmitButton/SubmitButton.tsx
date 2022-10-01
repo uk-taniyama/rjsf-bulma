@@ -1,5 +1,4 @@
 import React from "react";
-import Button from "react-bootstrap/Button";
 import { getSubmitButtonOptions, SubmitButtonProps } from "@rjsf/utils";
 
 const SubmitButton: React.ComponentType<SubmitButtonProps> = (props) => {
@@ -13,9 +12,9 @@ const SubmitButton: React.ComponentType<SubmitButtonProps> = (props) => {
   }
   return (
     <div>
-      <Button variant="primary" type="submit" {...submitButtonProps}>
+      <button className="button is-primary is-small" type="submit" {...submitButtonProps}>
         {submitText}
-      </Button>
+      </button>
     </div>
   );
 };

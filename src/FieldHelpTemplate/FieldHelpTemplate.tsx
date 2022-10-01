@@ -1,6 +1,5 @@
-import React from "react";
 import { FieldHelpProps } from "@rjsf/utils";
-import Form from "react-bootstrap/Form";
+import clsx from "clsx";
 
 /** The `FieldHelpTemplate` component renders any help desired for a field
  *
@@ -13,8 +12,6 @@ export default function FieldHelpTemplate(props: FieldHelpProps) {
   }
   const id = `${idSchema.$id}__help`;
   return (
-    <Form.Text className={hasErrors ? "text-danger" : "text-muted"} id={id}>
-      {help}
-    </Form.Text>
+    <p className={clsx('help', hasErrors && 'is-danger')} id={id}>{help}</p>
   );
 }

@@ -1,5 +1,5 @@
 import { WidgetProps } from "@rjsf/utils";
-import { FieldGroup, FieldControl, FieldLabel } from "../BaseInputTemplate";
+import { FieldGroup, FieldControl, FieldLabel } from "../ui";
 
 const RadioWidget = ({
   id,

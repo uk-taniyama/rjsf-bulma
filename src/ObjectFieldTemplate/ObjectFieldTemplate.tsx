@@ -1,15 +1,10 @@
-import React from "react";
-
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Container from "react-bootstrap/Container";
-
 import {
   canExpand,
   getTemplate,
   getUiOptions,
   ObjectFieldTemplateProps,
 } from "@rjsf/utils";
+import { Row, Col } from "../ui";
 
 const ObjectFieldTemplate = ({
   description,
@@ -58,19 +53,18 @@ const ObjectFieldTemplate = ({
           registry={registry}
         />
       )}
-      <Container fluid className="p-0">
+      <div className="p-0 fluid">
         {properties.map((element: any, index: number) => (
           <Row
             key={index}
-            style={{ marginBottom: "10px" }}
-            className={element.hidden ? "d-none" : undefined}
           >
-            <Col xs={12}> {element.content}</Col>
+            <Col n={12}> {element.content}</Col>
           </Row>
         ))}
         {canExpand(schema, uiSchema, formData) ? (
           <Row>
-            <Col xs={{ offset: 9, span: 3 }} className="py-4">
+            <Col n={9}></Col>
+            <Col n={3}>
               <AddButton
                 onClick={onAddClick(schema)}
                 disabled={disabled || readonly}
@@ -80,7 +74,7 @@ const ObjectFieldTemplate = ({
             </Col>
           </Row>
         ) : null}
-      </Container>
+      </div>
     </>
   );
 };

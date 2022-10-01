@@ -1,31 +1,5 @@
 import { getInputProps, getUiOptions, WidgetProps } from "@rjsf/utils";
-import { PropsWithChildren } from "react";
-
-export type FieldLabelProps = Pick<WidgetProps, "label" | "schema" | "id" | "required" | "uiSchema">;
-
-export const FieldGroup = ({ children }: PropsWithChildren) => {
-  return <div className="field">{children}</div>;
-};
-
-export const FieldLabel = ({ label, schema, id, required, uiSchema }: FieldLabelProps) => {
-  const uiOptions = getUiOptions(uiSchema);
-  const labelText = uiOptions.title || label || schema.title;
-
-  if (!labelText) {
-    return null;
-  }
-  return (
-    <label className="label is-small" htmlFor={id}>
-      {labelText}
-      {required && <span className="required">*</span>}
-    </label>
-  );
-};
-
-export const FieldControl = ({ children }: PropsWithChildren) => {
-  return <div className="control">{children}</div>;
-};
-
+import { FieldGroup, FieldLabel, FieldControl } from "../ui";
 
 const BaseInputTemplate = ({
   id,

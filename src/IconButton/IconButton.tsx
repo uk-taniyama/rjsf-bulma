@@ -1,16 +1,17 @@
-import React from "react";
 import { IconButtonProps } from "@rjsf/utils";
-import Button, { ButtonProps } from "react-bootstrap/Button";
 import { IoIosRemove } from "@react-icons/all-files/io/IoIosRemove";
 import { AiOutlineArrowUp } from "@react-icons/all-files/ai/AiOutlineArrowUp";
 import { AiOutlineArrowDown } from "@react-icons/all-files/ai/AiOutlineArrowDown";
+import clsx from "clsx";
 
-const IconButton = (props: IconButtonProps & ButtonProps) => {
-  const { icon, iconType, className, uiSchema, ...otherProps } = props;
+const IconButton = (props: IconButtonProps) => {
+  const { icon, className, iconType } = props;
+  console.log(iconType);
+  // <Button {...otherProps} variant={props.variant || "light"} size="sm">
+  //   {icon}
+  // </Button>
   return (
-    <Button {...otherProps} variant={props.variant || "light"} size="sm">
-      {icon}
-    </Button>
+    <button className={clsx('button', className)}>{icon}</button>
   );
 };
 
@@ -31,7 +32,7 @@ export function RemoveButton(props: IconButtonProps) {
     <IconButton
       title="Remove"
       {...props}
-      variant="danger"
+      className="is-danger"
       icon={<IoIosRemove />}
     />
   );

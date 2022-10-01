@@ -1,8 +1,5 @@
-import React from "react";
-
 import { getUiOptions, WidgetProps } from "@rjsf/utils";
-import FormControl from "react-bootstrap/FormControl";
-import InputGroup from "react-bootstrap/InputGroup";
+import { FieldGroup, FieldControl, FieldLabel } from "../ui";
 
 type CustomWidgetProps = WidgetProps & {
   options: any;
@@ -25,7 +22,6 @@ const TextareaWidget = ({
   rawErrors = [],
   uiSchema,
 }: CustomWidgetProps) => {
-  const uiOptions = getUiOptions(uiSchema);
   const _onChange = ({
     target: { value },
   }: React.ChangeEvent<HTMLTextAreaElement>) =>
@@ -38,23 +34,12 @@ const TextareaWidget = ({
   }: React.FocusEvent<HTMLTextAreaElement>) => onFocus(id, value);
 
   return (
-    <>
-      <label htmlFor={id}>
-        {uiOptions.title || schema.title || label}
-        {required && (
-          <span
-            aria-hidden
-            className={rawErrors.length > 0 ? "text-danger ml-1" : "ml-1"}
-          >
-            &thinsp;{"*"}
-          </span>
-        )}
-      </label>
-      <InputGroup>
-        <FormControl
+    <FieldGroup>
+      <FieldLabel id={id} label={label} schema={schema} uiSchema={uiSchema} required={required} />
+      <FieldControl>
+        <textarea
           id={id}
           name={id}
-          as="textarea"
           placeholder={placeholder}
           disabled={disabled}
           readOnly={readonly}
@@ -66,8 +51,8 @@ const TextareaWidget = ({
           onBlur={_onBlur}
           onFocus={_onFocus}
         />
-      </InputGroup>
-    </>
+      </FieldControl>
+    </FieldGroup>
   );
 };
 

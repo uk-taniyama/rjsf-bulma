@@ -1,13 +1,8 @@
-import React from "react";
-
 import {
   ADDITIONAL_PROPERTY_FLAG,
   WrapIfAdditionalTemplateProps,
 } from "@rjsf/utils";
-
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Form from "react-bootstrap/Form";
+import { FieldGroup, FieldLabel } from "../ui";
 
 const WrapIfAdditionalTemplate = ({
   classNames,
@@ -37,11 +32,11 @@ const WrapIfAdditionalTemplate = ({
   const keyId = `${id}-key`;
 
   return (
-    <Row className={classNames} key={keyId}>
-      <Col xs={5}>
-        <Form.Group>
-          <Form.Label htmlFor={keyId}>{keyLabel}</Form.Label>
-          <Form.Control
+    <Row key={keyId}>
+      <Col n={5}>
+        <FieldGroup>
+          <FieldLabel id={keyId} label={keyLabel} schema={{}} required={required} />
+          {/* <FieldControl
             required={required}
             defaultValue={label}
             disabled={disabled || readonly}
@@ -49,11 +44,11 @@ const WrapIfAdditionalTemplate = ({
             name={keyId}
             onBlur={!readonly ? handleBlur : undefined}
             type="text"
-          />
-        </Form.Group>
+          /> */}
+        </FieldGroup>
       </Col>
-      <Col xs={5}>{children}</Col>
-      <Col xs={2} className="py-4">
+      <Col n={5}>{children}</Col>
+      <Col n={2}>
         <RemoveButton
           iconType="block"
           className="w-100"

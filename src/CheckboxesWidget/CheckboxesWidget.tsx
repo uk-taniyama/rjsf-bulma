@@ -1,5 +1,5 @@
 import { WidgetProps } from "@rjsf/utils";
-import { FieldGroup, FieldControl, FieldLabel } from "../BaseInputTemplate";
+import { FieldControl, FieldLabel } from "../ui";
 
 const selectValue = (value: any, selected: any, all: any) => {
   const at = all.indexOf(value);

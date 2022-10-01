@@ -1,15 +1,11 @@
-import React from "react";
-
-import Card from "react-bootstrap/Card";
-import ListGroup from "react-bootstrap/ListGroup";
-
 import { ErrorListProps } from "@rjsf/utils";
+import { Card, CardHeader, CardContent } from "../ui";
 
 const ErrorList = ({ errors }: ErrorListProps) => (
-  <Card border="danger" className="mb-4">
-    <Card.Header className="alert-danger">Errors</Card.Header>
-    <Card.Body className="p-0">
-      <ListGroup>
+  <Card>
+    <CardHeader>Errors</CardHeader>
+    <CardContent>
+      {/* <ListGroup>
         {errors.map((error, i: number) => {
           return (
             <ListGroup.Item key={i} className="border-0">
@@ -17,8 +13,8 @@ const ErrorList = ({ errors }: ErrorListProps) => (
             </ListGroup.Item>
           );
         })}
-      </ListGroup>
-    </Card.Body>
+      </ListGroup> */}
+    </CardContent>
   </Card>
 );
 
