@@ -20,7 +20,9 @@
     "lint": "eslint src test",
     "precommit": "lint-staged",
     "test": "dts test",
-    "test:update": "dts test --u"
+    "test:update": "dts test --u",
+    "sb": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "lint-staged": {
     "{src,test}/**/*.ts?(x)": [
@@ -47,9 +49,17 @@
     "@rjsf/core": "^5.0.0-beta.10",
     "@rjsf/utils": "^5.0.0-beta.10",
     "@rjsf/validator-ajv6": "^5.0.0-beta.10",
+    "@storybook/addon-actions": "^6.5.12",
+    "@storybook/addon-essentials": "^6.5.12",
+    "@storybook/addon-interactions": "^6.5.12",
+    "@storybook/addon-links": "^6.5.12",
+    "@storybook/builder-vite": "^0.2.3",
+    "@storybook/react": "^6.5.12",
+    "@storybook/testing-library": "^0.0.13",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
     "@types/react-test-renderer": "^18.0.0",
+    "babel-loader": "^8.2.5",
     "dts-cli": "^1.6.0",
     "eslint": "^8.24.0",
     "lint-staged": "^13.0.3",
