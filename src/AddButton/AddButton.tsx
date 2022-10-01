@@ -3,7 +3,7 @@ import { BsPlus } from "@react-icons/all-files/bs/BsPlus";
 
 import IconButton from '../IconButton';
 
-function AddButton({ uiSchema, ...props }: IconButtonProps) {
+function AddButton(props: IconButtonProps) {
   return <IconButton title="Add Item" {...props} className="is-info" icon={<BsPlus />} />;
 }
 

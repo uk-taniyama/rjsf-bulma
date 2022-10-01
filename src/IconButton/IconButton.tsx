@@ -5,11 +5,7 @@ import { AiOutlineArrowDown } from "@react-icons/all-files/ai/AiOutlineArrowDown
 import clsx from "clsx";
 
 const IconButton = (props: IconButtonProps) => {
-  const { icon, className, iconType, ...other } = props;
-  console.log(iconType);
-  // <Button {...otherProps} variant={props.variant || "light"} size="sm">
-  //   {icon}
-  // </Button>
+  const { icon, className, iconType, uiSchema, ...other } = props;
   return (
     <button className={clsx('button is-fullwidth is-small', className)} {...other}>{icon}</button>
   );
