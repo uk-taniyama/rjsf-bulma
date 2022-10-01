@@ -8,11 +8,7 @@ import { AiOutlineArrowDown } from "@react-icons/all-files/ai/AiOutlineArrowDown
 const IconButton = (props: IconButtonProps & ButtonProps) => {
   const { icon, iconType, className, uiSchema, ...otherProps } = props;
   return (
-    <Button
-      {...otherProps}
-      variant={props.variant || "light"}
-      size="sm"
-    >
+    <Button {...otherProps} variant={props.variant || "light"} size="sm">
       {icon}
     </Button>
   );
