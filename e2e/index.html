@@ -12,6 +12,16 @@ body {
 }
 </style>
 <div class="cols">
-  <iframe src="default.html" ></iframe>
-  <iframe src="bulma.html" ></iframe>
+  <iframe id="left" src="default.html" ></iframe>
+  <iframe id="right" src="bulma.html" ></iframe>
 </div>
+<script>
+const leftWindow = document.getElementById('left').contentWindow;
+const rightWindow = document.getElementById('right').contentWindow;
+function getTargetWindow(w) {
+  return w===leftWindow ? rightWindow : leftWindow;
+}
+window.addEventListener("message", (event) => {
+  getTargetWindow(event.source).postMessage(event.data);
+}, false);
+</script>
