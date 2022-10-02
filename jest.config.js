@@ -21,25 +21,34 @@ const esmodules = [
 
 module.exports = {
   roots: [
-    '<rootDir>/src',
+    '<rootDir>/test',
   ],
   testEnvironment: 'jsdom',
-  testMatch: [
-    '**/__tests__/**/*.+(ts|tsx|js)',
-    '**/?(*.)+(spec|test).+(ts|tsx|js)',
-  ],
+  testMatch: ['**/*.test.tsx'],
+  setupFilesAfterEnv: ['jest-extended/all', 'expect-playwright'],
   transformIgnorePatterns: [
     `node_modules/(?!(${esmodules})/)`,
   ],
   coverageDirectory: './test-result/coverage/',
   reporters,
-  setupFilesAfterEnv: ['jest-extended/all', 'expect-playwright'],
   transform: {
     '.+\\.(t|j)sx?$': [
-      'esbuild-jest', {
-        sourcemap: true,
-        loaders: {
-          '.spec.ts': 'tsx',
+      '@swc/jest',
+      {
+        sourceMaps: true,
+        module: {
+          type: 'commonjs',
+        },
+        jsc: {
+          parser: {
+            syntax: 'typescript',
+            tsx: true,
+          },
+          transform: {
+            react: {
+              runtime: 'automatic',
+            },
+          },
         },
       },
     ],

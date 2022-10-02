@@ -18,6 +18,9 @@ const base = require('./jest.config');
 module.exports = {
   ...base,
   preset: 'jest-playwright-preset',
+  roots: [
+    '<rootDir>/src/e2e',
+  ],
   testMatch: [
     '**/*.e2e.ts',
   ],
