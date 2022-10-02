@@ -1,6 +1,6 @@
 import { getInputProps, WidgetProps } from "@rjsf/utils";
 import clsx from "clsx";
-import { FieldGroup, FieldLabel, FieldControl } from "../ui";
+import { FieldLabel, FieldControl } from "../ui";
 
 const BaseInputTemplate = ({
   id,
@@ -37,9 +37,16 @@ const BaseInputTemplate = ({
   // const classNames = [rawErrors.length > 0 ? "is-invalid" : "", type === 'file' ? 'custom-file-label': ""]
   return (
     <>
-      <FieldLabel id={id} label={label} schema={schema} uiSchema={uiSchema} required={required} />
+      <FieldLabel
+        id={id}
+        label={label}
+        schema={schema}
+        uiSchema={uiSchema}
+        required={required}
+      />
       <FieldControl>
-        <input className={clsx('input', 'is-small', isError && 'is-danger')}
+        <input
+          className={clsx("input", "is-small", isError && "is-danger")}
           id={id}
           name={id}
           placeholder={placeholder}

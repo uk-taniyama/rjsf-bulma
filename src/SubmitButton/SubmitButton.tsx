@@ -12,7 +12,11 @@ const SubmitButton: React.ComponentType<SubmitButtonProps> = (props) => {
   }
   return (
     <div>
-      <button className="button is-primary is-small" type="submit" {...submitButtonProps}>
+      <button
+        className="button is-primary is-small"
+        type="submit"
+        {...submitButtonProps}
+      >
         {submitText}
       </button>
     </div>

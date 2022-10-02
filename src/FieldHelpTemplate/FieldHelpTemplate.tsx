@@ -12,6 +12,8 @@ export default function FieldHelpTemplate(props: FieldHelpProps) {
   }
   const id = `${idSchema.$id}__help`;
   return (
-    <p className={clsx('help', hasErrors && 'is-danger')} id={id}>{help}</p>
+    <p className={clsx("help", hasErrors && "is-danger")} id={id}>
+      {help}
+    </p>
   );
 }

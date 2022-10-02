@@ -44,7 +44,12 @@ const FieldTemplate = ({
       <FieldGroup>
         {children}
         {displayLabel && rawDescription && (
-          <div className={clsx("form-text", rawErrors.length > 0 ? "text-danger" : "text-muted")}>
+          <div
+            className={clsx(
+              "form-text",
+              rawErrors.length > 0 ? "text-danger" : "text-muted"
+            )}
+          >
             {rawDescription}
           </div>
         )}

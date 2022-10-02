@@ -7,14 +7,21 @@ import clsx from "clsx";
 const IconButton = (props: IconButtonProps) => {
   const { icon, className, iconType, uiSchema, ...other } = props;
   return (
-    <button className={clsx('button is-fullwidth is-small', className)} {...other}>{icon}</button>
+    <button
+      className={clsx("button is-fullwidth is-small", className)}
+      {...other}
+    >
+      {icon}
+    </button>
   );
 };
 
 export default IconButton;
 
 export function MoveDownButton(props: IconButtonProps) {
-  return <IconButton title="Move down" {...props} icon={<AiOutlineArrowDown />} />;
+  return (
+    <IconButton title="Move down" {...props} icon={<AiOutlineArrowDown />} />
+  );
 }
 
 export function MoveUpButton(props: IconButtonProps) {

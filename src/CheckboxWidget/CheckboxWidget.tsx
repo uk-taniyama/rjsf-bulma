@@ -1,5 +1,5 @@
 import { WidgetProps } from "@rjsf/utils";
-import { FieldGroup,  FieldControl } from "../ui";
+import { FieldGroup, FieldControl } from "../ui";
 
 const CheckboxWidget = (props: WidgetProps) => {
   const {
@@ -30,20 +30,21 @@ const CheckboxWidget = (props: WidgetProps) => {
   return (
     <FieldGroup>
       <FieldControl>
-        <input
-          id={id}
-          name={id}
-          // label={desc}
-          checked={typeof value === "undefined" ? false : value}
-          required={required}
-          disabled={disabled || readonly}
-          autoFocus={autofocus}
-          onChange={_onChange}
-          type="checkbox"
-          onBlur={_onBlur}
-          onFocus={_onFocus}
-        />
-
+        <label>
+          <input
+            id={id}
+            name={id}
+            checked={typeof value === "undefined" ? false : value}
+            required={required}
+            disabled={disabled || readonly}
+            autoFocus={autofocus}
+            onChange={_onChange}
+            type="checkbox"
+            onBlur={_onBlur}
+            onFocus={_onFocus}
+          />
+          {desc}
+        </label>
       </FieldControl>
     </FieldGroup>
   );

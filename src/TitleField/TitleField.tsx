@@ -1,13 +1,11 @@
-import React from "react";
 import { TitleFieldProps } from "@rjsf/utils";
 
 const TitleField = ({ id, title, uiSchema }: TitleFieldProps) => (
-  <>
-    <div id={id} className="my-1">
-      <h5>{(uiSchema && uiSchema["ui:title"]) || title}</h5>
-      <hr className="border-0 bg-secondary" style={{ height: "1px" }} />
-    </div>
-  </>
+  <div id={id} className="title-field">
+    <h5 style={{ borderBottom: "1px solid #CCC" }}>
+      {(uiSchema && uiSchema["ui:title"]) || title}
+    </h5>
+  </div>
 );
 
 export default TitleField;

@@ -35,7 +35,13 @@ const TextareaWidget = ({
 
   return (
     <FieldGroup>
-      <FieldLabel id={id} label={label} schema={schema} uiSchema={uiSchema} required={required} />
+      <FieldLabel
+        id={id}
+        label={label}
+        schema={schema}
+        uiSchema={uiSchema}
+        required={required}
+      />
       <FieldControl>
         <textarea
           id={id}

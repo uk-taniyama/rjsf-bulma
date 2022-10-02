@@ -6,7 +6,9 @@ const ErrorList = ({ errors }: ErrorListProps) => (
     <CardHeader>Errors</CardHeader>
     <CardContent>
       <ul>
-        {errors.map((error, i: number) => <li key={i}>{error.stack}</li>)}
+        {errors.map((error, i: number) => (
+          <li key={i}>{error.stack}</li>
+        ))}
       </ul>
     </CardContent>
   </Card>

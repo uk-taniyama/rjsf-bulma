@@ -1,6 +1,6 @@
 import { processSelectValue, WidgetProps } from "@rjsf/utils";
 import clsx from "clsx";
-import { FieldGroup, FieldLabel, FieldControl } from "../ui";
+import { FieldLabel, FieldControl } from "../ui";
 
 const SelectWidget = ({
   schema,
@@ -41,7 +41,12 @@ const SelectWidget = ({
     <>
       <FieldLabel id={id} label={label} schema={schema} required={required} />
       <FieldControl>
-        <div className={clsx("select is-small is-fullwidth", rawErrors.length && "is-danger")}>
+        <div
+          className={clsx(
+            "select is-small is-fullwidth",
+            rawErrors.length && "is-danger"
+          )}
+        >
           <select
             id={id}
             name={id}

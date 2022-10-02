@@ -1,16 +1,34 @@
 import { getUiOptions, WidgetProps } from "@rjsf/utils";
 import { CSSProperties, PropsWithChildren } from "react";
 
-export const Row = ({ style, children }: PropsWithChildren<{ style?: CSSProperties }>) => <div className="columns is-gapless" style={style}>{children}</div>;
-export const Col = ({ n, children }: PropsWithChildren<{ n: number }>) => <div className={`column is-${n}`}>{children}</div>;
+export const Row = ({
+  style,
+  children,
+}: PropsWithChildren<{ style?: CSSProperties }>) => (
+  <div className="columns is-gapless" style={style}>
+    {children}
+  </div>
+);
+export const Col = ({ n, children }: PropsWithChildren<{ n: number }>) => (
+  <div className={`column is-${n}`}>{children}</div>
+);
 
-export type FieldLabelProps = Pick<WidgetProps, "label" | "schema" | "id" | "required" | "uiSchema">;
+export type FieldLabelProps = Pick<
+  WidgetProps,
+  "label" | "schema" | "id" | "required" | "uiSchema"
+>;
 
 export const FieldGroup = ({ children }: PropsWithChildren) => {
   return <div className="field">{children}</div>;
 };
 
-export const FieldLabel = ({ label, schema, id, required, uiSchema }: FieldLabelProps) => {
+export const FieldLabel = ({
+  label,
+  schema,
+  id,
+  required,
+  uiSchema,
+}: FieldLabelProps) => {
   const uiOptions = getUiOptions(uiSchema);
   const labelText = uiOptions.title || label || schema.title;
 
@@ -34,7 +52,11 @@ export const Card = ({ children }: PropsWithChildren) => {
 };
 
 export const CardHeader = ({ children }: PropsWithChildren) => {
-  return <div className="message-header"><p>{children}</p></div>;
+  return (
+    <div className="message-header">
+      <p>{children}</p>
+    </div>
+  );
 };
 
 export const CardContent = ({ children }: PropsWithChildren) => {

@@ -55,9 +55,7 @@ const ObjectFieldTemplate = ({
       )}
       <div className="p-0 fluid">
         {properties.map((element: any, index: number) => (
-          <Row
-            key={index}
-          >
+          <Row key={index}>
             <Col n={12}> {element.content}</Col>
           </Row>
         ))}

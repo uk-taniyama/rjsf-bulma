@@ -27,14 +27,20 @@ const WrapIfAdditionalTemplate = ({
     return <div className={classNames}>{children}</div>;
   }
 
-  const handleBlur = ({ target }: React.FocusEvent<HTMLInputElement>) => onKeyChange(target.value);
+  const handleBlur = ({ target }: React.FocusEvent<HTMLInputElement>) =>
+    onKeyChange(target.value);
   const keyId = `${id}-key`;
 
   return (
     <Row key={keyId}>
       <Col n={3}>
         <FieldGroup>
-          <FieldLabel id={keyId} label={keyLabel} schema={{}} required={required} />
+          <FieldLabel
+            id={keyId}
+            label={keyLabel}
+            schema={{}}
+            required={required}
+          />
           <FieldControl>
             <input
               className="input is-small"

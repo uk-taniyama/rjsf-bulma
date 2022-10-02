@@ -4,7 +4,7 @@ import {
   getTemplate,
   getUiOptions,
 } from "@rjsf/utils";
-import { Row, Col, CardContent } from "../ui";
+import { Row, Col } from "../ui";
 
 const ArrayFieldTemplate = (props: ArrayFieldTemplateProps) => {
   const {
@@ -60,7 +60,8 @@ const ArrayFieldTemplate = (props: ArrayFieldTemplateProps) => {
               registry={registry}
             />
           )}
-          <div className="fluid p-0 m-0"
+          <div
+            className="fluid p-0 m-0"
             key={`array-item-list-${idSchema.$id}`}
           >
             {items &&

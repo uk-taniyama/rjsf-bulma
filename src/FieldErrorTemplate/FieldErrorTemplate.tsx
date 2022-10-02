@@ -13,7 +13,9 @@ export default function FieldErrorTemplate(props: FieldErrorProps) {
   return (
     <p className="help is-danger">
       <ul>
-        {errors.map((error, i) => <li key={i}>{error}</li>)}
+        {errors.map((error, i) => (
+          <li key={i}>{error}</li>
+        ))}
       </ul>
     </p>
   );

@@ -29,19 +29,19 @@ const CheckboxesWidget = ({
   onFocus,
   uiSchema,
 }: WidgetProps) => {
-  const { enumOptions, enumDisabled, inline } = options;
+  const { enumOptions, enumDisabled } = options;
 
   const _onChange =
     (option: any) =>
-      ({ target: { checked } }: React.ChangeEvent<HTMLInputElement>) => {
-        const all = (enumOptions as any).map(({ value }: any) => value);
+    ({ target: { checked } }: React.ChangeEvent<HTMLInputElement>) => {
+      const all = (enumOptions as any).map(({ value }: any) => value);
 
-        if (checked) {
-          onChange(selectValue(option.value, value, all));
-        } else {
-          onChange(deselectValue(option.value, value));
-        }
-      };
+      if (checked) {
+        onChange(selectValue(option.value, value, all));
+      } else {
+        onChange(deselectValue(option.value, value));
+      }
+    };
 
   const _onBlur = ({ target: { value } }: React.FocusEvent<HTMLInputElement>) =>
     onBlur(id, value);
@@ -51,7 +51,13 @@ const CheckboxesWidget = ({
 
   return (
     <>
-      <FieldLabel id={id} label={label} schema={schema} required={required} uiSchema={uiSchema} />
+      <FieldLabel
+        id={id}
+        label={label}
+        schema={schema}
+        required={required}
+        uiSchema={uiSchema}
+      />
       <FieldControl>
         {Array.isArray(enumOptions) &&
           enumOptions.map((option, index: number) => {
@@ -64,9 +70,9 @@ const CheckboxesWidget = ({
               <label className="radio" key={option.value}>
                 <input
                   type="radio"
-                  checked={checked} autoFocus={autofocus && index === 0}
+                  checked={checked}
+                  autoFocus={autofocus && index === 0}
                   required={required}
-                  className="bg-transparent border-0"
                   id={`${id}-${option.value}`}
                   name={id}
                   onChange={_onChange(option)}
