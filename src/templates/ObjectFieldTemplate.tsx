@@ -65,8 +65,8 @@ const ObjectFieldTemplate: FC<ObjectFieldTemplateProps> = ({
       ))}
       {canExpand(schema, uiSchema, formData) ? (
         <Row>
-          <Col n={9}></Col>
-          <Col n={3}>
+          <Col></Col>
+          <Col n="narrow">
             <AddButton
               onClick={onAddClick(schema)}
               disabled={disabled || readonly}
