@@ -21,11 +21,11 @@ const ArrayFieldItemTemplate: FC<ArrayFieldTemplateItemType> = (props) => {
     registry.templates.ButtonTemplates;
   return (
     <Row style={{ alignItems: "flex-end" }}>
-      <Col n={9}>{children}</Col>
-      <Col n={3}>
+      <Col>{children}</Col>
+      <Col n="narrow">
         {hasToolbar && (
-          <div className="field has-addons">
-            <p className="control" style={{ width: "100%" }}>
+          <div className="field has-addons pl-2">
+            <p className="control">
               <MoveUpButton
                 className="array-item-move-up"
                 disabled={disabled || readonly || !hasMoveUp}
@@ -33,14 +33,14 @@ const ArrayFieldItemTemplate: FC<ArrayFieldTemplateItemType> = (props) => {
                 uiSchema={uiSchema}
               />
             </p>
-            <p className="control" style={{ width: "100%" }}>
+            <p className="control">
               <MoveDownButton
                 disabled={disabled || readonly || !hasMoveDown}
                 onClick={onReorderClick(index, index + 1)}
                 uiSchema={uiSchema}
               />
             </p>
-            <p className="control" style={{ width: "100%" }}>
+            <p className="control">
               <RemoveButton
                 disabled={disabled || readonly || !hasRemove}
                 onClick={onDropIndexClick(index)}

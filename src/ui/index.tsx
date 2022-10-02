@@ -1,14 +1,15 @@
 import { getUiOptions, WidgetProps } from "@rjsf/utils";
+import clsx from "clsx";
 import { CSSProperties, PropsWithChildren } from "react";
 
 export const Row = ({
   children,
 }: PropsWithChildren<{ style?: CSSProperties }>) => (
-    <div className="columns is-gapless">{children}</div>
+  <div className="columns is-gapless">{children}</div>
 );
 
-export const Col = ({ n, children }: PropsWithChildren<{ n: number }>) => (
-  <div className={`column is-${n}`}>{children}</div>
+export const Col = ({ n, children }: PropsWithChildren<{ n?: number | string }>) => (
+  <div className={clsx('column', n != null && `is-${n}`)}>{children}</div>
 );
 
 export type FieldLabelProps = Pick<
