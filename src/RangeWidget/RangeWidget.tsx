@@ -1,4 +1,5 @@
-import React from "react";
+// TODO FIXME
+
 import { getTemplate, WidgetProps } from "@rjsf/utils";
 
 const RangeWidget = (props: WidgetProps) => {

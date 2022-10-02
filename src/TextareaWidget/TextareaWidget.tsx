@@ -1,5 +1,5 @@
 import { WidgetProps } from "@rjsf/utils";
-import { FieldGroup, FieldControl, FieldLabel } from "../ui";
+import { FieldControl, FieldLabel } from "../ui";
 
 type CustomWidgetProps = WidgetProps & {
   options: any;
@@ -34,7 +34,7 @@ const TextareaWidget = ({
   }: React.FocusEvent<HTMLTextAreaElement>) => onFocus(id, value);
 
   return (
-    <FieldGroup>
+    <>
       <FieldLabel
         id={id}
         label={label}
@@ -59,7 +59,7 @@ const TextareaWidget = ({
           onFocus={_onFocus}
         />
       </FieldControl>
-    </FieldGroup>
+    </>
   );
 };
 

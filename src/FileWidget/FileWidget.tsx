@@ -1,4 +1,5 @@
-import React from "react";
+// TODO FIXME Files
+
 import { getTemplate, WidgetProps } from "@rjsf/utils";
 
 const FileWidget = (props: WidgetProps) => {

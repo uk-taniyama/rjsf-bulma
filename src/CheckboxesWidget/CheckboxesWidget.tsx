@@ -1,3 +1,5 @@
+// FIXME checkboxを横並びにしている.....
+// FIXME スタイルを強引に当てている.....
 import { WidgetProps } from "@rjsf/utils";
 import { FieldControl, FieldLabel } from "../ui";
 
@@ -67,18 +69,23 @@ const CheckboxesWidget = ({
               enumDisabled.indexOf(option.value) !== -1;
 
             return (
-              <label className="radio" key={option.value}>
+              <label
+                className="checkbox is-small is-size-7 mr-1"
+                key={option.value}
+              >
                 <input
-                  type="radio"
-                  checked={checked}
-                  autoFocus={autofocus && index === 0}
-                  required={required}
                   id={`${id}-${option.value}`}
                   name={id}
+                  type="checkbox"
+                  className="mr-1"
+                  style={{ verticalAlign: "middle" }}
+                  checked={checked}
+                  required={required}
+                  disabled={disabled || itemDisabled || readonly}
+                  autoFocus={autofocus && index === 0}
                   onChange={_onChange(option)}
                   onBlur={_onBlur}
                   onFocus={_onFocus}
-                  disabled={disabled || itemDisabled || readonly}
                 />
                 {option.label}
               </label>

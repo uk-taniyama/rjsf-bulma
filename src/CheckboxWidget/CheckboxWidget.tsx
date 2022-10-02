@@ -1,5 +1,7 @@
+// FIXME checkboxを横並びにしている.....
+// FIXME スタイルを強引に当てている.....
 import { WidgetProps } from "@rjsf/utils";
-import { FieldGroup, FieldControl } from "../ui";
+import { FieldControl } from "../ui";
 
 const CheckboxWidget = (props: WidgetProps) => {
   const {
@@ -28,25 +30,27 @@ const CheckboxWidget = (props: WidgetProps) => {
 
   const desc = label || schema.description;
   return (
-    <FieldGroup>
+    <>
       <FieldControl>
-        <label>
+        <label className="checkbox is-small is-size-7 mr-1">
           <input
             id={id}
             name={id}
+            type="checkbox"
+            className="mr-1"
+            style={{ verticalAlign: "middle" }}
             checked={typeof value === "undefined" ? false : value}
             required={required}
             disabled={disabled || readonly}
             autoFocus={autofocus}
             onChange={_onChange}
-            type="checkbox"
             onBlur={_onBlur}
             onFocus={_onFocus}
           />
           {desc}
         </label>
       </FieldControl>
-    </FieldGroup>
+    </>
   );
 };
 

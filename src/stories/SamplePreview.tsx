@@ -9,17 +9,21 @@ export interface SamplePreviewProps {
   render: FC<PreviewProps>;
 }
 
-function sendName(name:string) {
-  if (window.parent != null && window.parent!== window) {
+function sendName(name: string) {
+  if (window.parent != null && window.parent !== window) {
     window.parent.postMessage(name);
   }
 }
 
-let receiveName: (name:string) => void = () => {};
+let receiveName: (name: string) => void = () => {};
 
-window.addEventListener("message", (event) => {
-  receiveName(event.data);
-}, false);
+window.addEventListener(
+  "message",
+  (event) => {
+    receiveName(event.data);
+  },
+  false
+);
 
 const SamplePreview: FC<SamplePreviewProps> = ({ render }) => {
   const [name, setName] = useState("");

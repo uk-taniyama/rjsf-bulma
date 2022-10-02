@@ -53,7 +53,7 @@ const ObjectFieldTemplate = ({
           registry={registry}
         />
       )}
-      <div className="p-0 fluid">
+      <div>
         {properties.map((element: any, index: number) => (
           <Row key={index}>
             <Col n={12}> {element.content}</Col>

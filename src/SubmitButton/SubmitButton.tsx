@@ -1,4 +1,3 @@
-import React from "react";
 import { getSubmitButtonOptions, SubmitButtonProps } from "@rjsf/utils";
 
 const SubmitButton: React.ComponentType<SubmitButtonProps> = (props) => {

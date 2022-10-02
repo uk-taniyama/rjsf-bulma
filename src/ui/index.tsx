@@ -2,11 +2,10 @@ import { getUiOptions, WidgetProps } from "@rjsf/utils";
 import { CSSProperties, PropsWithChildren } from "react";
 
 export const Row = ({
-  style,
   children,
 }: PropsWithChildren<{ style?: CSSProperties }>) => (
-  <div className="columns is-gapless" style={style}>
-    {children}
+  <div>
+    <div className="columns is-gapless">{children}</div>
   </div>
 );
 export const Col = ({ n, children }: PropsWithChildren<{ n: number }>) => (

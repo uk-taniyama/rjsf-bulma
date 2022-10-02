@@ -1,5 +1,8 @@
+// TODO FIXME radio is-smallが効かない。
+// TODO FIXME??? inlineがデフォルト......
+
 import { WidgetProps } from "@rjsf/utils";
-import { FieldGroup, FieldControl, FieldLabel } from "../ui";
+import { FieldControl, FieldLabel } from "../ui";
 
 const RadioWidget = ({
   id,
@@ -27,10 +30,8 @@ const RadioWidget = ({
     target: { value },
   }: React.FocusEvent<HTMLInputElement>) => onFocus(id, value);
 
-  // const inline = Boolean(options && options.inline);
-
   return (
-    <FieldGroup>
+    <>
       <FieldLabel
         id={id}
         label={label}
@@ -47,15 +48,16 @@ const RadioWidget = ({
             const checked = option.value == value;
 
             const radio = (
-              <label className="radio is-small" key={option.value}>
+              <label className="radio is-small is-size-7" key={option.value}>
                 <input
-                  className="radio"
                   id={`${id}-${option.value}`}
                   name={id}
                   type="radio"
-                  disabled={disabled || itemDisabled || readonly}
+                  className="mr-1"
+                  style={{ verticalAlign: "middle" }}
                   checked={checked}
                   required={required}
+                  disabled={disabled || itemDisabled || readonly}
                   value={option.value}
                   onChange={_onChange}
                   onBlur={_onBlur}
@@ -64,10 +66,11 @@ const RadioWidget = ({
                 {option.label}
               </label>
             );
+
             return radio;
           })}
       </FieldControl>
-    </FieldGroup>
+    </>
   );
 };
 

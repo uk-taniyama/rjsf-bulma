@@ -46,8 +46,8 @@ const FieldTemplate = ({
         {displayLabel && rawDescription && (
           <div
             className={clsx(
-              "form-text",
-              rawErrors.length > 0 ? "text-danger" : "text-muted"
+              "is-size-7",
+              rawErrors.length > 0 && "is-danger"
             )}
           >
             {rawDescription}

@@ -44,6 +44,7 @@ const SelectWidget = ({
         <div
           className={clsx(
             "select is-small is-fullwidth",
+            multiple && "is-multiple",
             rawErrors.length && "is-danger"
           )}
         >
