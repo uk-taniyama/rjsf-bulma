@@ -1,7 +1,7 @@
 import { IconButtonProps } from "@rjsf/utils";
 import { BsPlus } from "@react-icons/all-files/bs/BsPlus";
 
-import IconButton from "../IconButton";
+import IconButton from "./IconButton";
 
 function AddButton(props: IconButtonProps) {
   return (
