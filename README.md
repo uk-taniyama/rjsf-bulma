@@ -1,17 +1,8 @@
-<!-- PROJECT LOGO -->
-<br />
-<p align="center">
-  <a href="https://bulma.io/">
-    <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
-  </a>
+# rjsf-bulma
 
-  <h3 align="center">rjsf-bulma</h3>
+[![bulma](https://bulma.io/images/bulma-logo.png)](https://bulma.io/)
 
-  <p align="center">
-  Bluma theme, fields and widgets for <a href="https://github.com/mozilla-services/react-jsonschema-form/"><code>react-jsonschema-form</code></a>.
-</p>
-
-<!-- TABLE OF CONTENTS -->
+Bluma theme, fields and widgets for [react-jsonschema-form](https://github.com/mozilla-services/react-jsonschema-form/).
 
 ## Table of Contents
 
@@ -21,11 +12,10 @@
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
+  - [Example](#example)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [Contact](#contact)
-
-<!-- ABOUT THE PROJECT -->
 
 ## About The Project
 
@@ -37,8 +27,6 @@ Exports `bulma` theme, fields and widgets for `react-jsonschema-form`.
 - [react-jsonschema-form](https://github.com/mozilla-services/react-jsonschema-form/)
 - [Bulma](https://bulma.io/)
 - [Typescript](https://www.typescriptlang.org/)
-
-<!-- GETTING STARTED -->
 
 ## Getting Started
 
@@ -57,6 +45,10 @@ yarn add bulma @rjsf/core
 yarn add rjsf-bulma
 ```
 
+### Example
+
+[Example](e2e/out/index.html)
+
 ## Usage
 
 ```js
@@ -72,13 +64,9 @@ import { Theme as BulmaTheme } from '@rjsf/bulma';
 const Form = withTheme(BulmaTheme);
 ```
 
-<!-- CONTRIBUTING -->
-
 ## Contributing
 
 Read our [contributors' guide](https://react-jsonschema-form.readthedocs.io/en/stable/contributing/) to get started.
-
-<!-- CONTACT -->
 
 ## Contact
 
