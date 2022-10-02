@@ -9,16 +9,6 @@
 
   <p align="center">
   Bluma theme, fields and widgets for <a href="https://github.com/mozilla-services/react-jsonschema-form/"><code>react-jsonschema-form</code></a>.
-    <!-- <br />
-    <a href="https://react-jsonschema-form.readthedocs.io/en/stable/"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-   <a href="https://rjsf-team.github.io/react-jsonschema-form/">View Playground</a>
-    ·
-    <a href="https://github.com/rjsf-team/react-jsonschema-form/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/rjsf-team/react-jsonschema-form/issues">Request Feature</a>
-  </p> -->
 </p>
 
 <!-- TABLE OF CONTENTS -->
