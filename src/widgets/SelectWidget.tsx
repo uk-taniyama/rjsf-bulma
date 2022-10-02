@@ -1,9 +1,9 @@
-import type { FC } from 'react';
+import type { FC } from "react";
 import { processSelectValue, WidgetProps } from "@rjsf/utils";
 import clsx from "clsx";
-import { FieldLabel, FieldControl } from "../ui";
+import { FieldControl } from "../ui";
 
-const SelectWidget:FC<WidgetProps> = ({
+const SelectWidget: FC<WidgetProps> = ({
   schema,
   id,
   options,

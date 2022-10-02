@@ -1,8 +1,8 @@
-import type { FC } from 'react';
+import type { FC } from "react";
 import { WidgetProps } from "@rjsf/utils";
-import { FieldControl, FieldLabel } from "../ui";
+import { FieldControl } from "../ui";
 
-const TextareaWidget:FC<WidgetProps> = ({
+const TextareaWidget: FC<WidgetProps> = ({
   id,
   placeholder,
   value,

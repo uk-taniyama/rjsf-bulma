@@ -1,9 +1,9 @@
 // TODO FIXME
-import type { FC } from 'react';
+import type { FC } from "react";
 
 import { getTemplate, WidgetProps } from "@rjsf/utils";
 
-const RangeWidget:FC<WidgetProps> = (props) => {
+const RangeWidget: FC<WidgetProps> = (props) => {
   const { value, label, options, registry } = props;
   const BaseInputTemplate = getTemplate<"BaseInputTemplate">(
     "BaseInputTemplate",

@@ -8,8 +8,11 @@ export const Row = ({
   <div className="columns is-gapless">{children}</div>
 );
 
-export const Col = ({ n, children }: PropsWithChildren<{ n?: number | string }>) => (
-  <div className={clsx('column', n != null && `is-${n}`)}>{children}</div>
+export const Col = ({
+  n,
+  children,
+}: PropsWithChildren<{ n?: number | string }>) => (
+  <div className={clsx("column", n != null && `is-${n}`)}>{children}</div>
 );
 
 export type FieldLabelProps = Pick<
@@ -61,4 +64,3 @@ export const CardHeader = ({ children }: PropsWithChildren) => {
 export const CardContent = ({ children }: PropsWithChildren) => {
   return <div className="message-body">{children}</div>;
 };
-

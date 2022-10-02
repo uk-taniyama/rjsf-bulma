@@ -44,24 +44,28 @@ const ArrayFieldTemplate: FC<ArrayFieldTemplateProps> = (props) => {
   } = registry.templates;
   return (
     <>
-      <Row><Col n={12}>
-        <ArrayFieldTitleTemplate
-          idSchema={idSchema}
-          title={uiOptions.title || title}
-          uiSchema={uiSchema}
-          required={required}
-          registry={registry}
-        />
-      </Col></Row>
-      {(uiOptions.description || schema.description) && (
-        <Row><Col n={12}>
-          <ArrayFieldDescriptionTemplate
+      <Row>
+        <Col n={12}>
+          <ArrayFieldTitleTemplate
             idSchema={idSchema}
-            description={(uiOptions.description || schema.description)!}
+            title={uiOptions.title || title}
             uiSchema={uiSchema}
+            required={required}
             registry={registry}
           />
-        </Col></Row>
+        </Col>
+      </Row>
+      {(uiOptions.description || schema.description) && (
+        <Row>
+          <Col n={12}>
+            <ArrayFieldDescriptionTemplate
+              idSchema={idSchema}
+              description={(uiOptions.description || schema.description)!}
+              uiSchema={uiSchema}
+              registry={registry}
+            />
+          </Col>
+        </Row>
       )}
       {items &&
         items.map(({ key, ...itemProps }: ArrayFieldTemplateItemType) => (

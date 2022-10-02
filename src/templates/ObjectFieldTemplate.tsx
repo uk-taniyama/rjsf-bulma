@@ -39,24 +39,28 @@ const ObjectFieldTemplate: FC<ObjectFieldTemplateProps> = ({
   return (
     <>
       {(uiOptions.title || title) && (
-        <Row><Col n={12}>
-          <TitleFieldTemplate
-            id={`${idSchema.$id}-title`}
-            title={uiOptions.title || title}
-            required={required}
-            registry={registry}
-            uiSchema={uiSchema}
-          />
-        </Col></Row>
+        <Row>
+          <Col n={12}>
+            <TitleFieldTemplate
+              id={`${idSchema.$id}-title`}
+              title={uiOptions.title || title}
+              required={required}
+              registry={registry}
+              uiSchema={uiSchema}
+            />
+          </Col>
+        </Row>
       )}
       {(uiOptions.description || description) && (
-        <Row><Col n={12}>
-          <DescriptionFieldTemplate
-            id={`${idSchema.$id}-description`}
-            description={uiOptions.description || description!}
-            registry={registry}
-          />
-        </Col></Row>
+        <Row>
+          <Col n={12}>
+            <DescriptionFieldTemplate
+              id={`${idSchema.$id}-description`}
+              description={uiOptions.description || description!}
+              registry={registry}
+            />
+          </Col>
+        </Row>
       )}
       {properties.map((element: any, index: number) => (
         <Row key={index}>

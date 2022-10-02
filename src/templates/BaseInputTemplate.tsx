@@ -1,7 +1,7 @@
 import type { FC } from "react";
 import { getInputProps, WidgetProps } from "@rjsf/utils";
 import clsx from "clsx";
-import { FieldLabel, FieldControl } from "../ui";
+import { FieldControl } from "../ui";
 
 const BaseInputTemplate: FC<WidgetProps> = ({
   id,

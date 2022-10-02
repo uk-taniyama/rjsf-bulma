@@ -1,5 +1,4 @@
 /dist
 /node_modules
-/e2e/out
 /test/e2e/__image_snapshots__
 *.log

@@ -13,6 +13,7 @@ export default defineConfig(({ command }) => ({
     outDir: 'out',
     rollupOptions: {
       input: {
+        index: __dirname + '/index.html',
         bulma: __dirname + '/bulma.html',
         default: __dirname + '/default.html',
       },

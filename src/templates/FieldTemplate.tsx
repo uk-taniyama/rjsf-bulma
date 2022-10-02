@@ -43,7 +43,7 @@ const FieldTemplate: FC<FieldTemplateProps> = ({
       registry={registry}
     >
       <FieldGroup>
-        {displayLabel && 
+        {displayLabel && (
           <FieldLabel
             id={id}
             label={label}
@@ -51,7 +51,7 @@ const FieldTemplate: FC<FieldTemplateProps> = ({
             uiSchema={uiSchema}
             required={required}
           />
-        }
+        )}
         {children}
         {displayLabel && rawDescription && (
           <div

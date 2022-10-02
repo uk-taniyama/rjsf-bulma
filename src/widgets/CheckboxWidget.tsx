@@ -1,10 +1,10 @@
 // FIXME checkboxを横並びにしている.....
 // FIXME スタイルを強引に当てている.....
-import type { FC } from 'react';
+import type { FC } from "react";
 import { WidgetProps } from "@rjsf/utils";
 import { FieldControl } from "../ui";
 
-const CheckboxWidget:FC<WidgetProps> = (props) => {
+const CheckboxWidget: FC<WidgetProps> = (props) => {
   const {
     id,
     value,
