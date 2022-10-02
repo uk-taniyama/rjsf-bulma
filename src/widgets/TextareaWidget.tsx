@@ -1,11 +1,8 @@
+import type { FC } from 'react';
 import { WidgetProps } from "@rjsf/utils";
 import { FieldControl, FieldLabel } from "../ui";
 
-type CustomWidgetProps = WidgetProps & {
-  options: any;
-};
-
-const TextareaWidget = ({
+const TextareaWidget:FC<WidgetProps> = ({
   id,
   placeholder,
   value,
@@ -21,7 +18,7 @@ const TextareaWidget = ({
   schema,
   rawErrors = [],
   uiSchema,
-}: CustomWidgetProps) => {
+}) => {
   const _onChange = ({
     target: { value },
   }: React.ChangeEvent<HTMLTextAreaElement>) =>

@@ -1,10 +1,11 @@
 // TODO FIXME radio is-smallが効かない。
 // TODO FIXME??? inlineがデフォルト......
+import type { FC } from 'react';
 
 import { WidgetProps } from "@rjsf/utils";
 import { FieldControl, FieldLabel } from "../ui";
 
-const RadioWidget = ({
+const RadioWidget:FC<WidgetProps> = ({
   id,
   schema,
   options,
@@ -17,7 +18,7 @@ const RadioWidget = ({
   onBlur,
   onFocus,
   uiSchema,
-}: WidgetProps) => {
+}) => {
   const { enumOptions, enumDisabled } = options;
 
   const _onChange = ({

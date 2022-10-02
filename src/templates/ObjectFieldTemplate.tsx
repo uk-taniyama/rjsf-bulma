@@ -1,3 +1,4 @@
+import type { FC } from "react";
 import {
   canExpand,
   getTemplate,
@@ -6,7 +7,7 @@ import {
 } from "@rjsf/utils";
 import { Row, Col } from "../ui";
 
-const ObjectFieldTemplate = ({
+const ObjectFieldTemplate: FC<ObjectFieldTemplateProps> = ({
   description,
   title,
   properties,
@@ -19,7 +20,7 @@ const ObjectFieldTemplate = ({
   disabled,
   readonly,
   registry,
-}: ObjectFieldTemplateProps) => {
+}) => {
   const uiOptions = getUiOptions(uiSchema);
   const TitleFieldTemplate = getTemplate<"TitleFieldTemplate">(
     "TitleFieldTemplate",

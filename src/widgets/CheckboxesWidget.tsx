@@ -1,5 +1,6 @@
 // FIXME checkboxを横並びにしている.....
 // FIXME スタイルを強引に当てている.....
+import type { FC } from 'react';
 import { WidgetProps } from "@rjsf/utils";
 import { FieldControl, FieldLabel } from "../ui";
 
@@ -16,7 +17,7 @@ const deselectValue = (value: any, selected: any) => {
   return selected.filter((v: any) => v !== value);
 };
 
-const CheckboxesWidget = ({
+const CheckboxesWidget:FC<WidgetProps> = ({
   schema,
   label,
   id,
@@ -30,7 +31,7 @@ const CheckboxesWidget = ({
   onBlur,
   onFocus,
   uiSchema,
-}: WidgetProps) => {
+}) => {
   const { enumOptions, enumDisabled } = options;
 
   const _onChange =

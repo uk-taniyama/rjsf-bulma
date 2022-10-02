@@ -1,10 +1,11 @@
+import type { FC } from "react";
 import {
   ADDITIONAL_PROPERTY_FLAG,
   WrapIfAdditionalTemplateProps,
 } from "@rjsf/utils";
 import { FieldGroup, FieldLabel, FieldControl, Row, Col } from "../ui";
 
-const WrapIfAdditionalTemplate = ({
+const WrapIfAdditionalTemplate: FC<WrapIfAdditionalTemplateProps> = ({
   classNames,
   children,
   disabled,
@@ -17,7 +18,7 @@ const WrapIfAdditionalTemplate = ({
   schema,
   uiSchema,
   registry,
-}: WrapIfAdditionalTemplateProps) => {
+}) => {
   // Button templates are not overridden in the uiSchema
   const { RemoveButton } = registry.templates.ButtonTemplates;
   const keyLabel = "Key"; // i18n ?

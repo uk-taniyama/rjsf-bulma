@@ -1,8 +1,9 @@
+import type { FC } from "react";
 import { getInputProps, WidgetProps } from "@rjsf/utils";
 import clsx from "clsx";
 import { FieldLabel, FieldControl } from "../ui";
 
-const BaseInputTemplate = ({
+const BaseInputTemplate: FC<WidgetProps> = ({
   id,
   placeholder,
   required,
@@ -21,7 +22,7 @@ const BaseInputTemplate = ({
   uiSchema,
   children,
   extraProps,
-}: WidgetProps) => {
+}) => {
   const inputProps = { ...extraProps, ...getInputProps(schema, type, options) };
   const _onChange = ({
     target: { value },

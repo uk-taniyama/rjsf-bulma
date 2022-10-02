@@ -1,7 +1,8 @@
+import type { FC } from "react";
 import { ArrayFieldTemplateItemType } from "@rjsf/utils";
 import { Row, Col } from "../ui";
 
-const ArrayFieldItemTemplate = (props: ArrayFieldTemplateItemType) => {
+const ArrayFieldItemTemplate: FC<ArrayFieldTemplateItemType> = (props) => {
   const {
     children,
     disabled,

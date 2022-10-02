@@ -1,8 +1,9 @@
+import type { FC } from "react";
 import { FieldTemplateProps, getTemplate, getUiOptions } from "@rjsf/utils";
 import clsx from "clsx";
 import { FieldGroup } from "../ui";
 
-const FieldTemplate = ({
+const FieldTemplate: FC<FieldTemplateProps> = ({
   id,
   children,
   displayLabel,
@@ -20,7 +21,7 @@ const FieldTemplate = ({
   schema,
   uiSchema,
   registry,
-}: FieldTemplateProps) => {
+}) => {
   const uiOptions = getUiOptions(uiSchema);
   const WrapIfAdditionalTemplate = getTemplate<"WrapIfAdditionalTemplate">(
     "WrapIfAdditionalTemplate",
@@ -45,10 +46,7 @@ const FieldTemplate = ({
         {children}
         {displayLabel && rawDescription && (
           <div
-            className={clsx(
-              "is-size-7",
-              rawErrors.length > 0 && "is-danger"
-            )}
+            className={clsx("is-size-7", rawErrors.length > 0 && "is-danger")}
           >
             {rawDescription}
           </div>

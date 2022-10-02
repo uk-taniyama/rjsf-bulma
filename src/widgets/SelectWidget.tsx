@@ -1,8 +1,9 @@
+import type { FC } from 'react';
 import { processSelectValue, WidgetProps } from "@rjsf/utils";
 import clsx from "clsx";
 import { FieldLabel, FieldControl } from "../ui";
 
-const SelectWidget = ({
+const SelectWidget:FC<WidgetProps> = ({
   schema,
   id,
   options,
@@ -18,7 +19,7 @@ const SelectWidget = ({
   onFocus,
   placeholder,
   rawErrors = [],
-}: WidgetProps) => {
+}) => {
   const { enumOptions, enumDisabled } = options;
 
   const emptyValue = multiple ? [] : "";

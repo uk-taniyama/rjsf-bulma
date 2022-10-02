@@ -1,6 +1,7 @@
+import type { FC } from "react";
 import { getSubmitButtonOptions, SubmitButtonProps } from "@rjsf/utils";
 
-const SubmitButton: React.ComponentType<SubmitButtonProps> = (props) => {
+const SubmitButton: FC<SubmitButtonProps> = (props) => {
   const {
     submitText,
     norender,

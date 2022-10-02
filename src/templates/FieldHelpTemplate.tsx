@@ -1,3 +1,4 @@
+import type { FC } from "react";
 import { FieldHelpProps } from "@rjsf/utils";
 import clsx from "clsx";
 
@@ -5,7 +6,7 @@ import clsx from "clsx";
  *
  * @param props - The `FieldHelpProps` to be rendered
  */
-export default function FieldHelpTemplate(props: FieldHelpProps) {
+const FieldHelpTemplate: FC<FieldHelpProps> = (props) => {
   const { idSchema, help, hasErrors } = props;
   if (!help) {
     return null;
@@ -16,4 +17,6 @@ export default function FieldHelpTemplate(props: FieldHelpProps) {
       {help}
     </p>
   );
-}
+};
+
+export default FieldHelpTemplate;
