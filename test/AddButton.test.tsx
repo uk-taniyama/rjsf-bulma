@@ -1,5 +1,5 @@
 import React from "react";
-import AddButton from "../src/AddButton";
+import AddButton from "../src/Templates/AddButton";
 import renderer from "react-test-renderer";
 
 describe("AddButton", () => {

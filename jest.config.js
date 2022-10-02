@@ -14,9 +14,8 @@ if (coverage) {
 }
 
 const esmodules = [
-  'd3-.*',
+  'nanoid',
   'lodash-es',
-  'chartjs-plugin-colorschemes',
 ].join('|');
 
 module.exports = {

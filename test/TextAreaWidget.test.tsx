@@ -1,5 +1,5 @@
 import React from "react";
-import TextareaWidget from "../src/TextareaWidget";
+import TextareaWidget from "../src/Widgets/TextareaWidget";
 import { makeWidgetMockProps } from "./helpers/createMocks";
 import renderer from "react-test-renderer";
 

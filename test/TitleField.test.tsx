@@ -1,7 +1,7 @@
 import React from "react";
 import renderer from "react-test-renderer";
 
-import TitleField from "../src/TitleField";
+import TitleField from "../src/Templates/TitleField";
 import { mockRegistry } from "./helpers/createMocks";
 
 describe("TitleField", () => {
