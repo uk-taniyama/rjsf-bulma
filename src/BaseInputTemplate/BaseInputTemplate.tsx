@@ -1,4 +1,5 @@
 import { getInputProps, WidgetProps } from "@rjsf/utils";
+import clsx from "clsx";
 import { FieldGroup, FieldLabel, FieldControl } from "../ui";
 
 const BaseInputTemplate = ({
@@ -32,40 +33,39 @@ const BaseInputTemplate = ({
     target: { value },
   }: React.FocusEvent<HTMLInputElement>) => onFocus(id, value);
 
+  const isError = rawErrors.length > 0;
   // const classNames = [rawErrors.length > 0 ? "is-invalid" : "", type === 'file' ? 'custom-file-label': ""]
   return (
-    <FieldGroup>
-      <div className={rawErrors.length > 0 ? "text-danger" : ""}>
-        <FieldLabel id={id} label={label} schema={schema} uiSchema={uiSchema} required={required} />
-        <FieldControl>
-          <input className="input is-small"
-            id={id}
-            name={id}
-            placeholder={placeholder}
-            autoFocus={autofocus}
-            required={required}
-            disabled={disabled}
-            readOnly={readonly}
-            list={schema.examples ? `examples_${id}` : undefined}
-            {...inputProps}
-            value={value || value === 0 ? value : ""}
-            onChange={_onChange}
-            onBlur={_onBlur}
-            onFocus={_onFocus}
-          />
-        </FieldControl>
-        {children}
-        {schema.examples ? (
-          <datalist id={`examples_${id}`}>
-            {(schema.examples as string[])
-              .concat(schema.default ? ([schema.default] as string[]) : [])
-              .map((example: any) => {
-                return <option key={example} value={example} />;
-              })}
-          </datalist>
-        ) : null}
-      </div>
-    </FieldGroup>
+    <>
+      <FieldLabel id={id} label={label} schema={schema} uiSchema={uiSchema} required={required} />
+      <FieldControl>
+        <input className={clsx('input', 'is-small', isError && 'is-danger')}
+          id={id}
+          name={id}
+          placeholder={placeholder}
+          autoFocus={autofocus}
+          required={required}
+          disabled={disabled}
+          readOnly={readonly}
+          list={schema.examples ? `examples_${id}` : undefined}
+          {...inputProps}
+          value={value || value === 0 ? value : ""}
+          onChange={_onChange}
+          onBlur={_onBlur}
+          onFocus={_onFocus}
+        />
+      </FieldControl>
+      {children}
+      {schema.examples ? (
+        <datalist id={`examples_${id}`}>
+          {(schema.examples as string[])
+            .concat(schema.default ? ([schema.default] as string[]) : [])
+            .map((example: any) => {
+              return <option key={example} value={example} />;
+            })}
+        </datalist>
+      ) : null}
+    </>
   );
 };
 

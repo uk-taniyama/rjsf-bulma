@@ -30,17 +30,27 @@ export const FieldControl = ({ children }: PropsWithChildren) => {
 };
 
 export const Card = ({ children }: PropsWithChildren) => {
-  return <div className="card is-danger">{children}</div>;
+  return <article className="message is-small is-danger">{children}</article>;
 };
 
 export const CardHeader = ({ children }: PropsWithChildren) => {
-  return <div className="card-header"><div className="card-header-title">{children}</div></div>;
+  return <div className="message-header"><p>{children}</p></div>;
 };
 
 export const CardContent = ({ children }: PropsWithChildren) => {
-  return <div className="card-content">{children}</div>;
+  return <div className="message-body">{children}</div>;
 };
-
+/*
+<article class="message is-danger">
+  <div class="message-header">
+    <p>Error</p>
+    <button class="delete" aria-label="delete"></button>
+  </div>
+  <div class="message-body">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur.
+  </div>
+</article>
+*/
 // card: the main container
 // card-header: a horizontal bar with a shadow
 // card-header-title: a left-aligned bold text

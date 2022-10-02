@@ -5,19 +5,16 @@ import { FieldErrorProps } from "@rjsf/utils";
  * @param props - The `FieldErrorProps` for the errors being rendered
  */
 export default function FieldErrorTemplate(props: FieldErrorProps) {
-  const { errors = [], idSchema } = props;
+  const { errors = [] } = props;
   if (errors.length === 0) {
     return null;
   }
-  const id = `${idSchema.$id}__error`;
 
   return (
     <p className="help is-danger">
-      {errors.map((error, i) => {
-        return (
-            <li key={i}>{error}</li>
-        );
-      })}
+      <ul>
+        {errors.map((error, i) => <li key={i}>{error}</li>)}
+      </ul>
     </p>
   );
 }

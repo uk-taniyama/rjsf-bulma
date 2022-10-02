@@ -1,5 +1,6 @@
 import { FieldTemplateProps, getTemplate, getUiOptions } from "@rjsf/utils";
 import clsx from "clsx";
+import { FieldGroup } from "../ui";
 
 const FieldTemplate = ({
   id,
@@ -40,7 +41,7 @@ const FieldTemplate = ({
       uiSchema={uiSchema}
       registry={registry}
     >
-      <div className="form-group">
+      <FieldGroup>
         {children}
         {displayLabel && rawDescription && (
           <div className={clsx("form-text", rawErrors.length > 0 ? "text-danger" : "text-muted")}>
@@ -49,7 +50,7 @@ const FieldTemplate = ({
         )}
         {errors}
         {help}
-      </div>
+      </FieldGroup>
     </WrapIfAdditionalTemplate>
   );
 };
