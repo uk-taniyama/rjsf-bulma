@@ -32,13 +32,6 @@ const TextareaWidget:FC<WidgetProps> = ({
 
   return (
     <>
-      <FieldLabel
-        id={id}
-        label={label}
-        schema={schema}
-        uiSchema={uiSchema}
-        required={required}
-      />
       <FieldControl>
         <textarea
           id={id}

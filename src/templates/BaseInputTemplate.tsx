@@ -38,13 +38,6 @@ const BaseInputTemplate: FC<WidgetProps> = ({
   // const classNames = [rawErrors.length > 0 ? "is-invalid" : "", type === 'file' ? 'custom-file-label': ""]
   return (
     <>
-      <FieldLabel
-        id={id}
-        label={label}
-        schema={schema}
-        uiSchema={uiSchema}
-        required={required}
-      />
       <FieldControl>
         <input
           className={clsx("input", "is-small", isError && "is-danger")}

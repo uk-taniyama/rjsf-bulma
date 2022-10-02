@@ -3,7 +3,7 @@
 import type { FC } from 'react';
 
 import { WidgetProps } from "@rjsf/utils";
-import { FieldControl, FieldLabel } from "../ui";
+import { FieldControl } from "../ui";
 
 const RadioWidget:FC<WidgetProps> = ({
   id,
@@ -13,11 +13,9 @@ const RadioWidget:FC<WidgetProps> = ({
   required,
   disabled,
   readonly,
-  label,
   onChange,
   onBlur,
   onFocus,
-  uiSchema,
 }) => {
   const { enumOptions, enumDisabled } = options;
 
@@ -33,13 +31,6 @@ const RadioWidget:FC<WidgetProps> = ({
 
   return (
     <>
-      <FieldLabel
-        id={id}
-        label={label}
-        schema={schema}
-        required={required}
-        uiSchema={uiSchema}
-      />
       <FieldControl>
         {Array.isArray(enumOptions) &&
           enumOptions.map((option) => {

@@ -40,7 +40,6 @@ const SelectWidget:FC<WidgetProps> = ({
 
   return (
     <>
-      <FieldLabel id={id} label={label} schema={schema} required={required} />
       <FieldControl>
         <div
           className={clsx(

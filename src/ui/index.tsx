@@ -4,10 +4,9 @@ import { CSSProperties, PropsWithChildren } from "react";
 export const Row = ({
   children,
 }: PropsWithChildren<{ style?: CSSProperties }>) => (
-  <div>
     <div className="columns is-gapless">{children}</div>
-  </div>
 );
+
 export const Col = ({ n, children }: PropsWithChildren<{ n: number }>) => (
   <div className={`column is-${n}`}>{children}</div>
 );
@@ -61,22 +60,4 @@ export const CardHeader = ({ children }: PropsWithChildren) => {
 export const CardContent = ({ children }: PropsWithChildren) => {
   return <div className="message-body">{children}</div>;
 };
-/*
-<article class="message is-danger">
-  <div class="message-header">
-    <p>Error</p>
-    <button class="delete" aria-label="delete"></button>
-  </div>
-  <div class="message-body">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur.
-  </div>
-</article>
-*/
-// card: the main container
-// card-header: a horizontal bar with a shadow
-// card-header-title: a left-aligned bold text
-// card-header-icon: a placeholder for an icon
-// card-image: a fullwidth container for a responsive image
-// card-content: a multi-purpose container for any other element
-// card-footer: a horizontal list of controls
-// card-footer-item: a repeatable list item
+

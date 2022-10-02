@@ -43,51 +43,48 @@ const ArrayFieldTemplate: FC<ArrayFieldTemplateProps> = (props) => {
     ButtonTemplates: { AddButton },
   } = registry.templates;
   return (
-    <div>
-      <Row>
-        <Col n={12}>
-          <ArrayFieldTitleTemplate
+    <>
+      <Row><Col n={12}>
+        <ArrayFieldTitleTemplate
+          idSchema={idSchema}
+          title={uiOptions.title || title}
+          uiSchema={uiSchema}
+          required={required}
+          registry={registry}
+        />
+      </Col></Row>
+      {(uiOptions.description || schema.description) && (
+        <Row><Col n={12}>
+          <ArrayFieldDescriptionTemplate
             idSchema={idSchema}
-            title={uiOptions.title || title}
+            description={(uiOptions.description || schema.description)!}
             uiSchema={uiSchema}
-            required={required}
             registry={registry}
           />
-          {(uiOptions.description || schema.description) && (
-            <ArrayFieldDescriptionTemplate
-              idSchema={idSchema}
-              description={(uiOptions.description || schema.description)!}
+        </Col></Row>
+      )}
+      {items &&
+        items.map(({ key, ...itemProps }: ArrayFieldTemplateItemType) => (
+          <Row key={key}>
+            <Col n={12}>
+              <ArrayFieldItemTemplate key={key} {...itemProps} />
+            </Col>
+          </Row>
+        ))}
+      {canAdd && (
+        <Row>
+          <Col n={9}></Col>
+          <Col n={3}>
+            <AddButton
+              className="array-item-add"
+              onClick={onAddClick}
+              disabled={disabled || readonly}
               uiSchema={uiSchema}
-              registry={registry}
             />
-          )}
-          <div
-            className="fluid p-0 m-0"
-            key={`array-item-list-${idSchema.$id}`}
-          >
-            {items &&
-              items.map(({ key, ...itemProps }: ArrayFieldTemplateItemType) => (
-                <ArrayFieldItemTemplate key={key} {...itemProps} />
-              ))}
-            {canAdd && (
-              <div className="Container">
-                <Row>
-                  <Col n={9}></Col>
-                  <Col n={3}>
-                    <AddButton
-                      className="array-item-add"
-                      onClick={onAddClick}
-                      disabled={disabled || readonly}
-                      uiSchema={uiSchema}
-                    />
-                  </Col>
-                </Row>
-              </div>
-            )}
-          </div>
-        </Col>
-      </Row>
-    </div>
+          </Col>
+        </Row>
+      )}
+    </>
   );
 };
 

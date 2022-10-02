@@ -3,8 +3,7 @@ import Form from "../index";
 import validator from "@rjsf/validator-ajv6";
 import { getSample } from "./sample";
 
-import "bulma";
-import "bulma-extensions";
+import './bulma.scss';
 
 export interface PreviewProps {
   name: string;

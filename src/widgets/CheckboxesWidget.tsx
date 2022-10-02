@@ -2,7 +2,7 @@
 // FIXME スタイルを強引に当てている.....
 import type { FC } from 'react';
 import { WidgetProps } from "@rjsf/utils";
-import { FieldControl, FieldLabel } from "../ui";
+import { FieldControl } from "../ui";
 
 const selectValue = (value: any, selected: any, all: any) => {
   const at = all.indexOf(value);
@@ -54,13 +54,6 @@ const CheckboxesWidget:FC<WidgetProps> = ({
 
   return (
     <>
-      <FieldLabel
-        id={id}
-        label={label}
-        schema={schema}
-        required={required}
-        uiSchema={uiSchema}
-      />
       <FieldControl>
         {Array.isArray(enumOptions) &&
           enumOptions.map((option, index: number) => {

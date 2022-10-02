@@ -1,7 +1,7 @@
 import type { FC } from "react";
 import { FieldTemplateProps, getTemplate, getUiOptions } from "@rjsf/utils";
 import clsx from "clsx";
-import { FieldGroup } from "../ui";
+import { FieldGroup, FieldLabel } from "../ui";
 
 const FieldTemplate: FC<FieldTemplateProps> = ({
   id,
@@ -43,6 +43,15 @@ const FieldTemplate: FC<FieldTemplateProps> = ({
       registry={registry}
     >
       <FieldGroup>
+        {displayLabel && 
+          <FieldLabel
+            id={id}
+            label={label}
+            schema={schema}
+            uiSchema={uiSchema}
+            required={required}
+          />
+        }
         {children}
         {displayLabel && rawDescription && (
           <div

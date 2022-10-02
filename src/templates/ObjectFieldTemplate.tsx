@@ -39,41 +39,43 @@ const ObjectFieldTemplate: FC<ObjectFieldTemplateProps> = ({
   return (
     <>
       {(uiOptions.title || title) && (
-        <TitleFieldTemplate
-          id={`${idSchema.$id}-title`}
-          title={uiOptions.title || title}
-          required={required}
-          registry={registry}
-          uiSchema={uiSchema}
-        />
+        <Row><Col n={12}>
+          <TitleFieldTemplate
+            id={`${idSchema.$id}-title`}
+            title={uiOptions.title || title}
+            required={required}
+            registry={registry}
+            uiSchema={uiSchema}
+          />
+        </Col></Row>
       )}
       {(uiOptions.description || description) && (
-        <DescriptionFieldTemplate
-          id={`${idSchema.$id}-description`}
-          description={uiOptions.description || description!}
-          registry={registry}
-        />
+        <Row><Col n={12}>
+          <DescriptionFieldTemplate
+            id={`${idSchema.$id}-description`}
+            description={uiOptions.description || description!}
+            registry={registry}
+          />
+        </Col></Row>
       )}
-      <div>
-        {properties.map((element: any, index: number) => (
-          <Row key={index}>
-            <Col n={12}> {element.content}</Col>
-          </Row>
-        ))}
-        {canExpand(schema, uiSchema, formData) ? (
-          <Row>
-            <Col n={9}></Col>
-            <Col n={3}>
-              <AddButton
-                onClick={onAddClick(schema)}
-                disabled={disabled || readonly}
-                className="object-property-expand"
-                uiSchema={uiSchema}
-              />
-            </Col>
-          </Row>
-        ) : null}
-      </div>
+      {properties.map((element: any, index: number) => (
+        <Row key={index}>
+          <Col n={12}> {element.content}</Col>
+        </Row>
+      ))}
+      {canExpand(schema, uiSchema, formData) ? (
+        <Row>
+          <Col n={9}></Col>
+          <Col n={3}>
+            <AddButton
+              onClick={onAddClick(schema)}
+              disabled={disabled || readonly}
+              className="object-property-expand"
+              uiSchema={uiSchema}
+            />
+          </Col>
+        </Row>
+      ) : null}
     </>
   );
 };
