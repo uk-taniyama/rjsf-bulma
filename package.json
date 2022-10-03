@@ -14,7 +14,8 @@
     "url": "https://github.com/uk-taniyama/rjsf-bulma/issues"
   },
   "files": [
-    "dist"
+    "dist",
+    "scss"
   ],
   "keywords": [
     "bulma",
@@ -32,13 +33,13 @@
   },
   "scripts": {
     "start": "vite",
-    "dev": "cd e2e && vite",
+    "dev": "cd example && vite",
     "build": "rimraf dist && vite build",
-    "e2e:build": "cd e2e && vite build",
+    "build:example": "cd example && vite build",
     "e2e": "jest -c jest.e2e.config.js",
-    "format": "npm-run-all -s lint-fix cs-format",
     "pree2e:video": "rimraf e2e",
     "e2e:video": "E2E_VIDEO=true jest -c jest.e2e.config.js",
+    "format": "npm-run-all -s lint-fix cs-format",
     "cs-check": "prettier -l \"{src,test}/**/*.ts?(x)\"",
     "cs-format": "prettier \"{src,test}/**/*.ts?(x)\" --write",
     "lint": "eslint src test e2e/src",

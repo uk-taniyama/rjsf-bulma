@@ -1,5 +1,5 @@
-import { FC } from "react";
-import Form from "../index";
+import type { FC } from "react";
+import Form from "../../src/index";
 import validator from "@rjsf/validator-ajv6";
 import { getSample } from "./sample";
 

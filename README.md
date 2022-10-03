@@ -47,7 +47,7 @@ yarn add rjsf-bulma
 
 ### Example
 
-[Example](e2e/out/index.html)
+[Example](example/out/index.html)
 
 ## Usage
 

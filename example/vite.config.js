@@ -6,7 +6,7 @@ export default defineConfig(({ command }) => ({
   plugins: [react()],
   resolve: {
     alias: {
-      'rjsf-bulma/stories': __dirname + '/../src/stories',
+      'rjsf-bulma/stories': __dirname + '/../test/stories',
     },
   },
   build: {
