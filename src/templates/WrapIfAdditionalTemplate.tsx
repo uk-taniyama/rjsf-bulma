@@ -57,14 +57,18 @@ const WrapIfAdditionalTemplate: FC<WrapIfAdditionalTemplateProps> = ({
             </FieldGroup>
           </div>
         </Col>
-        <Col><div className="additional-property-value">{children}</div></Col>
+        <Col>
+          <div className="additional-property-value">{children}</div>
+        </Col>
         <Col n="narrow">
-          <RemoveButton
-            iconType="block"
-            disabled={disabled || readonly}
-            onClick={onDropPropertyClick(label)}
-            uiSchema={uiSchema}
-          />
+          <div className="additional-property-toolbar">
+            <RemoveButton
+              iconType="block"
+              disabled={disabled || readonly}
+              onClick={onDropPropertyClick(label)}
+              uiSchema={uiSchema}
+            />
+          </div>
         </Col>
       </Row>
     </div>

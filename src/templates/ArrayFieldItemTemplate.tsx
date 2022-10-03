@@ -21,7 +21,9 @@ const ArrayFieldItemTemplate: FC<ArrayFieldTemplateItemType> = (props) => {
     registry.templates.ButtonTemplates;
   return (
     <Row>
-      <Col><div className="array-value">{children}</div></Col>
+      <Col>
+        <div className="array-value">{children}</div>
+      </Col>
       <Col n="narrow">
         {hasToolbar && (
           <div className="field has-addons array-toolbar">
