@@ -34,6 +34,7 @@ const BaseInputTemplate: FC<WidgetProps> = ({
   }: React.FocusEvent<HTMLInputElement>) => onFocus(id, value);
 
   const isDanger = rawErrors && rawErrors.length > 0;
+
   return (
     <>
       <FieldControl>

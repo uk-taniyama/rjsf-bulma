@@ -1,6 +1,7 @@
 import type { FC } from "react";
 import type { WidgetProps } from "@rjsf/utils";
 import { FieldControl } from "../ui";
+import clsx from "clsx";
 
 const TextareaWidget: FC<WidgetProps> = ({
   id,
@@ -14,6 +15,7 @@ const TextareaWidget: FC<WidgetProps> = ({
   onChange,
   onBlur,
   onFocus,
+  rawErrors,
 }) => {
   const _onChange = ({
     target: { value },
@@ -26,13 +28,15 @@ const TextareaWidget: FC<WidgetProps> = ({
     target: { value },
   }: React.FocusEvent<HTMLTextAreaElement>) => onFocus(id, value);
 
+  const isDanger = rawErrors && rawErrors.length > 0;
+
   return (
     <>
       <FieldControl>
         <textarea
           id={id}
           name={id}
-          className="textarea is-small"
+          className={clsx("input is-small", isDanger && "is-danger")}
           value={value == null || value === options.emptyValue ? "" : value}
           placeholder={placeholder}
           required={required}

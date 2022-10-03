@@ -1,4 +1,3 @@
-// TODO FIXME radio is-smallが効かない。
 // TODO FIXME??? inlineがデフォルト......
 import type { FC } from "react";
 import type { WidgetProps } from "@rjsf/utils";
@@ -39,13 +38,11 @@ const RadioWidget: FC<WidgetProps> = ({
             const checked = option.value == value;
 
             return (
-              <label className="radio is-small is-size-7" key={option.value}>
+              <label className="radio is-small" key={option.value}>
                 <input
                   id={`${id}-${option.value}`}
                   name={id}
                   type="radio"
-                  className="mr-1"
-                  style={{ verticalAlign: "middle" }}
                   checked={checked}
                   required={required}
                   disabled={disabled || itemDisabled || readonly}

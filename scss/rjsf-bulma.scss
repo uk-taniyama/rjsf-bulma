@@ -15,40 +15,23 @@
   .panel.panel-default.panel-body {
     padding: $s2 $s3;
   }
-  // .field-hidden {
-  //   display: none;
-  // }
 
-  // .form-group.field-object {
-  //   margin-bottom: 0;
-  // }
+  .title-field {
+    border-bottom: 1px solid #0003;
+  }
 
-  // .form-group:not(.field) {
-  //   // Add margin below oneOf / anyOf dropdown.
-  //   margin-bottom: @form-item-margin-bottom;
-  // }
+  .checkbox.is-small,
+  .radio.is-small {
+    font-size: $size-7;
+    margin-right: $s2;
+    & input {
+      vertical-align: middle;
+      margin-right: $s1;
+    }
+  }
 
-  // .object-property-expand {
-  //   // Add margin below the `additionalProperties` related add button.
-  //   margin-bottom: @form-item-margin-bottom;
-  // }
-
-  // // .panel.panel-default.panel-body > .ant-row > fieldset > .ant-col.ant-form-item-label {
-  // .panel.panel-default.panel-body fieldset>.ant-col.ant-form-item-label {
-  //   // Hide oneOf / anyOf  object title.
-  //   display: none;
-  // }
-
-  // .panel.panel-danger.errors {
-  //   margin-bottom: @form-item-margin-bottom;
-
-  //   .list-group .ant-list-item {
-  //     margin-left: 0;
-  //     margin-right: 0;
-
-  //     .anticon.anticon-exclamation-circle {
-  //       color: @red-6;
-  //     }
-  //   }
-  // }
+  .required {
+    padding-left: $s1;
+    color: $danger;
+  }
 }

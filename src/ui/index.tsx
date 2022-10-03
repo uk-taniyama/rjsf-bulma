@@ -1,4 +1,4 @@
-import type { PropsWithChildren } from "react";
+import type { FC, PropsWithChildren } from "react";
 import type { WidgetProps } from "@rjsf/utils";
 import { getUiOptions } from "@rjsf/utils";
 import clsx from "clsx";
@@ -13,6 +13,13 @@ export const Col = ({
 }: PropsWithChildren<{ n?: number | string }>) => (
   <div className={clsx("column", n != null && `is-${n}`)}>{children}</div>
 );
+
+export interface RequiredProps {
+  required?: boolean;
+}
+
+export const Required: FC<RequiredProps> = ({ required }) =>
+  required ? <span className="required">*</span> : null;
 
 export type FieldLabelProps = Pick<
   WidgetProps,
@@ -39,7 +46,7 @@ export const FieldLabel = ({
   return (
     <label className="label is-small" htmlFor={id}>
       {labelText}
-      {required && <span className="required">*</span>}
+      <Required required={required} />
     </label>
   );
 };
@@ -48,11 +55,11 @@ export const FieldControl = ({ children }: PropsWithChildren) => {
   return <div className="control">{children}</div>;
 };
 
-export const Card = ({ children }: PropsWithChildren) => {
+export const ErrorMessage = ({ children }: PropsWithChildren) => {
   return <article className="message is-small is-danger">{children}</article>;
 };
 
-export const CardHeader = ({ children }: PropsWithChildren) => {
+export const ErrorMessageHeader = ({ children }: PropsWithChildren) => {
   return (
     <div className="message-header">
       <p>{children}</p>
@@ -60,6 +67,6 @@ export const CardHeader = ({ children }: PropsWithChildren) => {
   );
 };
 
-export const CardContent = ({ children }: PropsWithChildren) => {
+export const ErrorMessageBody = ({ children }: PropsWithChildren) => {
   return <div className="message-body">{children}</div>;
 };

@@ -12,15 +12,13 @@ const SubmitButton: FC<SubmitButtonProps> = (props) => {
     return null;
   }
   return (
-    <div>
-      <button
-        className="button is-primary is-small"
-        type="submit"
-        {...submitButtonProps}
-      >
-        {submitText}
-      </button>
-    </div>
+    <button
+      className="button is-primary is-small"
+      type="submit"
+      {...submitButtonProps}
+    >
+      {submitText}
+    </button>
   );
 };
 

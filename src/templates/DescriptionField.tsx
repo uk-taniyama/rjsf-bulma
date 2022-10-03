@@ -7,7 +7,7 @@ const DescriptionField: FC<DescriptionFieldProps> = ({ id, description }) => {
   }
 
   return (
-    <div id={id} className="mb-1 is-size-7">
+    <div id={id} className="description-field is-size-7">
       {description}
     </div>
   );

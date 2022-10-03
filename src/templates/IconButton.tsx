@@ -8,10 +8,7 @@ import clsx from "clsx";
 const IconButton: FC<IconButtonProps> = (props) => {
   const { icon, className, iconType, uiSchema, ...other } = props;
   return (
-    <button
-      className={clsx("button is-fullwidth is-small", className)}
-      {...other}
-    >
+    <button className={clsx("button is-small", className)} {...other}>
       {icon}
     </button>
   );
