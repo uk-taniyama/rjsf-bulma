@@ -7,5 +7,9 @@ export function getSample(name: string) {
   if (entry == null) {
     return null;
   }
-  return entry[1];
+  return {
+    uiSchema: {}, // force update uiSchema!!!
+    formData: {},
+    ...entry[1],
+  };
 }

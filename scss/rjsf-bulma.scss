@@ -20,6 +20,11 @@
     border-bottom: 1px solid #0003;
   }
 
+  .required {
+    padding-left: $s1;
+    color: $danger;
+  }
+
   .checkbox.is-small,
   .radio.is-small {
     font-size: $size-7;
@@ -28,10 +33,5 @@
       vertical-align: middle;
       margin-right: $s1;
     }
-  }
-
-  .required {
-    padding-left: $s1;
-    color: $danger;
   }
 }
