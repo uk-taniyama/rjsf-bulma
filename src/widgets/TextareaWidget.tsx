@@ -1,6 +1,6 @@
 import type { FC } from "react";
 import type { WidgetProps } from "@rjsf/utils";
-import { FieldControl } from "../ui";
+import { FieldControl, isSmallClass } from "../ui";
 import clsx from "clsx";
 
 const TextareaWidget: FC<WidgetProps> = ({
@@ -16,6 +16,7 @@ const TextareaWidget: FC<WidgetProps> = ({
   onBlur,
   onFocus,
   rawErrors,
+  formContext,
 }) => {
   const _onChange = ({
     target: { value },
@@ -36,7 +37,11 @@ const TextareaWidget: FC<WidgetProps> = ({
         <textarea
           id={id}
           name={id}
-          className={clsx("input is-small", isDanger && "is-danger")}
+          className={clsx(
+            "input",
+            isSmallClass(formContext),
+            isDanger && "is-danger"
+          )}
           value={value == null || value === options.emptyValue ? "" : value}
           placeholder={placeholder}
           required={required}

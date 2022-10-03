@@ -1,6 +1,6 @@
 import type { FC } from "react";
 import type { ArrayFieldTemplateItemType } from "@rjsf/utils";
-import { Col, Row } from "../ui";
+import { Col, Row, isSmallClass } from "../ui";
 
 const ArrayFieldItemTemplate: FC<ArrayFieldTemplateItemType> = (props) => {
   const {
@@ -17,6 +17,8 @@ const ArrayFieldItemTemplate: FC<ArrayFieldTemplateItemType> = (props) => {
     registry,
     uiSchema,
   } = props;
+  const { formContext } = registry;
+  const buttonClassName = isSmallClass(formContext);
   const { MoveDownButton, MoveUpButton, RemoveButton } =
     registry.templates.ButtonTemplates;
   return (
@@ -29,7 +31,7 @@ const ArrayFieldItemTemplate: FC<ArrayFieldTemplateItemType> = (props) => {
           <div className="field has-addons array-toolbar">
             <p className="control">
               <MoveUpButton
-                className="array-item-move-up"
+                className={buttonClassName}
                 disabled={disabled || readonly || !hasMoveUp}
                 onClick={onReorderClick(index, index - 1)}
                 uiSchema={uiSchema}
@@ -37,6 +39,7 @@ const ArrayFieldItemTemplate: FC<ArrayFieldTemplateItemType> = (props) => {
             </p>
             <p className="control">
               <MoveDownButton
+                className={buttonClassName}
                 disabled={disabled || readonly || !hasMoveDown}
                 onClick={onReorderClick(index, index + 1)}
                 uiSchema={uiSchema}
@@ -44,6 +47,7 @@ const ArrayFieldItemTemplate: FC<ArrayFieldTemplateItemType> = (props) => {
             </p>
             <p className="control">
               <RemoveButton
+                className={buttonClassName}
                 disabled={disabled || readonly || !hasRemove}
                 onClick={onDropIndexClick(index)}
                 uiSchema={uiSchema}

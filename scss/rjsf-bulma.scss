@@ -17,6 +17,7 @@
   }
 
   .title-field {
+    font-weight: bold;
     border-bottom: 1px solid #0003;
   }
 
@@ -31,11 +32,16 @@
     padding-left: $s2;
   }
 
+  .checkbox > input,
+  .radio > input {
+    margin-right: $s1;
+  }
+
   .checkbox.is-small,
   .radio.is-small {
     font-size: $size-7;
     margin-right: $s2;
-    & input {
+    & > input {
       vertical-align: middle;
       margin-right: $s1;
     }

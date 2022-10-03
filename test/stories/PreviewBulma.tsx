@@ -1,5 +1,6 @@
 import type { FC } from "react";
-import Form from "../../src/index";
+import { useState } from "react";
+import Form, { createIsSmallUiSchema } from "../../src/index";
 import validator from "@rjsf/validator-ajv6";
 import { getSample } from "./sample";
 
@@ -10,11 +11,34 @@ export interface PreviewProps {
 }
 
 const Preview: FC<PreviewProps> = ({ name }) => {
+  const [isSmall, setIsSmall] = useState(false);
+  const header = (
+    <div>
+      <button id="isSmall" onClick={() => setIsSmall((v) => !v)}>
+        {isSmall ? "isSmall" : "!isSmall"}
+      </button>
+    </div>
+  );
   const sample = getSample(name) as any;
   if (sample == null) {
-    return <>Not found sample:{name}</>;
+    return (
+      <>
+        {header}Not found sample:{name}
+      </>
+    );
   }
-  return <Form validator={validator} {...sample}></Form>;
+  const { uiSchema, ...rest } = sample;
+  return (
+    <>
+      {header}
+      <Form
+        validator={validator}
+        {...rest}
+        formContext={{ bulma: { isSmall } }}
+        uiSchema={isSmall ? createIsSmallUiSchema(uiSchema) : uiSchema}
+      ></Form>
+    </>
+  );
 };
 
 export default Preview;

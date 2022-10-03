@@ -1,7 +1,14 @@
 import type { FC } from "react";
 import type { WrapIfAdditionalTemplateProps } from "@rjsf/utils";
 import { ADDITIONAL_PROPERTY_FLAG } from "@rjsf/utils";
-import { Col, FieldControl, FieldGroup, FieldLabel, Row } from "../ui";
+import {
+  Col,
+  FieldControl,
+  FieldGroup,
+  FieldLabel,
+  Row,
+  isSmallClass,
+} from "../ui";
 import clsx from "clsx";
 
 const WrapIfAdditionalTemplate: FC<WrapIfAdditionalTemplateProps> = ({
@@ -18,6 +25,7 @@ const WrapIfAdditionalTemplate: FC<WrapIfAdditionalTemplateProps> = ({
   uiSchema,
   registry,
 }) => {
+  const { formContext } = registry;
   // Button templates are not overridden in the uiSchema
   const { RemoveButton } = registry.templates.ButtonTemplates;
   const keyLabel = "Key"; // i18n ?
@@ -42,10 +50,11 @@ const WrapIfAdditionalTemplate: FC<WrapIfAdditionalTemplateProps> = ({
                 label={keyLabel}
                 schema={{}}
                 required={required}
+                formContext={formContext}
               />
               <FieldControl>
                 <input
-                  className="input is-small"
+                  className={clsx("input", isSmallClass(formContext))}
                   defaultValue={label}
                   disabled={disabled || readonly}
                   id={keyId}

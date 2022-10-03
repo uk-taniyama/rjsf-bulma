@@ -1,7 +1,8 @@
 // FIXME checkboxを横並びにしている.....
 import type { FC } from "react";
 import type { WidgetProps } from "@rjsf/utils";
-import { FieldControl } from "../ui";
+import { FieldControl, isSmallClass } from "../ui";
+import clsx from "clsx";
 
 const selectValue = (value: any, selected: any, all: any) => {
   const at = all.indexOf(value);
@@ -27,6 +28,7 @@ const CheckboxesWidget: FC<WidgetProps> = ({
   onChange,
   onBlur,
   onFocus,
+  formContext,
 }) => {
   const { enumOptions, enumDisabled } = options;
 
@@ -59,7 +61,10 @@ const CheckboxesWidget: FC<WidgetProps> = ({
               enumDisabled.indexOf(option.value) !== -1;
 
             return (
-              <label className="checkbox is-small" key={option.value}>
+              <label
+                key={option.value}
+                className={clsx("checkbox", isSmallClass(formContext))}
+              >
                 <input
                   id={`${id}-${option.value}`}
                   name={id}

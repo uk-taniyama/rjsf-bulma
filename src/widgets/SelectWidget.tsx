@@ -2,7 +2,7 @@ import type { FC } from "react";
 import type { WidgetProps } from "@rjsf/utils";
 import { processSelectValue } from "@rjsf/utils";
 import clsx from "clsx";
-import { FieldControl } from "../ui";
+import { FieldControl, isSmallClass } from "../ui";
 
 const SelectWidget: FC<WidgetProps> = ({
   id,
@@ -18,6 +18,7 @@ const SelectWidget: FC<WidgetProps> = ({
   onChange,
   onBlur,
   onFocus,
+  formContext,
   rawErrors = [],
 }) => {
   const { enumOptions, enumDisabled } = options;
@@ -43,7 +44,8 @@ const SelectWidget: FC<WidgetProps> = ({
       <FieldControl>
         <div
           className={clsx(
-            "select is-small is-fullwidth",
+            "select is-fullwidth",
+            isSmallClass(formContext),
             multiple && "is-multiple",
             rawErrors.length && "is-danger"
           )}

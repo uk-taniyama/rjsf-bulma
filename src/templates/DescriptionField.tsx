@@ -1,13 +1,25 @@
 import type { FC } from "react";
 import type { DescriptionFieldProps } from "@rjsf/utils";
+import clsx from "clsx";
+import { isSmallClass } from "../ui";
 
-const DescriptionField: FC<DescriptionFieldProps> = ({ id, description }) => {
+const DescriptionField: FC<DescriptionFieldProps> = ({
+  id,
+  description,
+  registry,
+}) => {
   if (!description) {
     return null;
   }
 
   return (
-    <div id={id} className="description-field is-size-7">
+    <div
+      id={id}
+      className={clsx(
+        "description-field",
+        isSmallClass(registry.formContext, "is-size-7")
+      )}
+    >
       {description}
     </div>
   );

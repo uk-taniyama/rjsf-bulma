@@ -20,6 +20,7 @@ const FieldTemplate: FC<FieldTemplateProps> = ({
   schema,
   uiSchema,
   registry,
+  formContext,
 }) => {
   const uiOptions = getUiOptions(uiSchema);
   const WrapIfAdditionalTemplate = getTemplate<"WrapIfAdditionalTemplate">(
@@ -49,6 +50,7 @@ const FieldTemplate: FC<FieldTemplateProps> = ({
             schema={schema}
             uiSchema={uiSchema}
             required={required}
+            formContext={formContext}
           />
         )}
         {children}

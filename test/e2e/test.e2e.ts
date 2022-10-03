@@ -2,6 +2,7 @@
 import type { Browser, Page } from "playwright";
 import { chromium } from "playwright";
 import { toMatchImageSnapshot } from "jest-image-snapshot";
+import { sampleNames } from "../stories/sample";
 
 expect.extend({ toMatchImageSnapshot });
 
@@ -32,38 +33,62 @@ afterAll(async () => {
   await browser.close();
 });
 
-async function test(name: string) {
+async function gotoPage(name: string, title?: string) {
   page = await browser.newPage({
     viewport: { width: 1200, height: 1600 },
-    videosPath: videosPath(name),
+    videosPath: videosPath(title || name),
   });
   await page.goto(`${exampleURL}${name}.html`);
 
   await sleep(500);
-  const buttons = await page.locator("#buttons button");
+}
 
-  const count = await buttons.count();
-  for (let i = 0; i < count; i += 1) {
-    const button = buttons.nth(i);
-    console.log(await button.innerText());
-    await button.click();
-    await sleep(100);
-    expect(await page.screenshot()).toMatchImageSnapshot();
-  }
+async function buttonClick(selector: string) {
+  await page.locator(selector).click();
+  await sleep(100);
+}
+
+async function testScreenshot(name: string, nth: number) {
+  const button = await page.locator("#buttons button >> nth=" + nth);
+
+  await button.click();
+  await sleep(100);
+  expect(await page.screenshot()).toMatchImageSnapshot();
 }
 
 describe.skip("default", () => {
-  afterAll(async () => {
-    await page.close();
+  beforeAll(async () => {
+    await gotoPage("default");
   });
+  afterAll(() => page.close());
 
-  it("screenshot", async () => test("default"));
+  it.each(sampleNames.map((name, index) => [index, name]))(
+    "%i-%s",
+    (index, name) => testScreenshot(name, index)
+  );
 });
 
 describe("bulma", () => {
-  afterAll(async () => {
-    await page.close();
+  beforeAll(async () => {
+    await gotoPage("bulma");
   });
+  afterAll(() => page.close());
 
-  it("screenshot", async () => test("bulma"));
+  it.each(sampleNames.map((name, index) => [index, name]))(
+    "%i-%s",
+    (index, name) => testScreenshot(name, index)
+  );
+});
+
+describe("bulma:isSmall", () => {
+  beforeAll(async () => {
+    await gotoPage("bulma", "bulma-isSmall");
+    await buttonClick("#isSmall");
+  });
+  afterAll(() => page.close());
+
+  it.each(sampleNames.map((name, index) => [index, name]))(
+    "%i-%s",
+    (index, name) => testScreenshot(name, index)
+  );
 });

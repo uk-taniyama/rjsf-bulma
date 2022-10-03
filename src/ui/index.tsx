@@ -1,7 +1,45 @@
 import type { FC, PropsWithChildren } from "react";
-import type { WidgetProps } from "@rjsf/utils";
+import type { UiSchema, WidgetProps } from "@rjsf/utils";
 import { getUiOptions } from "@rjsf/utils";
 import clsx from "clsx";
+
+export const isSmallUiSchema = {
+  "ui:submitButtonOptions": {
+    props: {
+      className: "is-small",
+    },
+  },
+};
+
+function updateObject(obj: any, path: string[], setter: (value: any) => any) {
+  const root = { ...obj };
+  if (path.length == 0) {
+    return root;
+  }
+  let parent = root;
+  for (let i = 0; i < path.length - 1; i += 1) {
+    const key = path[i];
+    parent[key] = { ...parent[key] };
+    parent = parent[key];
+  }
+
+  const key = path[path.length - 1];
+  parent[key] = setter(parent[key]);
+  return root;
+}
+
+export function createIsSmallUiSchema(uiSchema: UiSchema = {}): UiSchema {
+  const key = ["ui:submitButtonOptions", "props", "className"];
+  return updateObject(uiSchema, key, (value) => clsx(value, "is-small"));
+}
+
+export function isSmall(formContext: any) {
+  return formContext?.bulma?.isSmall === true;
+}
+
+export function isSmallClass(formContext: any, className = "is-small") {
+  return isSmall(formContext) ? className : undefined;
+}
 
 export const Row = ({ children }: PropsWithChildren) => (
   <div className="columns is-gapless">{children}</div>
@@ -23,7 +61,7 @@ export const Required: FC<RequiredProps> = ({ required }) =>
 
 export type FieldLabelProps = Pick<
   WidgetProps,
-  "label" | "schema" | "id" | "required" | "uiSchema"
+  "label" | "schema" | "id" | "required" | "uiSchema" | "formContext"
 >;
 
 export const FieldGroup = ({ children }: PropsWithChildren) => {
@@ -36,6 +74,7 @@ export const FieldLabel = ({
   id,
   required,
   uiSchema,
+  formContext,
 }: FieldLabelProps) => {
   const uiOptions = getUiOptions(uiSchema);
   const labelText = uiOptions.title || label || schema.title;
@@ -44,7 +83,10 @@ export const FieldLabel = ({
     return null;
   }
   return (
-    <label className="label is-small" htmlFor={id}>
+    <label
+      className={clsx("label", isSmall(formContext) && "is-small")}
+      htmlFor={id}
+    >
       {labelText}
       <Required required={required} />
     </label>
@@ -53,20 +95,4 @@ export const FieldLabel = ({
 
 export const FieldControl = ({ children }: PropsWithChildren) => {
   return <div className="control">{children}</div>;
-};
-
-export const ErrorMessage = ({ children }: PropsWithChildren) => {
-  return <article className="message is-small is-danger">{children}</article>;
-};
-
-export const ErrorMessageHeader = ({ children }: PropsWithChildren) => {
-  return (
-    <div className="message-header">
-      <p>{children}</p>
-    </div>
-  );
-};
-
-export const ErrorMessageBody = ({ children }: PropsWithChildren) => {
-  return <div className="message-body">{children}</div>;
 };

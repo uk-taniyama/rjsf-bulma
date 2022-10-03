@@ -2,6 +2,8 @@
 import type { FC } from "react";
 import type { WidgetProps } from "@rjsf/utils";
 import { FieldControl } from "../ui";
+import { isSmallClass } from "../ui";
+import clsx from "clsx";
 
 const RadioWidget: FC<WidgetProps> = ({
   id,
@@ -14,6 +16,7 @@ const RadioWidget: FC<WidgetProps> = ({
   onChange,
   onBlur,
   onFocus,
+  formContext,
 }) => {
   const { enumOptions, enumDisabled } = options;
 
@@ -38,7 +41,10 @@ const RadioWidget: FC<WidgetProps> = ({
             const checked = option.value == value;
 
             return (
-              <label className="radio is-small" key={option.value}>
+              <label
+                key={option.value}
+                className={clsx("radio", isSmallClass(formContext))}
+              >
                 <input
                   id={`${id}-${option.value}`}
                   name={id}

@@ -4,7 +4,7 @@ import type {
   ArrayFieldTemplateProps,
 } from "@rjsf/utils";
 import { getTemplate, getUiOptions } from "@rjsf/utils";
-import { Col, Row } from "../ui";
+import { Col, Row, isSmallClass } from "../ui";
 
 const ArrayFieldTemplate: FC<ArrayFieldTemplateProps> = (props) => {
   const {
@@ -19,6 +19,7 @@ const ArrayFieldTemplate: FC<ArrayFieldTemplateProps> = (props) => {
     required,
     schema,
     title,
+    formContext,
   } = props;
   const uiOptions = getUiOptions(uiSchema);
   const ArrayFieldDescriptionTemplate =
@@ -79,7 +80,7 @@ const ArrayFieldTemplate: FC<ArrayFieldTemplateProps> = (props) => {
           <Col></Col>
           <Col n="narrow">
             <AddButton
-              className="array-item-add"
+              className={isSmallClass(formContext)}
               onClick={onAddClick}
               disabled={disabled || readonly}
               uiSchema={uiSchema}

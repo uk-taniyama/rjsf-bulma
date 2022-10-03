@@ -8,7 +8,7 @@ import clsx from "clsx";
 const IconButton: FC<IconButtonProps> = (props) => {
   const { icon, className, iconType, uiSchema, ...other } = props;
   return (
-    <button className={clsx("button is-small", className)} {...other}>
+    <button className={clsx("button", className)} {...other}>
       {icon}
     </button>
   );
@@ -24,11 +24,11 @@ export const MoveUpButton: FC<IconButtonProps> = (props) => (
   <IconButton title="Move up" {...props} icon={<AiOutlineArrowUp />} />
 );
 
-export const RemoveButton: FC<IconButtonProps> = (props) => (
+export const RemoveButton: FC<IconButtonProps> = ({ className, ...props }) => (
   <IconButton
     title="Remove"
     {...props}
-    className="is-danger"
+    className={clsx(className, "is-danger")}
     icon={<IoIosRemove />}
   />
 );

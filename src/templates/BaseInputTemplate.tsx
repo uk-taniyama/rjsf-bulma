@@ -2,7 +2,7 @@ import type { FC } from "react";
 import type { WidgetProps } from "@rjsf/utils";
 import { getInputProps } from "@rjsf/utils";
 import clsx from "clsx";
-import { FieldControl } from "../ui";
+import { FieldControl, isSmallClass } from "../ui";
 
 const BaseInputTemplate: FC<WidgetProps> = ({
   id,
@@ -20,6 +20,7 @@ const BaseInputTemplate: FC<WidgetProps> = ({
   schema,
   rawErrors,
   children,
+  formContext,
   extraProps,
 }) => {
   const inputProps = { ...extraProps, ...getInputProps(schema, type, options) };
@@ -39,7 +40,11 @@ const BaseInputTemplate: FC<WidgetProps> = ({
     <>
       <FieldControl>
         <input
-          className={clsx("input is-small", isDanger && "is-danger")}
+          className={clsx(
+            "input",
+            isSmallClass(formContext),
+            isDanger && "is-danger"
+          )}
           id={id}
           name={id}
           placeholder={placeholder}
