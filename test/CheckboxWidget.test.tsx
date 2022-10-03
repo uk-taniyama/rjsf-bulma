@@ -1,5 +1,5 @@
 import React from "react";
-import CheckboxWidget from "../src/Widgets/CheckboxWidget";
+import CheckboxWidget from "../src/widgets/CheckboxWidget";
 import renderer from "react-test-renderer";
 import { makeWidgetMockProps } from "./helpers/createMocks";
 

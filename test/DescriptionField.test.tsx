@@ -1,7 +1,7 @@
 import React from "react";
 import renderer from "react-test-renderer";
 
-import DescriptionField from "../src/Templates/DescriptionField";
+import DescriptionField from "../src/templates/DescriptionField";
 import { mockRegistry } from "./helpers/createMocks";
 
 const registry = mockRegistry();

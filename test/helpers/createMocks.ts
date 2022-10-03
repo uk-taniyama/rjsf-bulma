@@ -3,8 +3,8 @@ import { createSchemaUtils } from "@rjsf/utils";
 import { getDefaultRegistry } from "@rjsf/core";
 import validator from "@rjsf/validator-ajv6";
 
-import Templates from "../../src/Templates";
-import BaseInputTemplate from "../../src/Templates/BaseInputTemplate";
+import Templates from "../../src/templates";
+import BaseInputTemplate from "../../src/templates/BaseInputTemplate";
 
 export const mockSchema: RJSFSchema = {
   type: "array",
