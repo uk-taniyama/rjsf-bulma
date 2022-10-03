@@ -4,20 +4,19 @@ import clsx from "clsx";
 import { FieldControl } from "../ui";
 
 const SelectWidget: FC<WidgetProps> = ({
-  schema,
   id,
+  schema,
   options,
-  label,
+  value,
+  multiple,
+  placeholder,
+  autofocus,
   required,
   disabled,
   readonly,
-  value,
-  multiple,
-  autofocus,
   onChange,
   onBlur,
   onFocus,
-  placeholder,
   rawErrors = [],
 }) => {
   const { enumOptions, enumDisabled } = options;

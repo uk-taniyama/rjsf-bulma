@@ -20,7 +20,7 @@ const ArrayFieldItemTemplate: FC<ArrayFieldTemplateItemType> = (props) => {
   const { MoveDownButton, MoveUpButton, RemoveButton } =
     registry.templates.ButtonTemplates;
   return (
-    <Row style={{ alignItems: "flex-end" }}>
+    <Row>
       <Col>{children}</Col>
       <Col n="narrow">
         {hasToolbar && (

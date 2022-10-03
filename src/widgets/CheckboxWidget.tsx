@@ -40,7 +40,7 @@ const CheckboxWidget: FC<WidgetProps> = (props) => {
             type="checkbox"
             className="mr-1"
             style={{ verticalAlign: "middle" }}
-            checked={typeof value === "undefined" ? false : value}
+            checked={value == null ? false : value}
             required={required}
             disabled={disabled || readonly}
             autoFocus={autofocus}

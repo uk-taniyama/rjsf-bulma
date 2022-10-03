@@ -10,7 +10,6 @@ const BaseInputTemplate: FC<WidgetProps> = ({
   readonly,
   disabled,
   type,
-  label,
   value,
   onChange,
   onBlur,
@@ -18,8 +17,7 @@ const BaseInputTemplate: FC<WidgetProps> = ({
   autofocus,
   options,
   schema,
-  rawErrors = [],
-  uiSchema,
+  rawErrors,
   children,
   extraProps,
 }) => {
@@ -34,13 +32,12 @@ const BaseInputTemplate: FC<WidgetProps> = ({
     target: { value },
   }: React.FocusEvent<HTMLInputElement>) => onFocus(id, value);
 
-  const isError = rawErrors.length > 0;
-  // const classNames = [rawErrors.length > 0 ? "is-invalid" : "", type === 'file' ? 'custom-file-label': ""]
+  const isDanger = rawErrors && rawErrors.length > 0;
   return (
     <>
       <FieldControl>
         <input
-          className={clsx("input", "is-small", isError && "is-danger")}
+          className={clsx("input is-small", isDanger && "is-danger")}
           id={id}
           name={id}
           placeholder={placeholder}

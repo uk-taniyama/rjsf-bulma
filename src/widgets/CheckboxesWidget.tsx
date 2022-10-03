@@ -18,19 +18,16 @@ const deselectValue = (value: any, selected: any) => {
 };
 
 const CheckboxesWidget: FC<WidgetProps> = ({
-  schema,
-  label,
   id,
-  disabled,
   options,
   value,
   autofocus,
-  readonly,
   required,
+  disabled,
+  readonly,
   onChange,
   onBlur,
   onFocus,
-  uiSchema,
 }) => {
   const { enumOptions, enumDisabled } = options;
 

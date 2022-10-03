@@ -1,10 +1,8 @@
+import type { PropsWithChildren } from "react";
 import { getUiOptions, WidgetProps } from "@rjsf/utils";
 import clsx from "clsx";
-import { CSSProperties, PropsWithChildren } from "react";
 
-export const Row = ({
-  children,
-}: PropsWithChildren<{ style?: CSSProperties }>) => (
+export const Row = ({ children }: PropsWithChildren) => (
   <div className="columns is-gapless">{children}</div>
 );
 

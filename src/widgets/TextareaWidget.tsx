@@ -4,20 +4,16 @@ import { FieldControl } from "../ui";
 
 const TextareaWidget: FC<WidgetProps> = ({
   id,
-  placeholder,
+  options,
   value,
+  placeholder,
+  autofocus,
   required,
   disabled,
-  autofocus,
-  label,
   readonly,
+  onChange,
   onBlur,
   onFocus,
-  onChange,
-  options,
-  schema,
-  rawErrors = [],
-  uiSchema,
 }) => {
   const _onChange = ({
     target: { value },
@@ -37,11 +33,11 @@ const TextareaWidget: FC<WidgetProps> = ({
           id={id}
           name={id}
           className="textarea is-small"
+          value={value == null || value === options.emptyValue ? "" : value}
           placeholder={placeholder}
+          required={required}
           disabled={disabled}
           readOnly={readonly}
-          value={value}
-          required={required}
           autoFocus={autofocus}
           rows={options.rows || 5}
           onChange={_onChange}

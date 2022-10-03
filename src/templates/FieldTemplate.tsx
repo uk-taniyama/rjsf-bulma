@@ -1,13 +1,11 @@
 import type { FC } from "react";
 import { FieldTemplateProps, getTemplate, getUiOptions } from "@rjsf/utils";
-import clsx from "clsx";
 import { FieldGroup, FieldLabel } from "../ui";
 
 const FieldTemplate: FC<FieldTemplateProps> = ({
   id,
   children,
   displayLabel,
-  rawErrors = [],
   errors,
   help,
   rawDescription,
@@ -54,11 +52,7 @@ const FieldTemplate: FC<FieldTemplateProps> = ({
         )}
         {children}
         {displayLabel && rawDescription && (
-          <div
-            className={clsx("is-size-7", rawErrors.length > 0 && "is-danger")}
-          >
-            {rawDescription}
-          </div>
+          <div className="help">{rawDescription}</div>
         )}
         {errors}
         {help}

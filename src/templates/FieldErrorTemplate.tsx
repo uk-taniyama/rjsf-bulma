@@ -12,13 +12,13 @@ const FieldErrorTemplate: FC<FieldErrorProps> = (props) => {
   }
 
   return (
-    <p className="help is-danger">
+    <div className="help is-danger">
       <ul>
         {errors.map((error, i) => (
           <li key={i}>{error}</li>
         ))}
       </ul>
-    </p>
+    </div>
   );
 };
 
