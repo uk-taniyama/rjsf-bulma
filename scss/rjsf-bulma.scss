@@ -25,6 +25,12 @@
     color: $danger;
   }
 
+  .array-toolbar,
+  .additional-property-value,
+  .additional-property-toolbar {
+    padding-left: $s2;
+  }
+
   .checkbox.is-small,
   .radio.is-small {
     font-size: $size-7;

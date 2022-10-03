@@ -21,10 +21,10 @@ const ArrayFieldItemTemplate: FC<ArrayFieldTemplateItemType> = (props) => {
     registry.templates.ButtonTemplates;
   return (
     <Row>
-      <Col>{children}</Col>
+      <Col><div className="array-value">{children}</div></Col>
       <Col n="narrow">
         {hasToolbar && (
-          <div className="field has-addons pl-2">
+          <div className="field has-addons array-toolbar">
             <p className="control">
               <MoveUpButton
                 className="array-item-move-up"

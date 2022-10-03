@@ -36,7 +36,7 @@ const ObjectFieldTemplate: FC<ObjectFieldTemplateProps> = ({
     <>
       {(uiOptions.title || title) && (
         <Row>
-          <Col n={12}>
+          <Col>
             <TitleFieldTemplate
               id={`${idSchema.$id}-title`}
               title={uiOptions.title || title}
@@ -49,7 +49,7 @@ const ObjectFieldTemplate: FC<ObjectFieldTemplateProps> = ({
       )}
       {(uiOptions.description || description) && (
         <Row>
-          <Col n={12}>
+          <Col>
             <DescriptionFieldTemplate
               id={`${idSchema.$id}-description`}
               description={uiOptions.description || description!}
@@ -60,7 +60,7 @@ const ObjectFieldTemplate: FC<ObjectFieldTemplateProps> = ({
       )}
       {properties.map((element: any, index: number) => (
         <Row key={index}>
-          <Col n={12}> {element.content}</Col>
+          <Col> {element.content}</Col>
         </Row>
       ))}
       {canExpand(schema, uiSchema, formData) ? (

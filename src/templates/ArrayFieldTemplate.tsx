@@ -44,7 +44,7 @@ const ArrayFieldTemplate: FC<ArrayFieldTemplateProps> = (props) => {
   return (
     <>
       <Row>
-        <Col n={12}>
+        <Col>
           <ArrayFieldTitleTemplate
             idSchema={idSchema}
             title={uiOptions.title || title}
@@ -56,7 +56,7 @@ const ArrayFieldTemplate: FC<ArrayFieldTemplateProps> = (props) => {
       </Row>
       {(uiOptions.description || schema.description) && (
         <Row>
-          <Col n={12}>
+          <Col>
             <ArrayFieldDescriptionTemplate
               idSchema={idSchema}
               description={(uiOptions.description || schema.description)!}
@@ -69,7 +69,7 @@ const ArrayFieldTemplate: FC<ArrayFieldTemplateProps> = (props) => {
       {items &&
         items.map(({ key, ...itemProps }: ArrayFieldTemplateItemType) => (
           <Row key={key}>
-            <Col n={12}>
+            <Col>
               <ArrayFieldItemTemplate key={key} {...itemProps} />
             </Col>
           </Row>

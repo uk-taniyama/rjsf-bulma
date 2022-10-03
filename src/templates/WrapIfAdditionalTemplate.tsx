@@ -2,6 +2,7 @@ import type { FC } from "react";
 import type { WrapIfAdditionalTemplateProps } from "@rjsf/utils";
 import { ADDITIONAL_PROPERTY_FLAG } from "@rjsf/utils";
 import { Col, FieldControl, FieldGroup, FieldLabel, Row } from "../ui";
+import clsx from "clsx";
 
 const WrapIfAdditionalTemplate: FC<WrapIfAdditionalTemplateProps> = ({
   classNames,
@@ -31,40 +32,42 @@ const WrapIfAdditionalTemplate: FC<WrapIfAdditionalTemplateProps> = ({
   const keyId = `${id}-key`;
 
   return (
-    <Row key={keyId}>
-      <Col n={3}>
-        <FieldGroup>
-          <FieldLabel
-            id={keyId}
-            label={keyLabel}
-            schema={{}}
-            required={required}
-          />
-          <FieldControl>
-            <input
-              className="input is-small"
-              defaultValue={label}
-              disabled={disabled || readonly}
-              id={keyId}
-              name={keyId}
-              onBlur={!readonly ? handleBlur : undefined}
-              type="text"
-            />
-          </FieldControl>
-        </FieldGroup>
-      </Col>
-      <Col>{children}</Col>
-      <Col n="narrow">
-        <div className="pl-2">
+    <div className={clsx(classNames, "additional-property")}>
+      <Row key={keyId}>
+        <Col n={3}>
+          <div className="additional-property-key">
+            <FieldGroup>
+              <FieldLabel
+                id={keyId}
+                label={keyLabel}
+                schema={{}}
+                required={required}
+              />
+              <FieldControl>
+                <input
+                  className="input is-small"
+                  defaultValue={label}
+                  disabled={disabled || readonly}
+                  id={keyId}
+                  name={keyId}
+                  onBlur={!readonly ? handleBlur : undefined}
+                  type="text"
+                />
+              </FieldControl>
+            </FieldGroup>
+          </div>
+        </Col>
+        <Col><div className="additional-property-value">{children}</div></Col>
+        <Col n="narrow">
           <RemoveButton
             iconType="block"
             disabled={disabled || readonly}
             onClick={onDropPropertyClick(label)}
             uiSchema={uiSchema}
           />
-        </div>
-      </Col>
-    </Row>
+        </Col>
+      </Row>
+    </div>
   );
 };
 
