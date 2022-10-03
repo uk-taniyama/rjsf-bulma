@@ -1,5 +1,6 @@
 import type { FC } from "react";
-import { processSelectValue, WidgetProps } from "@rjsf/utils";
+import type { WidgetProps } from "@rjsf/utils";
+import { processSelectValue } from "@rjsf/utils";
 import clsx from "clsx";
 import { FieldControl } from "../ui";
 

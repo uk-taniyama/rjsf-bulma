@@ -1,4 +1,4 @@
-import { FC } from "react";
+import type { FC } from "react";
 import Form from "@rjsf/core";
 import validator from "@rjsf/validator-ajv6";
 import { getSample } from "./sample";

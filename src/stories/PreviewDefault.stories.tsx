@@ -1,5 +1,6 @@
-import { Story, Meta } from "@storybook/react";
-import Preview, { PreviewProps } from "./PreviewDefault";
+import type { Meta, Story } from "@storybook/react";
+import type { PreviewProps } from "./PreviewDefault";
+import Preview from "./PreviewDefault";
 import { sampleNames } from "./sample";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export

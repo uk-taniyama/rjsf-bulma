@@ -1,9 +1,7 @@
 import type { FC } from "react";
-import {
-  ADDITIONAL_PROPERTY_FLAG,
-  WrapIfAdditionalTemplateProps,
-} from "@rjsf/utils";
-import { FieldGroup, FieldLabel, FieldControl, Row, Col } from "../ui";
+import type { WrapIfAdditionalTemplateProps } from "@rjsf/utils";
+import { ADDITIONAL_PROPERTY_FLAG } from "@rjsf/utils";
+import { Col, FieldControl, FieldGroup, FieldLabel, Row } from "../ui";
 
 const WrapIfAdditionalTemplate: FC<WrapIfAdditionalTemplateProps> = ({
   classNames,

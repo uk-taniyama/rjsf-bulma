@@ -1,5 +1,5 @@
 import type { FC } from "react";
-import { FieldHelpProps } from "@rjsf/utils";
+import type { FieldHelpProps } from "@rjsf/utils";
 import clsx from "clsx";
 
 /** The `FieldHelpTemplate` component renders any help desired for a field

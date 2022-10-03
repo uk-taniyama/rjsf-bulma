@@ -1,4 +1,5 @@
-import { createSchemaUtils, WidgetProps, RJSFSchema } from "@rjsf/utils";
+import type { RJSFSchema, WidgetProps } from "@rjsf/utils";
+import { createSchemaUtils } from "@rjsf/utils";
 import { getDefaultRegistry } from "@rjsf/core";
 import validator from "@rjsf/validator-ajv6";
 

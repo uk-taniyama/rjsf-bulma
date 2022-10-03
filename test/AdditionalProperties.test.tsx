@@ -1,5 +1,5 @@
 import React from "react";
-import { RJSFSchema } from "@rjsf/utils";
+import type { RJSFSchema } from "@rjsf/utils";
 import validator from "@rjsf/validator-ajv6";
 import renderer from "react-test-renderer";
 

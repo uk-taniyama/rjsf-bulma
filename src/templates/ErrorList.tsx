@@ -1,6 +1,6 @@
 import type { FC } from "react";
-import { ErrorListProps } from "@rjsf/utils";
-import { Card, CardHeader, CardContent } from "../ui";
+import type { ErrorListProps } from "@rjsf/utils";
+import { Card, CardContent, CardHeader } from "../ui";
 
 const ErrorList: FC<ErrorListProps> = ({ errors }) => (
   <Card>

@@ -1,6 +1,7 @@
 // TODO FIXME Files
 import type { FC } from "react";
-import { getTemplate, WidgetProps } from "@rjsf/utils";
+import type { WidgetProps } from "@rjsf/utils";
+import { getTemplate } from "@rjsf/utils";
 
 const FileWidget: FC<WidgetProps> = (props) => {
   const { options, registry } = props;

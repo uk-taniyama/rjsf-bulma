@@ -1,5 +1,5 @@
 import type { FC } from "react";
-import { IconButtonProps } from "@rjsf/utils";
+import type { IconButtonProps } from "@rjsf/utils";
 import { IoIosRemove } from "@react-icons/all-files/io/IoIosRemove";
 import { AiOutlineArrowUp } from "@react-icons/all-files/ai/AiOutlineArrowUp";
 import { AiOutlineArrowDown } from "@react-icons/all-files/ai/AiOutlineArrowDown";

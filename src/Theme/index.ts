@@ -1,4 +1,4 @@
-import { ThemeProps } from "@rjsf/core";
+import type { ThemeProps } from "@rjsf/core";
 
 import templates from "../templates";
 import widgets from "../widgets";

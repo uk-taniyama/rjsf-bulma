@@ -1,5 +1,5 @@
 import type { FC } from "react";
-import { DescriptionFieldProps } from "@rjsf/utils";
+import type { DescriptionFieldProps } from "@rjsf/utils";
 
 const DescriptionField: FC<DescriptionFieldProps> = ({ id, description }) => {
   if (!description) {

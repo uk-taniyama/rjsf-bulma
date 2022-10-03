@@ -1,5 +1,6 @@
 import type { FC } from "react";
-import { getInputProps, WidgetProps } from "@rjsf/utils";
+import type { WidgetProps } from "@rjsf/utils";
+import { getInputProps } from "@rjsf/utils";
 import clsx from "clsx";
 import { FieldControl } from "../ui";
 

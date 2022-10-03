@@ -1,5 +1,6 @@
 import type { PropsWithChildren } from "react";
-import { getUiOptions, WidgetProps } from "@rjsf/utils";
+import type { WidgetProps } from "@rjsf/utils";
+import { getUiOptions } from "@rjsf/utils";
 import clsx from "clsx";
 
 export const Row = ({ children }: PropsWithChildren) => (

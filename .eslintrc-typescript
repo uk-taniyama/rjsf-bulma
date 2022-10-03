@@ -37,7 +37,20 @@
     "keyword-spacing": ["error"],
     "no-prototype-builtins": "error",
     "@typescript-eslint/no-empty-function": "warn",
-    "@typescript-eslint/no-var-requires": "warn"
+    "@typescript-eslint/no-var-requires": "warn",
+    "sort-imports": [
+      "error",
+      {
+        "ignoreCase": false,
+        "ignoreDeclarationSort": true,
+        "ignoreMemberSort": false,
+        "memberSyntaxSortOrder": ["none", "all", "multiple", "single"],
+        "allowSeparatedGroups": true
+      }
+    ],
+    "@typescript-eslint/consistent-type-imports": ["error", { "prefer": "type-imports" }],
+    "@typescript-eslint/type-annotation-spacing": "error",
+    "@typescript-eslint/ban-ts-comment": ["error", { "ts-expect-error": { "descriptionFormat": "^: TS\\d+" } }]
   },
   "env": {
     "es6": true,

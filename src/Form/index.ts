@@ -1,4 +1,5 @@
-import { withTheme, FormProps } from "@rjsf/core";
+import type { FormProps } from "@rjsf/core";
+import { withTheme } from "@rjsf/core";
 
 import Theme from "../Theme";
 
