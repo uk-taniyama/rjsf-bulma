@@ -32,9 +32,9 @@
   },
   "scripts": {
     "start": "vite",
+    "dev": "cd e2e && vite",
     "build": "rimraf dist && vite build",
     "e2e:build": "cd e2e && vite build",
-    "e2e:server": "cd e2e && vite",
     "e2e": "jest -c jest.e2e.config.js",
     "format": "npm-run-all -s lint-fix cs-format",
     "pree2e:video": "rimraf e2e",
