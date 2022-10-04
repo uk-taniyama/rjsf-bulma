@@ -36,6 +36,7 @@
     "dev": "cd example && vite",
     "build": "rimraf dist && vite build",
     "build:example": "cd example && vite build",
+    "build:css": "sass --load-path=node_modules/ scss/bulma.scss dist/index.css",
     "e2e": "jest -c jest.e2e.config.js",
     "pree2e:video": "rimraf e2e",
     "e2e:video": "E2E_VIDEO=true jest -c jest.e2e.config.js",
