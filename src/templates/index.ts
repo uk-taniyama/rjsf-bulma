@@ -1,2 +1,2 @@
 export { default } from "./Templates";
-export * from "./Templates";
+export type { FileInfoType, FilesInfoProps } from "./Templates";

@@ -12,6 +12,8 @@ import ObjectFieldTemplate from "./ObjectFieldTemplate";
 import SubmitButton from "./SubmitButton";
 import TitleFieldTemplate from "./TitleField";
 import WrapIfAdditionalTemplate from "./WrapIfAdditionalTemplate";
+import FilesInfoTemplate from "./FilesInfoTemplate";
+export type { FilesInfoProps, FileInfoType } from "../rjsf-core/useFileWidget";
 
 export default {
   ArrayFieldItemTemplate,
@@ -32,4 +34,5 @@ export default {
   ObjectFieldTemplate,
   TitleFieldTemplate,
   WrapIfAdditionalTemplate,
+  FilesInfoTemplate,
 };
