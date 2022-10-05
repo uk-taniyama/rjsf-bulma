@@ -41,7 +41,7 @@ const BaseInputTemplate: FC<WidgetProps> = ({
       <FieldControl>
         <input
           className={clsx(
-            "input",
+            type === "range" ? "slider is-fullwidth has-output" : "input",
             isSmallClass(formContext),
             isDanger && "is-danger"
           )}
@@ -59,6 +59,9 @@ const BaseInputTemplate: FC<WidgetProps> = ({
           onBlur={_onBlur}
           onFocus={_onFocus}
         />
+        {type === "range" && (
+          <output className={clsx(isSmallClass(formContext))}>{value}</output>
+        )}
       </FieldControl>
       {children}
       {schema.examples ? (

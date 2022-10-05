@@ -11,7 +11,7 @@ const RangeWidget: FC<WidgetProps> = (props) => {
     registry,
     options
   );
-  return <BaseInputTemplate {...props} />;
+  return <BaseInputTemplate {...props} type="range" />;
 };
 
 export default RangeWidget;

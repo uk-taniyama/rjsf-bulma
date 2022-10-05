@@ -33,6 +33,7 @@ Exports `bulma` theme, fields and widgets for `react-jsonschema-form`.
 ### Prerequisites
 
 - `bulma >= 0.9.4`
+- `bulma-slider >= ^2.0.5`
 - `@rjsf/core >= 5.0.0`
 
 ```bash
