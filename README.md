@@ -13,12 +13,12 @@ Bluma theme, fields and widgets for [react-jsonschema-form](https://github.com/m
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
   - [Example](#example)
+  - [Typedoc](#typedoc)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [Contact](#contact)
 
 ## About The Project
-
 
 Exports `bulma` theme, fields and widgets for `react-jsonschema-form`.
 
@@ -32,12 +32,12 @@ Exports `bulma` theme, fields and widgets for `react-jsonschema-form`.
 
 ### Prerequisites
 
-- `bulma >= 0.9.4`
-- `bulma-slider >= ^2.0.5`
 - `@rjsf/core >= 5.0.0`
+- `bulma >= 0.9.4`
+- `bulma-slider >= ^2.0.5 (for "ui:widget": "range")`
 
 ```bash
-yarn add bulma @rjsf/core
+yarn add @rjsf/core bulma bulma-slider
 ```
 
 ### Installation
@@ -49,6 +49,11 @@ yarn add rjsf-bulma
 ### Example
 
 [Example](example/out/index.html)
+
+### Typedoc
+
+[Typedoc](docs/README.md)
+
 
 ## Usage
 

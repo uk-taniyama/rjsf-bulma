@@ -1,0 +1,23 @@
+{
+  "extends": "./tsconfig.base.json",
+  "include": ["src"],
+  "compilerOptions": {
+    "noEmit": false,
+    "sourceMap": false
+  },
+  "typedocOptions": {
+    "entryPoints": [
+      "./src/index.ts",
+    ],
+    "out": "./docs",
+    "theme": "default",
+    "plugin": "typedoc-plugin-markdown",
+    "readme": "none",
+    "githubPages": false,
+    "disableSources": true,
+    "excludeExternals": true,
+    "excludePrivate": true,
+    "includeVersion": true,
+    "hideGenerator": true
+  }
+}
