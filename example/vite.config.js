@@ -12,6 +12,8 @@ export default defineConfig(({ command }) => {
       },
     },
     build: {
+      // minify: false,
+      // sourcemap: true,
       outDir: 'out',
       rollupOptions: {
         input: {

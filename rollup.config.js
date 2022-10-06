@@ -23,17 +23,18 @@ const dtsPlugins = [
 ];
 
 module.exports = [
-  { format: 'esm', ext: '.js', plugins: commonPlugins },
-  { format: 'cjs', ext: '.js', plugins: commonPlugins },
+  { format: 'esm', ext: '.js', plugins: commonPlugins, banner: "import React from 'react';\n" },
+  { format: 'cjs', ext: '.js', plugins: commonPlugins, banner: "var React = require('react');" },
   { format: 'es', ext: '.d.ts', plugins: dtsPlugins },
 ]
   .filter(({ format }) => watch === false || format === 'esm')
-  .map(({ format, ext, plugins }) => ['.']
+  .map(({ format, ext, plugins, banner }) => ['.']
     .map((dir) => ({
       plugins,
       input: `src/${dir}/index.ts`.replace('/./', '/'),
       output: {
         format,
+        banner,
         exports: 'named',
         file: `dist/${format}/${dir}/index${ext}`.replace('/./', '/'),
       },
