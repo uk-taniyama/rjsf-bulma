@@ -92,8 +92,8 @@ describe.only("bulma:isSmall", () => {
     (index, name) => testScreenshot(name, index)
   );
 
-  it("customFilesInfo", async() => {
+  it("customFilesInfo", async () => {
     await buttonClick("#customFilesInfo");
     await testScreenshotAfterClick("#buttons >> text=Files");
-  })
+  });
 });
