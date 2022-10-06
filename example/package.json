@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "build": "npx tsc --noEmit && npx vite build",
+    "dev": "npx vite"
+  },
+  "dependencies": {
+    "rjsf-bulma": "file:../"
+  }
+}

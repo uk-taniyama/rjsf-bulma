@@ -1,8 +1,7 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import type { Browser, Page } from "playwright";
 import { chromium } from "playwright";
 import { toMatchImageSnapshot } from "jest-image-snapshot";
-import { sampleNames } from "../stories/sample";
+import { sampleNames } from "../../example/src/stories/sample";
 
 expect.extend({ toMatchImageSnapshot });
 

@@ -1,5 +1,6 @@
 /dist
 /node_modules
+/example/node_modules
 /test/e2e/__image_snapshots__
 *.log
 *.tgz

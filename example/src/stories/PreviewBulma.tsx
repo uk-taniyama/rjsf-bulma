@@ -1,10 +1,10 @@
 import type { FC } from "react";
 import { useState } from "react";
-import Form, { createIsSmallUiSchema } from "../../src/index";
+import Form, { createIsSmallUiSchema } from "rjsf-bulma";
 import validator from "@rjsf/validator-ajv6";
 import { getSample } from "./sample";
 
-import "../../scss/bulma.scss";
+import "rjsf-bulma/scss/bulma.scss";
 
 export interface PreviewProps {
   name: string;

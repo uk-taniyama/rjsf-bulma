@@ -3,12 +3,11 @@ import type { WidgetProps } from "@rjsf/utils";
 import { FilesInfo } from "./FilesInfo";
 import { useFileWidget } from "./useFileWidget";
 
-
 /**
  *  The `FileWidget` is a widget for rendering file upload fields.
  *  It is typically used with a string property with data-url format.
  */
- function FileWidget<T, F>(props: WidgetProps<T, F>) {
+function FileWidget<T, F>(props: WidgetProps<T, F>) {
   const { id, readonly, disabled, autofocus, multiple, options } = props;
   const { handleChange, filesInfo } = useFileWidget(props);
 

@@ -3,7 +3,7 @@ import Form from "@rjsf/core";
 import validator from "@rjsf/validator-ajv6";
 import { getSample } from "./sample";
 
-// import './bootstrap.scss';
+import './bootstrap.scss';
 
 export interface PreviewProps {
   name: string;
