@@ -65,10 +65,31 @@ or
 
 ```js
 import { withTheme } from '@rjsf/core';
-import { Theme as BulmaTheme } from '@rjsf/bulma';
+import { Theme as BulmaTheme } from 'rjsf-bulma';
 
 const Form = withTheme(BulmaTheme);
 ```
+
+### Use stylesheet
+
+- Use compiled css.
+
+```js
+import "rjsf-bulma/dist/index.css";
+```
+
+- Use scss (ex. customize color...)
+
+```scss
+@import "bulma/bulma.sass";
+@import "bulma-slider/dist/css/bulma-slider.min.css";
+@import "rjsf-bulma/scss/rjsf-bulma.scss";
+```
+
+### Customize FileWidget
+
+- See [example Files](example/out/bulma.html?name=Files) and click "customFilesInfo" button.
+- See [source](https://github.com/uk-taniyama/rjsf-bulma/blob/master/example/src/stories/PreviewBulma.tsx#L13), [FilesInfoProps](docs/interfaces/FilesInfoProps.md)
 
 ## Contributing
 

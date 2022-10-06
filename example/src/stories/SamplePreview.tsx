@@ -26,7 +26,9 @@ function listenName(handler: (name: string) => void) {
 }
 
 const SamplePreview: FC<SamplePreviewProps> = ({ render }) => {
-  const [name, setName] = useState("");
+  const [name, setName] = useState(
+    new URLSearchParams(location.search).get("name") || ""
+  );
   useEffect(() => listenName(setName), [setName]);
   const handleName = (name: string) => () => {
     setName(name);
