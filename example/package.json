@@ -2,10 +2,13 @@
   "private": true,
   "license": "MIT",
   "scripts": {
+    "setup": "npm install ../../rjsf-bulma",
+    "prebuild": "npm run setup",
     "build": "npx tsc --noEmit && npx vite build",
+    "predev": "npm run setup",
     "dev": "npx vite"
   },
   "dependencies": {
-    "rjsf-bulma": "file:../"
+    "rjsf-bulma": "file:.."
   }
 }
