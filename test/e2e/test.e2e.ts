@@ -47,12 +47,13 @@ async function buttonClick(selector: string) {
   await sleep(100);
 }
 
-async function testScreenshot(name: string, nth: number) {
-  const button = await page.locator("#buttons button >> nth=" + nth);
+async function testScreenshotAfterClick(selector: string) {
+  await buttonClick(selector);
+  expect(await page.locator(".rjsf").screenshot()).toMatchImageSnapshot();
+}
 
-  await button.click();
-  await sleep(100);
-  expect(await page.screenshot()).toMatchImageSnapshot();
+async function testScreenshot(name: string, nth: number) {
+  await testScreenshotAfterClick("#buttons button >> nth=" + nth);
 }
 
 describe.skip("default", () => {
@@ -79,7 +80,7 @@ describe("bulma", () => {
   );
 });
 
-describe("bulma:isSmall", () => {
+describe.only("bulma:isSmall", () => {
   beforeAll(async () => {
     await gotoPage("bulma", "bulma-isSmall");
     await buttonClick("#isSmall");
@@ -90,4 +91,9 @@ describe("bulma:isSmall", () => {
     "%i-%s",
     (index, name) => testScreenshot(name, index)
   );
+
+  it("customFilesInfo", async() => {
+    await buttonClick("#customFilesInfo");
+    await testScreenshotAfterClick("#buttons >> text=Files");
+  })
 });
