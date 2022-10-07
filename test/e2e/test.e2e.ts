@@ -80,7 +80,7 @@ describe("bulma", () => {
   );
 });
 
-describe.only("bulma:isSmall", () => {
+describe("bulma:isSmall", () => {
   beforeAll(async () => {
     await gotoPage("bulma", "bulma-isSmall");
     await buttonClick("#isSmall");
