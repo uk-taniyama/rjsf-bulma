@@ -1,5 +1,5 @@
 import type { FC, ReactElement } from "react";
-import { useEffect } from "react";
+import { useMemo } from "react";
 import { useCallback, useState } from "react";
 import type { FilesInfoProps } from "rjsf-bulma";
 import Form, { createIsSmallUiSchema } from "rjsf-bulma";
@@ -25,7 +25,7 @@ const CustomFilesInfoTemplate: FC<FilesInfoProps> = (props) => {
   );
 };
 
-const templates: Partial<TemplatesType> = {
+const customTemplates: Partial<TemplatesType> = {
   FilesInfoTemplate: CustomFilesInfoTemplate,
 };
 
@@ -51,13 +51,21 @@ function useToggleButton(id: string): [boolean, ReactElement] {
 
 const Preview: FC<PreviewProps> = ({ name }) => {
   const [isSmall, toggleIsSmall] = useToggleButton("isSmall");
-  const [dummy, setDummy] = useState(false);
   const [customFilesInfo, toggleCustomFilesInfo] =
     useToggleButton("customFilesInfo");
-  // NOTE FORCE RENDER!!!
-  useEffect(() => {
-    setDummy((v) => !v);
-  }, [customFilesInfo]);
+  const formContext = useMemo(
+    () => ({
+      bulma: {
+        // form is-small or not.
+        isSmall,
+        // NOTE NO re-rendering on template update.
+        // NOTE -> Set to force a re-render on template update.
+        dummy: customFilesInfo,
+      },
+    }),
+    [isSmall, customFilesInfo]
+  );
+
   const header = (
     <div>
       {toggleIsSmall}
@@ -79,9 +87,9 @@ const Preview: FC<PreviewProps> = ({ name }) => {
       <Form
         validator={validator}
         {...rest}
-        formContext={{ bulma: { isSmall: dummy ? !isSmall : isSmall } }}
+        formContext={formContext}
         uiSchema={isSmall ? createIsSmallUiSchema(uiSchema) : uiSchema}
-        templates={customFilesInfo ? templates : undefined}
+        templates={customFilesInfo ? customTemplates : undefined}
       ></Form>
     </>
   );
