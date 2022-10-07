@@ -10,6 +10,7 @@ rjsf-bulma - v5.0.0-beta.1
 
 ### Interfaces
 
+- [BulmaContext](interfaces/BulmaContext.md)
 - [FilesInfoProps](interfaces/FilesInfoProps.md)
 
 ### Type Aliases
