@@ -1,7 +1,6 @@
 // copy from @rjsf/core 4adf86a1a633ae25fbeae2f9ca3e419716e5a3d2
-// FIXME dropとfile inputを共通化。
-import type { ChangeEvent, DragEvent, UIEvent } from "react";
-import { useCallback, useMemo, useState } from "react";
+import type { ChangeEvent, DragEvent, DragEventHandler, UIEvent } from "react";
+import { useCallback, useMemo, useRef, useState } from "react";
 
 import type { WidgetProps } from "@rjsf/utils";
 import { dataURItoBlob } from "@rjsf/utils";
@@ -55,6 +54,11 @@ function processFiles(files: FileList) {
   return Promise.all(Array.from(files).map(processFile));
 }
 
+function toValue(filesInfo: FileInfoType[], multiple?: boolean) {
+  const newValue = filesInfo.map((fileInfo) => fileInfo.dataURL);
+  return multiple ? newValue : newValue[0];
+}
+
 function extractFileInfo(dataURLs: string[]) {
   return dataURLs
     .filter((dataURL) => dataURL != null)
@@ -87,11 +91,48 @@ function handleDragEvent(event: DragEvent, multiple?: boolean) {
   return true;
 }
 
+export interface UseFileWidgetReturn {
+  /**
+   * choose file(s).
+   */
+  handleChoose: () => void;
+  /**
+   * clear chosen file(s).
+   */
+  handleClear: () => void;
+  /**
+   * <input type=file>
+   */
+  fileInputEl: JSX.Element,
+  /**
+   * drag-over at droppable.
+   */
+  dragOver: boolean;
+  /**
+   * droppable file handlers properties.
+   */
+  droppableProps: {
+    onDragEnter: DragEventHandler;
+    onDragOver: DragEventHandler;
+    onDragLeave: DragEventHandler;
+    onDrop: DragEventHandler;
+  };
+  /**
+   * chosen file(s).
+   */
+  filesInfo: FileInfoType[];
+}
+
 export function useFileWidget<T, F>({
-  value,
+  id,
+  readonly,
+  disabled,
+  autofocus,
   multiple,
+  options,
+  value,
   onChange,
-}: WidgetProps<T, F>) {
+}: WidgetProps<T, F>): UseFileWidgetReturn {
   const [dragOver, setDragOver] = useState(false);
   const extractedFilesInfo = useMemo(
     () =>
@@ -100,6 +141,8 @@ export function useFileWidget<T, F>({
   );
   const [filesInfo, setFilesInfo] =
     useState<FileInfoType[]>(extractedFilesInfo);
+  const fileRef = useRef<HTMLInputElement>(null);
+  const disabledInput = disabled || readonly;
 
   const handleChange = useCallback(
     (event: ChangeEvent<HTMLInputElement>) => {
@@ -108,12 +151,7 @@ export function useFileWidget<T, F>({
       }
       processFiles(event.target.files).then((filesInfoEvent) => {
         setFilesInfo(filesInfoEvent);
-        const newValue = filesInfoEvent.map((fileInfo) => fileInfo.dataURL);
-        if (multiple) {
-          onChange(newValue);
-        } else {
-          onChange(newValue[0]);
-        }
+        onChange(toValue(filesInfoEvent, multiple));
       });
     },
     [multiple, onChange]
@@ -155,20 +193,47 @@ export function useFileWidget<T, F>({
       event.preventDefault();
       processFiles(event.dataTransfer.files).then((filesInfoEvent) => {
         setFilesInfo(filesInfoEvent);
-        const newValue = filesInfoEvent.map((fileInfo) => fileInfo.dataURL);
-        if (multiple) {
-          onChange(newValue);
-        } else {
-          onChange(newValue[0]);
-        }
+        onChange(toValue(filesInfoEvent, multiple));
       });
     },
     [multiple, onChange]
   );
 
+  const handleChoose = useCallback(() => {
+    fileRef.current?.click();
+  }, [fileRef]);
+
+  const fileInputEl = useMemo(
+    () => (
+      <input
+        ref={fileRef}
+        id={id}
+        name={id}
+        type="file"
+        style={{ display: "none" }}
+        disabled={disabledInput}
+        onChange={handleChange}
+        value=""
+        autoFocus={autofocus}
+        multiple={multiple}
+        accept={options.accept ? String(options.accept) : undefined}
+      />
+    ),
+    [
+      fileRef,
+      id,
+      disabledInput,
+      handleChange,
+      autofocus,
+      multiple,
+      options.accept,
+    ]
+  );
+
   return {
-    handleChange,
+    handleChoose,
     handleClear,
+    fileInputEl,
     dragOver,
     droppableProps: {
       onDragEnter: handleDragEnter,

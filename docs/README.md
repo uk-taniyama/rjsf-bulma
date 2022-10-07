@@ -12,6 +12,7 @@ rjsf-bulma - v5.0.0-beta.1
 
 - [BulmaContext](interfaces/BulmaContext.md)
 - [FilesInfoProps](interfaces/FilesInfoProps.md)
+- [UseFileWidgetReturn](interfaces/UseFileWidgetReturn.md)
 
 ### Type Aliases
 
@@ -27,6 +28,7 @@ rjsf-bulma - v5.0.0-beta.1
 ### Functions
 
 - [createIsSmallUiSchema](README.md#createissmalluischema)
+- [useFileWidget](README.md#usefilewidget)
 
 ## References
 
@@ -123,3 +125,26 @@ ___
 #### Returns
 
 `UiSchema`
+
+___
+
+### useFileWidget
+
+▸ **useFileWidget**<`T`, `F`\>(`__namedParameters`): [`UseFileWidgetReturn`](interfaces/UseFileWidgetReturn.md)
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `T` |
+| `F` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `__namedParameters` | `WidgetProps`<`T`, `F`\> |
+
+#### Returns
+
+[`UseFileWidgetReturn`](interfaces/UseFileWidgetReturn.md)

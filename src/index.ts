@@ -1,6 +1,8 @@
 import Form from "./Form";
 import type { FilesInfoProps } from "./templates";
 
+export * from "./rjsf-core";
+
 export { default as Form } from "./Form";
 export { default as Templates } from "./templates";
 export type { FilesInfoProps, FileInfoType } from "./templates";
@@ -11,7 +13,7 @@ export { createIsSmallUiSchema } from "./ui";
 
 export interface BulmaContext {
   isSmall?: boolean;
-};
+}
 
 declare module "@rjsf/utils" {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
