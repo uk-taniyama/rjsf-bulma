@@ -10,86 +10,60 @@ exports[`array fields array 1`] = `
     className="form-group field field-array"
   >
     <div
-      className="form-group"
+      className="field"
     >
-      <div>
+      <div
+        className="columns is-gapless"
+      >
         <div
-          className="p-0 m-0 row"
+          className="column"
+        />
+      </div>
+      <div
+        className="columns is-gapless"
+      >
+        <div
+          className="column"
+        />
+        <div
+          className="column is-narrow"
         >
-          <div
-            className="p-0 m-0 col"
+          <button
+            className="button is-info"
+            disabled={false}
+            onClick={[Function]}
+            title="Add Item"
           >
-            <div
-              className="p-0 m-0 container-fluid"
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              strokeWidth="0"
+              style={
+                {
+                  "color": undefined,
+                }
+              }
+              viewBox="0 0 448 512"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <div
-                className="container"
-              >
-                <div
-                  className="mt-2 row"
-                >
-                  <div
-                    className="col-9"
-                  />
-                  <div
-                    className="py-4 col-lg-3 col-3 col-3"
-                  >
-                    <button
-                      className="ml-1 array-item-add btn btn-primary"
-                      disabled={false}
-                      onClick={[Function]}
-                      style={
-                        Object {
-                          "width": "100%",
-                        }
-                      }
-                      title="Add Item"
-                      type="button"
-                    >
-                      <svg
-                        fill="currentColor"
-                        height="1em"
-                        stroke="currentColor"
-                        strokeWidth="0"
-                        style={
-                          Object {
-                            "color": undefined,
-                          }
-                        }
-                        viewBox="0 0 16 16"
-                        width="1em"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          clipRule="evenodd"
-                          d="M8 3.5a.5.5 0 01.5.5v4a.5.5 0 01-.5.5H4a.5.5 0 010-1h3.5V4a.5.5 0 01.5-.5z"
-                          fillRule="evenodd"
-                        />
-                        <path
-                          clipRule="evenodd"
-                          d="M7.5 8a.5.5 0 01.5-.5h4a.5.5 0 010 1H8.5V12a.5.5 0 01-1 0V8z"
-                          fillRule="evenodd"
-                        />
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+              <path
+                d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"
+              />
+            </svg>
+          </button>
         </div>
       </div>
     </div>
   </div>
-  <div>
-    <button
-      className="btn btn-primary"
-      disabled={false}
-      type="submit"
-    >
-      Submit
-    </button>
-  </div>
+  <button
+    className="button is-primary"
+    disabled={false}
+    type="submit"
+  >
+    Submit
+  </button>
 </form>
 `;
 
@@ -103,414 +77,344 @@ exports[`array fields array icons 1`] = `
     className="form-group field field-array"
   >
     <div
-      className="form-group"
+      className="field"
     >
-      <div>
+      <div
+        className="columns is-gapless"
+      >
         <div
-          className="p-0 m-0 row"
+          className="column"
+        />
+      </div>
+      <div
+        className="columns is-gapless"
+      >
+        <div
+          className="column"
         >
           <div
-            className="p-0 m-0 col"
+            className="columns is-gapless"
           >
             <div
-              className="p-0 m-0 container-fluid"
+              className="column"
             >
-              <div>
-                <div
-                  className="mb-2  d-flex align-items-center row"
-                >
-                  <div
-                    className="col-lg-9 col-9"
-                  >
-                    <div
-                      className="form-group field field-string"
-                    >
-                      <div
-                        className="form-group"
-                      >
-                        <div
-                          className="mb-0 form-group"
-                        >
-                          <label
-                            className="form-label"
-                            htmlFor="root_0"
-                          />
-                          <input
-                            autoFocus={false}
-                            className="form-control"
-                            disabled={false}
-                            id="root_0"
-                            name="root_0"
-                            onBlur={[Function]}
-                            onChange={[Function]}
-                            onFocus={[Function]}
-                            placeholder=""
-                            readOnly={false}
-                            required={true}
-                            type="text"
-                            value="a"
-                          />
-                        </div>
-                        
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className="py-4 col-lg-3 col-3"
-                  >
-                    <div
-                      className="d-flex flex-row"
-                    >
-                      <div
-                        className="m-0 p-0"
-                      >
-                        <button
-                          className="btn btn-light btn-sm"
-                          disabled={true}
-                          onClick={[Function]}
-                          style={
-                            Object {
-                              "flex": 1,
-                              "fontWeight": "bold",
-                              "paddingLeft": 6,
-                              "paddingRight": 6,
-                            }
-                          }
-                          title="Move up"
-                          type="button"
-                        >
-                          <svg
-                            fill="currentColor"
-                            height="1em"
-                            stroke="currentColor"
-                            strokeWidth="0"
-                            style={
-                              Object {
-                                "color": undefined,
-                              }
-                            }
-                            viewBox="0 0 1024 1024"
-                            width="1em"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M868 545.5L536.1 163a31.96 31.96 0 0 0-48.3 0L156 545.5a7.97 7.97 0 0 0 6 13.2h81c4.6 0 9-2 12.1-5.5L474 300.9V864c0 4.4 3.6 8 8 8h60c4.4 0 8-3.6 8-8V300.9l218.9 252.3c3 3.5 7.4 5.5 12.1 5.5h81c6.8 0 10.5-8 6-13.2z"
-                            />
-                          </svg>
-                        </button>
-                      </div>
-                      <div
-                        className="m-0 p-0"
-                      >
-                        <button
-                          className="btn btn-light btn-sm"
-                          disabled={false}
-                          onClick={[Function]}
-                          style={
-                            Object {
-                              "flex": 1,
-                              "fontWeight": "bold",
-                              "paddingLeft": 6,
-                              "paddingRight": 6,
-                            }
-                          }
-                          title="Move down"
-                          type="button"
-                        >
-                          <svg
-                            fill="currentColor"
-                            height="1em"
-                            stroke="currentColor"
-                            strokeWidth="0"
-                            style={
-                              Object {
-                                "color": undefined,
-                              }
-                            }
-                            viewBox="0 0 1024 1024"
-                            width="1em"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M862 465.3h-81c-4.6 0-9 2-12.1 5.5L550 723.1V160c0-4.4-3.6-8-8-8h-60c-4.4 0-8 3.6-8 8v563.1L255.1 470.8c-3-3.5-7.4-5.5-12.1-5.5h-81c-6.8 0-10.5 8.1-6 13.2L487.9 861a31.96 31.96 0 0 0 48.3 0L868 478.5c4.5-5.2.8-13.2-6-13.2z"
-                            />
-                          </svg>
-                        </button>
-                      </div>
-                      <div
-                        className="m-0 p-0"
-                      >
-                        <button
-                          className="btn btn-danger btn-sm"
-                          disabled={false}
-                          onClick={[Function]}
-                          style={
-                            Object {
-                              "flex": 1,
-                              "fontWeight": "bold",
-                              "paddingLeft": 6,
-                              "paddingRight": 6,
-                            }
-                          }
-                          title="Remove"
-                          type="button"
-                        >
-                          <svg
-                            fill="currentColor"
-                            height="1em"
-                            stroke="currentColor"
-                            strokeWidth="0"
-                            style={
-                              Object {
-                                "color": undefined,
-                              }
-                            }
-                            viewBox="0 0 512 512"
-                            width="1em"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M368.5 240h-225c-8.8 0-16 7.2-16 16 0 4.4 1.8 8.4 4.7 11.3 2.9 2.9 6.9 4.7 11.3 4.7h225c8.8 0 16-7.2 16-16s-7.2-16-16-16z"
-                            />
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div
-                  className="mb-2  d-flex align-items-center row"
-                >
-                  <div
-                    className="col-lg-9 col-9"
-                  >
-                    <div
-                      className="form-group field field-string"
-                    >
-                      <div
-                        className="form-group"
-                      >
-                        <div
-                          className="mb-0 form-group"
-                        >
-                          <label
-                            className="form-label"
-                            htmlFor="root_1"
-                          />
-                          <input
-                            autoFocus={false}
-                            className="form-control"
-                            disabled={false}
-                            id="root_1"
-                            name="root_1"
-                            onBlur={[Function]}
-                            onChange={[Function]}
-                            onFocus={[Function]}
-                            placeholder=""
-                            readOnly={false}
-                            required={true}
-                            type="text"
-                            value="b"
-                          />
-                        </div>
-                        
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className="py-4 col-lg-3 col-3"
-                  >
-                    <div
-                      className="d-flex flex-row"
-                    >
-                      <div
-                        className="m-0 p-0"
-                      >
-                        <button
-                          className="btn btn-light btn-sm"
-                          disabled={false}
-                          onClick={[Function]}
-                          style={
-                            Object {
-                              "flex": 1,
-                              "fontWeight": "bold",
-                              "paddingLeft": 6,
-                              "paddingRight": 6,
-                            }
-                          }
-                          title="Move up"
-                          type="button"
-                        >
-                          <svg
-                            fill="currentColor"
-                            height="1em"
-                            stroke="currentColor"
-                            strokeWidth="0"
-                            style={
-                              Object {
-                                "color": undefined,
-                              }
-                            }
-                            viewBox="0 0 1024 1024"
-                            width="1em"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M868 545.5L536.1 163a31.96 31.96 0 0 0-48.3 0L156 545.5a7.97 7.97 0 0 0 6 13.2h81c4.6 0 9-2 12.1-5.5L474 300.9V864c0 4.4 3.6 8 8 8h60c4.4 0 8-3.6 8-8V300.9l218.9 252.3c3 3.5 7.4 5.5 12.1 5.5h81c6.8 0 10.5-8 6-13.2z"
-                            />
-                          </svg>
-                        </button>
-                      </div>
-                      <div
-                        className="m-0 p-0"
-                      >
-                        <button
-                          className="btn btn-light btn-sm"
-                          disabled={true}
-                          onClick={[Function]}
-                          style={
-                            Object {
-                              "flex": 1,
-                              "fontWeight": "bold",
-                              "paddingLeft": 6,
-                              "paddingRight": 6,
-                            }
-                          }
-                          title="Move down"
-                          type="button"
-                        >
-                          <svg
-                            fill="currentColor"
-                            height="1em"
-                            stroke="currentColor"
-                            strokeWidth="0"
-                            style={
-                              Object {
-                                "color": undefined,
-                              }
-                            }
-                            viewBox="0 0 1024 1024"
-                            width="1em"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M862 465.3h-81c-4.6 0-9 2-12.1 5.5L550 723.1V160c0-4.4-3.6-8-8-8h-60c-4.4 0-8 3.6-8 8v563.1L255.1 470.8c-3-3.5-7.4-5.5-12.1-5.5h-81c-6.8 0-10.5 8.1-6 13.2L487.9 861a31.96 31.96 0 0 0 48.3 0L868 478.5c4.5-5.2.8-13.2-6-13.2z"
-                            />
-                          </svg>
-                        </button>
-                      </div>
-                      <div
-                        className="m-0 p-0"
-                      >
-                        <button
-                          className="btn btn-danger btn-sm"
-                          disabled={false}
-                          onClick={[Function]}
-                          style={
-                            Object {
-                              "flex": 1,
-                              "fontWeight": "bold",
-                              "paddingLeft": 6,
-                              "paddingRight": 6,
-                            }
-                          }
-                          title="Remove"
-                          type="button"
-                        >
-                          <svg
-                            fill="currentColor"
-                            height="1em"
-                            stroke="currentColor"
-                            strokeWidth="0"
-                            style={
-                              Object {
-                                "color": undefined,
-                              }
-                            }
-                            viewBox="0 0 512 512"
-                            width="1em"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M368.5 240h-225c-8.8 0-16 7.2-16 16 0 4.4 1.8 8.4 4.7 11.3 2.9 2.9 6.9 4.7 11.3 4.7h225c8.8 0 16-7.2 16-16s-7.2-16-16-16z"
-                            />
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
               <div
-                className="container"
+                className="array-value"
               >
                 <div
-                  className="mt-2 row"
+                  className="form-group field field-string"
                 >
                   <div
-                    className="col-9"
-                  />
-                  <div
-                    className="py-4 col-lg-3 col-3 col-3"
+                    className="field"
                   >
-                    <button
-                      className="ml-1 array-item-add btn btn-primary"
-                      disabled={false}
-                      onClick={[Function]}
-                      style={
-                        Object {
-                          "width": "100%",
-                        }
-                      }
-                      title="Add Item"
-                      type="button"
+                    <div
+                      className="control"
                     >
-                      <svg
-                        fill="currentColor"
-                        height="1em"
-                        stroke="currentColor"
-                        strokeWidth="0"
-                        style={
-                          Object {
-                            "color": undefined,
-                          }
-                        }
-                        viewBox="0 0 16 16"
-                        width="1em"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          clipRule="evenodd"
-                          d="M8 3.5a.5.5 0 01.5.5v4a.5.5 0 01-.5.5H4a.5.5 0 010-1h3.5V4a.5.5 0 01.5-.5z"
-                          fillRule="evenodd"
-                        />
-                        <path
-                          clipRule="evenodd"
-                          d="M7.5 8a.5.5 0 01.5-.5h4a.5.5 0 010 1H8.5V12a.5.5 0 01-1 0V8z"
-                          fillRule="evenodd"
-                        />
-                      </svg>
-                    </button>
+                      <input
+                        autoFocus={false}
+                        className="input"
+                        disabled={false}
+                        id="root_0"
+                        name="root_0"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                        placeholder=""
+                        readOnly={false}
+                        required={true}
+                        type="text"
+                        value="a"
+                      />
+                    </div>
                   </div>
                 </div>
+              </div>
+            </div>
+            <div
+              className="column is-narrow"
+            >
+              <div
+                className="field has-addons array-toolbar"
+              >
+                <p
+                  className="control"
+                >
+                  <button
+                    className="button"
+                    disabled={true}
+                    onClick={[Function]}
+                    title="Move up"
+                  >
+                    <svg
+                      fill="currentColor"
+                      height="1em"
+                      stroke="currentColor"
+                      strokeWidth="0"
+                      style={
+                        {
+                          "color": undefined,
+                        }
+                      }
+                      viewBox="0 0 448 512"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"
+                      />
+                    </svg>
+                  </button>
+                </p>
+                <p
+                  className="control"
+                >
+                  <button
+                    className="button"
+                    disabled={false}
+                    onClick={[Function]}
+                    title="Move down"
+                  >
+                    <svg
+                      fill="currentColor"
+                      height="1em"
+                      stroke="currentColor"
+                      strokeWidth="0"
+                      style={
+                        {
+                          "color": undefined,
+                        }
+                      }
+                      viewBox="0 0 448 512"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M413.1 222.5l22.2 22.2c9.4 9.4 9.4 24.6 0 33.9L241 473c-9.4 9.4-24.6 9.4-33.9 0L12.7 278.6c-9.4-9.4-9.4-24.6 0-33.9l22.2-22.2c9.5-9.5 25-9.3 34.3.4L184 343.4V56c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24v287.4l114.8-120.5c9.3-9.8 24.8-10 34.3-.4z"
+                      />
+                    </svg>
+                  </button>
+                </p>
+                <p
+                  className="control"
+                >
+                  <button
+                    className="button is-danger"
+                    disabled={false}
+                    onClick={[Function]}
+                    title="Remove"
+                  >
+                    <svg
+                      fill="currentColor"
+                      height="1em"
+                      stroke="currentColor"
+                      strokeWidth="0"
+                      style={
+                        {
+                          "color": undefined,
+                        }
+                      }
+                      viewBox="0 0 448 512"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"
+                      />
+                    </svg>
+                  </button>
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <div
+        className="columns is-gapless"
+      >
+        <div
+          className="column"
+        >
+          <div
+            className="columns is-gapless"
+          >
+            <div
+              className="column"
+            >
+              <div
+                className="array-value"
+              >
+                <div
+                  className="form-group field field-string"
+                >
+                  <div
+                    className="field"
+                  >
+                    <div
+                      className="control"
+                    >
+                      <input
+                        autoFocus={false}
+                        className="input"
+                        disabled={false}
+                        id="root_1"
+                        name="root_1"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                        placeholder=""
+                        readOnly={false}
+                        required={true}
+                        type="text"
+                        value="b"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="column is-narrow"
+            >
+              <div
+                className="field has-addons array-toolbar"
+              >
+                <p
+                  className="control"
+                >
+                  <button
+                    className="button"
+                    disabled={false}
+                    onClick={[Function]}
+                    title="Move up"
+                  >
+                    <svg
+                      fill="currentColor"
+                      height="1em"
+                      stroke="currentColor"
+                      strokeWidth="0"
+                      style={
+                        {
+                          "color": undefined,
+                        }
+                      }
+                      viewBox="0 0 448 512"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"
+                      />
+                    </svg>
+                  </button>
+                </p>
+                <p
+                  className="control"
+                >
+                  <button
+                    className="button"
+                    disabled={true}
+                    onClick={[Function]}
+                    title="Move down"
+                  >
+                    <svg
+                      fill="currentColor"
+                      height="1em"
+                      stroke="currentColor"
+                      strokeWidth="0"
+                      style={
+                        {
+                          "color": undefined,
+                        }
+                      }
+                      viewBox="0 0 448 512"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M413.1 222.5l22.2 22.2c9.4 9.4 9.4 24.6 0 33.9L241 473c-9.4 9.4-24.6 9.4-33.9 0L12.7 278.6c-9.4-9.4-9.4-24.6 0-33.9l22.2-22.2c9.5-9.5 25-9.3 34.3.4L184 343.4V56c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24v287.4l114.8-120.5c9.3-9.8 24.8-10 34.3-.4z"
+                      />
+                    </svg>
+                  </button>
+                </p>
+                <p
+                  className="control"
+                >
+                  <button
+                    className="button is-danger"
+                    disabled={false}
+                    onClick={[Function]}
+                    title="Remove"
+                  >
+                    <svg
+                      fill="currentColor"
+                      height="1em"
+                      stroke="currentColor"
+                      strokeWidth="0"
+                      style={
+                        {
+                          "color": undefined,
+                        }
+                      }
+                      viewBox="0 0 448 512"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"
+                      />
+                    </svg>
+                  </button>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="columns is-gapless"
+      >
+        <div
+          className="column"
+        />
+        <div
+          className="column is-narrow"
+        >
+          <button
+            className="button is-info"
+            disabled={false}
+            onClick={[Function]}
+            title="Add Item"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              strokeWidth="0"
+              style={
+                {
+                  "color": undefined,
+                }
+              }
+              viewBox="0 0 448 512"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
     </div>
   </div>
-  <div>
-    <button
-      className="btn btn-primary"
-      disabled={false}
-      type="submit"
-    >
-      Submit
-    </button>
-  </div>
+  <button
+    className="button is-primary"
+    disabled={false}
+    type="submit"
+  >
+    Submit
+  </button>
 </form>
 `;
 
@@ -524,63 +428,59 @@ exports[`array fields checkboxes 1`] = `
     className="form-group field field-array"
   >
     <div
-      className="form-group"
+      className="field"
     >
       <div
-        className="form-group"
+        className="control"
       >
-        <label
-          className="form-label"
-          htmlFor="root"
-        />
-        <select
-          autoFocus={false}
-          className="custom-select"
-          disabled={false}
-          id="root"
-          multiple={true}
-          name="root"
-          onBlur={[Function]}
-          onChange={[Function]}
-          onFocus={[Function]}
-          required={false}
-          value={Array []}
+        <div
+          className="select is-fullwidth is-multiple"
         >
-          <option
+          <select
+            autoFocus={false}
             disabled={false}
-            id="a"
-            value="a"
+            id="root"
+            multiple={true}
+            name="root"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            required={false}
+            value={[]}
           >
-            a
-          </option>
-          <option
-            disabled={false}
-            id="b"
-            value="b"
-          >
-            b
-          </option>
-          <option
-            disabled={false}
-            id="c"
-            value="c"
-          >
-            c
-          </option>
-        </select>
+            <option
+              disabled={false}
+              id="a"
+              value="a"
+            >
+              a
+            </option>
+            <option
+              disabled={false}
+              id="b"
+              value="b"
+            >
+              b
+            </option>
+            <option
+              disabled={false}
+              id="c"
+              value="c"
+            >
+              c
+            </option>
+          </select>
+        </div>
       </div>
-      
     </div>
   </div>
-  <div>
-    <button
-      className="btn btn-primary"
-      disabled={false}
-      type="submit"
-    >
-      Submit
-    </button>
-  </div>
+  <button
+    className="button is-primary"
+    disabled={false}
+    type="submit"
+  >
+    Submit
+  </button>
 </form>
 `;
 
@@ -594,56 +494,45 @@ exports[`array fields empty errors array 1`] = `
     className="form-group field field-object"
   >
     <div
-      className="form-group"
+      className="field"
     >
-      
       <div
-        className="p-0 container-fluid"
+        className="columns is-gapless"
       >
         <div
-          className="row"
-          style={
-            Object {
-              "marginBottom": "10px",
-            }
-          }
+          className="column"
         >
+           
           <div
-            className="col-12"
+            className="form-group field field-string"
           >
-             
             <div
-              className="form-group field field-string"
+              className="field"
             >
-              <div
-                className="form-group"
+              <label
+                className="label"
+                htmlFor="root_name"
               >
-                <div
-                  className="mb-0 form-group"
-                >
-                  <label
-                    className="form-label"
-                    htmlFor="root_name"
-                  >
-                    name
-                  </label>
-                  <input
-                    autoFocus={false}
-                    className="form-control"
-                    disabled={false}
-                    id="root_name"
-                    name="root_name"
-                    onBlur={[Function]}
-                    onChange={[Function]}
-                    onFocus={[Function]}
-                    placeholder=""
-                    readOnly={false}
-                    required={false}
-                    type="text"
-                    value=""
-                  />
-                </div>
-                
+                name
+              </label>
+              <div
+                className="control"
+              >
+                <input
+                  autoFocus={false}
+                  className="input"
+                  disabled={false}
+                  id="root_name"
+                  name="root_name"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  placeholder=""
+                  readOnly={false}
+                  required={false}
+                  type="text"
+                  value=""
+                />
               </div>
             </div>
           </div>
@@ -651,15 +540,13 @@ exports[`array fields empty errors array 1`] = `
       </div>
     </div>
   </div>
-  <div>
-    <button
-      className="btn btn-primary"
-      disabled={false}
-      type="submit"
-    >
-      Submit
-    </button>
-  </div>
+  <button
+    className="button is-primary"
+    disabled={false}
+    type="submit"
+  >
+    Submit
+  </button>
 </form>
 `;
 
@@ -673,124 +560,125 @@ exports[`array fields fixed array 1`] = `
     className="form-group field field-array"
   >
     <div
-      className="form-group"
+      className="field"
     >
-      <div>
+      <div
+        className="columns is-gapless"
+      >
         <div
-          className="p-0 m-0 row"
+          className="column"
+        />
+      </div>
+      <div
+        className="columns is-gapless"
+      >
+        <div
+          className="column"
         >
           <div
-            className="p-0 m-0 col"
+            className="columns is-gapless"
           >
             <div
-              className="p-0 m-0 container-fluid"
+              className="column"
             >
-              <div>
+              <div
+                className="array-value"
+              >
                 <div
-                  className="mb-2  d-flex align-items-center row"
+                  className="form-group field field-string"
                 >
                   <div
-                    className="col-lg-9 col-9"
+                    className="field"
                   >
                     <div
-                      className="form-group field field-string"
+                      className="control"
                     >
-                      <div
-                        className="form-group"
-                      >
-                        <div
-                          className="mb-0 form-group"
-                        >
-                          <label
-                            className="form-label"
-                            htmlFor="root_0"
-                          />
-                          <input
-                            autoFocus={false}
-                            className="form-control"
-                            disabled={false}
-                            id="root_0"
-                            name="root_0"
-                            onBlur={[Function]}
-                            onChange={[Function]}
-                            onFocus={[Function]}
-                            placeholder=""
-                            readOnly={false}
-                            required={true}
-                            type="text"
-                            value=""
-                          />
-                        </div>
-                        
-                      </div>
+                      <input
+                        autoFocus={false}
+                        className="input"
+                        disabled={false}
+                        id="root_0"
+                        name="root_0"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                        placeholder=""
+                        readOnly={false}
+                        required={true}
+                        type="text"
+                        value=""
+                      />
                     </div>
                   </div>
-                  <div
-                    className="py-4 col-lg-3 col-3"
-                  />
-                </div>
-              </div>
-              <div>
-                <div
-                  className="mb-2  d-flex align-items-center row"
-                >
-                  <div
-                    className="col-lg-9 col-9"
-                  >
-                    <div
-                      className="form-group field field-number"
-                    >
-                      <div
-                        className="form-group"
-                      >
-                        <div
-                          className="mb-0 form-group"
-                        >
-                          <label
-                            className="form-label"
-                            htmlFor="root_1"
-                          />
-                          <input
-                            autoFocus={false}
-                            className="form-control"
-                            disabled={false}
-                            id="root_1"
-                            name="root_1"
-                            onBlur={[Function]}
-                            onChange={[Function]}
-                            onFocus={[Function]}
-                            placeholder=""
-                            readOnly={false}
-                            required={true}
-                            step="any"
-                            type="number"
-                            value=""
-                          />
-                        </div>
-                        
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className="py-4 col-lg-3 col-3"
-                  />
                 </div>
               </div>
             </div>
+            <div
+              className="column is-narrow"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        className="columns is-gapless"
+      >
+        <div
+          className="column"
+        >
+          <div
+            className="columns is-gapless"
+          >
+            <div
+              className="column"
+            >
+              <div
+                className="array-value"
+              >
+                <div
+                  className="form-group field field-number"
+                >
+                  <div
+                    className="field"
+                  >
+                    <div
+                      className="control"
+                    >
+                      <input
+                        autoFocus={false}
+                        className="input"
+                        disabled={false}
+                        id="root_1"
+                        name="root_1"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                        placeholder=""
+                        readOnly={false}
+                        required={true}
+                        step="any"
+                        type="number"
+                        value=""
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="column is-narrow"
+            />
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div>
-    <button
-      className="btn btn-primary"
-      disabled={false}
-      type="submit"
-    >
-      Submit
-    </button>
-  </div>
+  <button
+    className="button is-primary"
+    disabled={false}
+    type="submit"
+  >
+    Submit
+  </button>
 </form>
 `;
 
@@ -804,56 +692,45 @@ exports[`array fields no errors 1`] = `
     className="form-group field field-object"
   >
     <div
-      className="form-group"
+      className="field"
     >
-      
       <div
-        className="p-0 container-fluid"
+        className="columns is-gapless"
       >
         <div
-          className="row"
-          style={
-            Object {
-              "marginBottom": "10px",
-            }
-          }
+          className="column"
         >
+           
           <div
-            className="col-12"
+            className="form-group field field-string"
           >
-             
             <div
-              className="form-group field field-string"
+              className="field"
             >
-              <div
-                className="form-group"
+              <label
+                className="label"
+                htmlFor="root_name"
               >
-                <div
-                  className="mb-0 form-group"
-                >
-                  <label
-                    className="form-label"
-                    htmlFor="root_name"
-                  >
-                    name
-                  </label>
-                  <input
-                    autoFocus={false}
-                    className="form-control"
-                    disabled={false}
-                    id="root_name"
-                    name="root_name"
-                    onBlur={[Function]}
-                    onChange={[Function]}
-                    onFocus={[Function]}
-                    placeholder=""
-                    readOnly={false}
-                    required={false}
-                    type="text"
-                    value=""
-                  />
-                </div>
-                
+                name
+              </label>
+              <div
+                className="control"
+              >
+                <input
+                  autoFocus={false}
+                  className="input"
+                  disabled={false}
+                  id="root_name"
+                  name="root_name"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  placeholder=""
+                  readOnly={false}
+                  required={false}
+                  type="text"
+                  value=""
+                />
               </div>
             </div>
           </div>
@@ -861,14 +738,12 @@ exports[`array fields no errors 1`] = `
       </div>
     </div>
   </div>
-  <div>
-    <button
-      className="btn btn-primary"
-      disabled={false}
-      type="submit"
-    >
-      Submit
-    </button>
-  </div>
+  <button
+    className="button is-primary"
+    disabled={false}
+    type="submit"
+  >
+    Submit
+  </button>
 </form>
 `;

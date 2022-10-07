@@ -2,19 +2,9 @@
 
 exports[`TitleField simple 1`] = `
 <div
-  className="my-1"
+  className="title-field"
   id="testid"
 >
-  <h5>
-    Hello
-  </h5>
-  <hr
-    className="border-0 bg-secondary"
-    style={
-      Object {
-        "height": "1px",
-      }
-    }
-  />
+  Hello
 </div>
 `;

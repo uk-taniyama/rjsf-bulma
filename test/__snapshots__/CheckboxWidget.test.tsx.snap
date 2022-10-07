@@ -2,15 +2,14 @@
 
 exports[`CheckboxWidget simple 1`] = `
 <div
-  className="checkbox disabled form-group"
+  className="control"
 >
-  <div
-    className="form-check"
+  <label
+    className="checkbox"
   >
     <input
       autoFocus={true}
       checked="value"
-      className="form-check-input"
       disabled={true}
       id="_id"
       name="_id"
@@ -20,13 +19,7 @@ exports[`CheckboxWidget simple 1`] = `
       required={true}
       type="checkbox"
     />
-    <label
-      className="form-check-label"
-      htmlFor="_id"
-      title=""
-    >
-      Some simple label
-    </label>
-  </div>
+    Some simple label
+  </label>
 </div>
 `;
