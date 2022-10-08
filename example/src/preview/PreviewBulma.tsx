@@ -1,7 +1,7 @@
 import type { FC, ReactElement } from "react";
 import { useMemo } from "react";
 import { useCallback, useState } from "react";
-import type { FilesInfoProps } from "rjsf-bulma";
+import type { FilesInfoTemplateProps } from "rjsf-bulma";
 import Form, { createIsSmallUiSchema } from "rjsf-bulma";
 import validator from "@rjsf/validator-ajv6";
 import { getSample } from "./sample";
@@ -10,7 +10,7 @@ import clsx from "clsx";
 
 import "rjsf-bulma/scss/bulma.scss";
 
-const CustomFilesInfoTemplate: FC<FilesInfoProps> = (props) => {
+const CustomFilesInfoTemplate: FC<FilesInfoTemplateProps> = (props) => {
   return (
     <pre
       style={{

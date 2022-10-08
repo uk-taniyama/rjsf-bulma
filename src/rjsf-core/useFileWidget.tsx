@@ -19,11 +19,6 @@ export type FileInfoType = {
   type: string;
 };
 
-export interface FilesInfoProps {
-  filesInfo: FileInfoType[];
-  multiple?: boolean;
-}
-
 function processFile(file: File): Promise<FileInfoType> {
   const { name, size, type } = file;
   return new Promise((resolve, reject) => {
@@ -103,7 +98,7 @@ export interface UseFileWidgetReturn {
   /**
    * <input type=file>
    */
-  fileInputEl: JSX.Element,
+  fileInputEl: JSX.Element;
   /**
    * drag-over at droppable.
    */

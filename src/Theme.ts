@@ -1,7 +1,7 @@
 import type { ThemeProps } from "@rjsf/core";
 
-import templates from "../templates";
-import widgets from "../widgets";
+import templates from "./templates";
+import widgets from "./widgets";
 
 const Theme: ThemeProps = {
   templates,

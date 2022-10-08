@@ -19,11 +19,15 @@
 
 • **dragOver**: `boolean`
 
+drag-over at droppable.
+
 ___
 
 ### droppableProps
 
 • **droppableProps**: `Object`
+
+droppable file handlers properties.
 
 #### Type declaration
 
@@ -40,11 +44,15 @@ ___
 
 • **fileInputEl**: `Element`
 
+<input type=file>
+
 ___
 
 ### filesInfo
 
 • **filesInfo**: [`FileInfoType`](../README.md#fileinfotype)[]
+
+chosen file(s).
 
 ___
 
@@ -55,6 +63,8 @@ ___
 #### Type declaration
 
 ▸ (): `void`
+
+choose file(s).
 
 ##### Returns
 
@@ -69,6 +79,8 @@ ___
 #### Type declaration
 
 ▸ (): `void`
+
+clear chosen file(s).
 
 ##### Returns
 

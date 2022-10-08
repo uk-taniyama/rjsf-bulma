@@ -1,6 +1,7 @@
 import type { FC } from "react";
 import type { WrapIfAdditionalTemplateProps } from "@rjsf/utils";
 import { ADDITIONAL_PROPERTY_FLAG } from "@rjsf/utils";
+import clsx from "clsx";
 import {
   Col,
   FieldControl,
@@ -9,7 +10,6 @@ import {
   Row,
   isSmallClass,
 } from "../ui";
-import clsx from "clsx";
 
 const WrapIfAdditionalTemplate: FC<WrapIfAdditionalTemplateProps> = ({
   classNames,

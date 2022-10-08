@@ -1,4 +1,3 @@
-// TODO FIXME
 import type { FC } from "react";
 
 import type { WidgetProps } from "@rjsf/utils";

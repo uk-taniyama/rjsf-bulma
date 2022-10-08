@@ -1,7 +1,15 @@
 import type { FC } from "react";
-import type { FilesInfoProps } from "../rjsf-core/useFileWidget";
+import type { FileInfoType } from "../rjsf-core/useFileWidget";
 
-const FilesInfoTemplate: FC<FilesInfoProps> = ({ filesInfo, multiple }) => {
+export interface FilesInfoTemplateProps {
+  filesInfo: FileInfoType[];
+  multiple?: boolean;
+}
+
+const FilesInfoTemplate: FC<FilesInfoTemplateProps> = ({
+  filesInfo,
+  multiple,
+}) => {
   if (filesInfo.length === 0) {
     const placeholder = multiple
       ? "Choose or drop files."

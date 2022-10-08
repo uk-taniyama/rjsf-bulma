@@ -11,7 +11,7 @@ rjsf-bulma - v5.0.0-beta.1
 ### Interfaces
 
 - [BulmaContext](interfaces/BulmaContext.md)
-- [FilesInfoProps](interfaces/FilesInfoProps.md)
+- [FilesInfoTemplateProps](interfaces/FilesInfoTemplateProps.md)
 - [UseFileWidgetReturn](interfaces/UseFileWidgetReturn.md)
 
 ### Type Aliases
@@ -27,6 +27,7 @@ rjsf-bulma - v5.0.0-beta.1
 
 ### Functions
 
+- [IconButton](README.md#iconbutton)
 - [createIsSmallUiSchema](README.md#createissmalluischema)
 - [useFileWidget](README.md#usefilewidget)
 
@@ -81,7 +82,7 @@ ___
 | `FieldErrorTemplate` | `FC`<`FieldErrorProps`<`any`, `any`\>\> |
 | `FieldHelpTemplate` | `FC`<`FieldHelpProps`<`any`, `any`\>\> |
 | `FieldTemplate` | `FC`<`FieldTemplateProps`<`any`, `any`\>\> |
-| `FilesInfoTemplate` | `FC`<[`FilesInfoProps`](interfaces/FilesInfoProps.md)\> |
+| `FilesInfoTemplate` | `FC`<[`FilesInfoTemplateProps`](interfaces/FilesInfoTemplateProps.md)\> |
 | `ObjectFieldTemplate` | `FC`<`ObjectFieldTemplateProps`<`any`, `any`\>\> |
 | `TitleFieldTemplate` | `FC`<`TitleFieldProps`<`any`, `any`\>\> |
 | `WrapIfAdditionalTemplate` | `FC`<`WrapIfAdditionalTemplateProps`<`any`, `any`\>\> |
@@ -111,6 +112,23 @@ ___
 | `TextareaWidget` | `FC`<`WidgetProps`<`any`, `any`\>\> |
 
 ## Functions
+
+### IconButton
+
+▸ **IconButton**(`props`, `context?`): ``null`` \| `ReactElement`<`any`, `any`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `props` | `IconButtonProps`<`any`, `any`\> |
+| `context?` | `any` |
+
+#### Returns
+
+``null`` \| `ReactElement`<`any`, `any`\>
+
+___
 
 ### createIsSmallUiSchema
 

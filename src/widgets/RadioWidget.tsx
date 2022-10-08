@@ -1,8 +1,7 @@
 // TODO FIXME??? inlineがデフォルト......
 import type { FC } from "react";
 import type { WidgetProps } from "@rjsf/utils";
-import { FieldControl } from "../ui";
-import { isSmallClass } from "../ui";
+import { FieldControl, isSmallClass } from "../ui";
 import clsx from "clsx";
 
 const RadioWidget: FC<WidgetProps> = ({

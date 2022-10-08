@@ -1,11 +1,10 @@
 import Form from "./Form";
-import type { FilesInfoProps } from "./templates";
 
 export * from "./rjsf-core";
 
 export { default as Form } from "./Form";
-export { default as Templates } from "./templates";
-export type { FilesInfoProps, FileInfoType } from "./templates";
+export { default as Templates, IconButton } from "./templates";
+export type { FilesInfoTemplateProps } from "./templates";
 export { default as Widgets } from "./widgets";
 export { default as Theme } from "./Theme";
 
@@ -16,10 +15,6 @@ export interface BulmaContext {
 }
 
 declare module "@rjsf/utils" {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  interface TemplatesType<T = any, F = any> {
-    FilesInfoTemplate: React.ComponentType<FilesInfoProps>;
-  }
   interface FormContext {
     bulma?: BulmaContext;
   }

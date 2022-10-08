@@ -36,7 +36,7 @@
     "clean": "rimraf dist",
     "build": "npm-run-all -s clean -p build:ts build:css build:typedoc -s build:example",
     "build:ts": "rollup -c",
-    "build:css": "sass --load-path=node_modules/ scss/bulma.scss dist/index.css",
+    "build:css": "sass --no-source-map --load-path=node_modules/ scss/bulma.scss dist/index.css",
     "build:typedoc": "typedoc --tsconfig tsconfig.typedoc.json",
     "build:example": "cd example && yarn build",
     "server": "markserv README.md",
