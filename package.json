@@ -50,7 +50,9 @@
     "lint-fix": "eslint src test example/src --fix",
     "precommit": "lint-staged",
     "test": "jest",
-    "test:update": "jest -u"
+    "test:update": "jest -u",
+    "rjsf:clean": "rimraf rjsf",
+    "rjsf:clone": "git clone --depth 1 https://github.com/rjsf-team/react-jsonschema-form rjsf"
   },
   "lint-staged": {
     "{src,test,example}/**/*.ts?(x)": [

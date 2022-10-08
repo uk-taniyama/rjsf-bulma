@@ -5,3 +5,4 @@
 /test/e2e/__image_snapshots__
 *.log
 *.tgz
+/rjsf

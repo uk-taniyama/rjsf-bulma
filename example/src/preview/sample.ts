@@ -1,4 +1,4 @@
-import { samples } from "./samples";
+import { samples } from "../samples";
 
 export const sampleNames = Object.keys(samples);
 
