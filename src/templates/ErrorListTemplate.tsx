@@ -3,7 +3,7 @@ import type { ErrorListProps } from "@rjsf/utils";
 import clsx from "clsx";
 import { isSmallClass } from "../ui";
 
-const ErrorList: FC<ErrorListProps> = ({ errors, formContext }) => (
+const ErrorListTemplate: FC<ErrorListProps> = ({ errors, formContext }) => (
   <article className={clsx("message is-danger", isSmallClass(formContext))}>
     <div className="message-header">
       <p>Errors</p>
@@ -18,4 +18,4 @@ const ErrorList: FC<ErrorListProps> = ({ errors, formContext }) => (
   </article>
 );
 
-export default ErrorList;
+export default ErrorListTemplate;

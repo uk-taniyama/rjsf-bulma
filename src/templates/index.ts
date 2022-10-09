@@ -1,8 +1,8 @@
 import ArrayFieldItemTemplate from "./ArrayFieldItemTemplate";
 import ArrayFieldTemplate from "./ArrayFieldTemplate";
 import BaseInputTemplate from "./BaseInputTemplate";
-import DescriptionFieldTemplate from "./DescriptionField";
-import ErrorListTemplate from "./ErrorList";
+import DescriptionFieldTemplate from "./DescriptionFieldTemplate";
+import ErrorListTemplate from "./ErrorListTemplate";
 import {
   AddButton,
   MoveDownButton,
@@ -14,7 +14,7 @@ import FieldHelpTemplate from "./FieldHelpTemplate";
 import FieldTemplate from "./FieldTemplate";
 import ObjectFieldTemplate from "./ObjectFieldTemplate";
 import SubmitButton from "./SubmitButton";
-import TitleFieldTemplate from "./TitleField";
+import TitleFieldTemplate from "./TitleFieldTemplate";
 import WrapIfAdditionalTemplate from "./WrapIfAdditionalTemplate";
 import type { FilesInfoTemplateProps } from "./FilesInfoTemplate";
 import FilesInfoTemplate from "./FilesInfoTemplate";

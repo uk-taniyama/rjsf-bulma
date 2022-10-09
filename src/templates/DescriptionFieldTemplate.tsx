@@ -3,7 +3,7 @@ import type { DescriptionFieldProps } from "@rjsf/utils";
 import clsx from "clsx";
 import { isSmallClass } from "../ui";
 
-const DescriptionField: FC<DescriptionFieldProps> = ({
+const DescriptionFieldTemplate: FC<DescriptionFieldProps> = ({
   id,
   description,
   registry,
@@ -25,4 +25,4 @@ const DescriptionField: FC<DescriptionFieldProps> = ({
   );
 };
 
-export default DescriptionField;
+export default DescriptionFieldTemplate;

@@ -3,7 +3,7 @@ import type { TitleFieldProps } from "@rjsf/utils";
 import clsx from "clsx";
 import { Required, isSmallClass } from "../ui";
 
-const TitleField: FC<TitleFieldProps> = ({
+const TitleFieldTemplate: FC<TitleFieldProps> = ({
   id,
   title,
   required,
@@ -22,4 +22,4 @@ const TitleField: FC<TitleFieldProps> = ({
   </div>
 );
 
-export default TitleField;
+export default TitleFieldTemplate;
