@@ -2,6 +2,7 @@ const { default: resolve } = require('@rollup/plugin-node-resolve');
 const { default: esbuild } = require('rollup-plugin-esbuild');
 const { default: dts } = require('rollup-plugin-dts');
 const json = require('@rollup/plugin-json');
+const { default: visualizer } = require('rollup-plugin-visualizer');
 
 const watch = process.env.ROLLUP_WATCH === 'true';
 
@@ -16,6 +17,7 @@ const commonPlugins = [
     extensions: ['.ts', '.mjs', '.cjs', '.js', '.jsx', '.json', '.node'],
     modulesOnly: true,
   }),
+  visualizer()
 ];
 
 const dtsPlugins = [

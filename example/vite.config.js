@@ -1,12 +1,20 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import visualizer from 'rollup-plugin-visualizer';
+import { optimizeLodashImports } from "@optimize-lodash/rollup-plugin";
 
 export default defineConfig(({ command }) => {
   return {
     base: './',
-    plugins: [react()],
+    plugins: [
+      react(),
+      optimizeLodashImports(),
+      command==='build' && visualizer()
+    ],
     resolve: {
-      alias: command === 'build' ? {} : {
+      alias: command === 'build' ? {
+        'lodash': 'lodash-es',
+      } : {
         'rjsf-bulma/scss': __dirname + '/../scss/',
         'rjsf-bulma': __dirname + '/../src/',
       },

@@ -6,3 +6,5 @@
 *.log
 *.tgz
 /rjsf
+stats.html
+example/stats.html

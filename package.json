@@ -72,6 +72,7 @@
     "clsx": "^1.2.1"
   },
   "devDependencies": {
+    "@optimize-lodash/rollup-plugin": "^3.1.0",
     "@rjsf/core": "^5.0.0-beta.10",
     "@rjsf/utils": "^5.0.0-beta.10",
     "@rjsf/validator-ajv6": "^5.0.0-beta.10",
@@ -118,6 +119,7 @@
     "rollup": "^2.79.1",
     "rollup-plugin-dts": "^4.2.2",
     "rollup-plugin-esbuild": "^4.10.1",
+    "rollup-plugin-visualizer": "^5.8.2",
     "sass": "^1.55.0",
     "typedoc": "0.23.15",
     "typedoc-plugin-markdown": "^3.13.6",
