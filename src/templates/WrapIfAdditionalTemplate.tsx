@@ -72,7 +72,7 @@ const WrapIfAdditionalTemplate: FC<WrapIfAdditionalTemplateProps> = ({
         <Col n="narrow">
           <div className="additional-property-toolbar">
             <RemoveButton
-              iconType="block"
+              className={isSmallClass(formContext)}
               disabled={disabled || readonly}
               onClick={onDropPropertyClick(label)}
               uiSchema={uiSchema}

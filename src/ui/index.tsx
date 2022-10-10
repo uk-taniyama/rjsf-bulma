@@ -1,5 +1,5 @@
 import type { FC, PropsWithChildren } from "react";
-import type { UiSchema, WidgetProps } from "@rjsf/utils";
+import type { FormContext, UiSchema, WidgetProps } from "@rjsf/utils";
 import { getUiOptions } from "@rjsf/utils";
 import clsx from "clsx";
 
@@ -33,23 +33,39 @@ export function createIsSmallUiSchema(uiSchema: UiSchema = {}): UiSchema {
   return updateObject(uiSchema, key, (value) => clsx(value, "is-small"));
 }
 
-export function isSmall(formContext: any) {
+export function isSmall(formContext?: FormContext) {
   return formContext?.bulma?.isSmall === true;
 }
 
-export function isSmallClass(formContext: any, className = "is-small") {
+export function isSmallClass(
+  formContext?: FormContext,
+  className = "is-small"
+) {
   return isSmall(formContext) ? className : undefined;
 }
 
-export const Row = ({ children }: PropsWithChildren) => (
-  <div className="columns is-gapless">{children}</div>
-);
+export interface RowProps {
+  className?: string;
+}
 
-export const Col = ({
-  n,
+export const Row: FC<PropsWithChildren<RowProps>> = ({
+  className,
   children,
-}: PropsWithChildren<{ n?: number | string }>) => (
-  <div className={clsx("column", n != null && `is-${n}`)}>{children}</div>
+}) => <div className={clsx(className, "columns is-gapless")}>{children}</div>;
+
+export interface ColProps {
+  className?: string;
+  n?: number | string;
+}
+
+export const Col: FC<PropsWithChildren<ColProps>> = ({
+  n,
+  className,
+  children,
+}) => (
+  <div className={clsx(className, "column", n != null && `is-${n}`)}>
+    {children}
+  </div>
 );
 
 export interface RequiredProps {
@@ -64,7 +80,7 @@ export type FieldLabelProps = Pick<
   "label" | "schema" | "id" | "required" | "uiSchema" | "formContext"
 >;
 
-export const FieldGroup = ({ children }: PropsWithChildren) => {
+export const FieldGroup: FC<PropsWithChildren> = ({ children }) => {
   return <div className="field">{children}</div>;
 };
 
@@ -93,6 +109,6 @@ export const FieldLabel = ({
   );
 };
 
-export const FieldControl = ({ children }: PropsWithChildren) => {
+export const FieldControl: FC<PropsWithChildren> = ({ children }) => {
   return <div className="control">{children}</div>;
 };

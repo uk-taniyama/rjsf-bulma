@@ -11,6 +11,18 @@
     margin-bottom: $s2;
   }
 
+  .column + .column {
+    margin-left: $s2;
+  }
+
+  input[type=range].slider:not([orient=vertical]) {
+    min-height: auto !important;
+  }
+
+  input[type=range].slider.is-small {
+    margin: $s3 0;
+  }
+
   // oneOf anyOf
   .panel.panel-default.panel-body {
     padding: $s2 $s3;
@@ -26,12 +38,9 @@
     color: $danger;
   }
 
-  .array-toolbar,
-  .additional-property-value,
-  .additional-property-toolbar {
-    padding-left: $s2;
+  .checkbox {
+    margin-right: $s2;
   }
-
   .checkbox > input,
   .radio > input {
     margin-right: $s1;

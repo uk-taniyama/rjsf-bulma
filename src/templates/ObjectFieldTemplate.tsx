@@ -1,7 +1,8 @@
 import type { FC } from "react";
 import type { ObjectFieldTemplateProps } from "@rjsf/utils";
 import { canExpand, getTemplate, getUiOptions } from "@rjsf/utils";
-import { Col, Row } from "../ui";
+import { Col, Row, isSmallClass } from "../ui";
+import clsx from "clsx";
 
 const ObjectFieldTemplate: FC<ObjectFieldTemplateProps> = ({
   description,
@@ -17,6 +18,7 @@ const ObjectFieldTemplate: FC<ObjectFieldTemplateProps> = ({
   readonly,
   registry,
 }) => {
+  const { formContext } = registry;
   const uiOptions = getUiOptions(uiSchema);
   const TitleFieldTemplate = getTemplate<"TitleFieldTemplate">(
     "TitleFieldTemplate",
@@ -70,7 +72,10 @@ const ObjectFieldTemplate: FC<ObjectFieldTemplateProps> = ({
             <AddButton
               onClick={onAddClick(schema)}
               disabled={disabled || readonly}
-              className="object-property-expand"
+              className={clsx(
+                "object-property-expand",
+                isSmallClass(formContext)
+              )}
               uiSchema={uiSchema}
             />
           </Col>

@@ -26,8 +26,8 @@ const ArrayFieldItemTemplate: FC<ArrayFieldTemplateItemType> = (props) => {
       <Col>
         <div className="array-value">{children}</div>
       </Col>
-      <Col n="narrow">
-        {hasToolbar && (
+      {hasToolbar && (
+        <Col n="narrow">
           <div className="field has-addons array-toolbar">
             <p className="control">
               <MoveUpButton
@@ -54,8 +54,8 @@ const ArrayFieldItemTemplate: FC<ArrayFieldTemplateItemType> = (props) => {
               />
             </p>
           </div>
-        )}
-      </Col>
+        </Col>
+      )}
     </Row>
   );
 };
