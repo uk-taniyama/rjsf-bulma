@@ -12,6 +12,7 @@ export { createIsSmallUiSchema } from "./ui";
 
 export interface BulmaContext {
   isSmall?: boolean;
+  isHorizontal?: boolean;
 }
 
 declare module "@rjsf/utils" {

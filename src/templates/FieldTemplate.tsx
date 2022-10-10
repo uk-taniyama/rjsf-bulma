@@ -1,7 +1,7 @@
 import type { FC } from "react";
 import type { FieldTemplateProps } from "@rjsf/utils";
 import { getTemplate, getUiOptions } from "@rjsf/utils";
-import { FieldGroup, FieldLabel } from "../ui";
+import { FieldBody, FieldGroup, FieldLabel } from "../ui";
 
 const FieldTemplate: FC<FieldTemplateProps> = ({
   id,
@@ -42,7 +42,7 @@ const FieldTemplate: FC<FieldTemplateProps> = ({
       uiSchema={uiSchema}
       registry={registry}
     >
-      <FieldGroup>
+      <FieldGroup formContext={formContext}>
         {displayLabel && (
           <FieldLabel
             id={id}
@@ -53,12 +53,14 @@ const FieldTemplate: FC<FieldTemplateProps> = ({
             formContext={formContext}
           />
         )}
-        {children}
-        {displayLabel && rawDescription && (
-          <div className="help">{rawDescription}</div>
-        )}
-        {errors}
-        {help}
+        <FieldBody formContext={formContext}>
+          {children}
+          {displayLabel && rawDescription && (
+            <div className="help">{rawDescription}</div>
+          )}
+          {errors}
+          {help}
+        </FieldBody>
       </FieldGroup>
     </WrapIfAdditionalTemplate>
   );

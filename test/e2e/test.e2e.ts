@@ -97,3 +97,21 @@ describe("bulma:isSmall", () => {
     await testScreenshotAfterClick("#buttons >> text=Files");
   });
 });
+
+describe("bulma:isHorizontal", () => {
+  beforeAll(async () => {
+    await gotoPage("bulma", "bulma-isHorizontal");
+    await buttonClick("#isHorizontal");
+  });
+  afterAll(() => page.close());
+
+  it.each(sampleNames.map((name, index) => [index, name]))(
+    "%i-%s",
+    (index, name) => testScreenshot(name, index)
+  );
+
+  it("customFilesInfo", async () => {
+    await buttonClick("#customFilesInfo");
+    await testScreenshotAfterClick("#buttons >> text=Files");
+  });
+});

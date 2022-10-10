@@ -5,7 +5,7 @@ import type { FilesInfoTemplateProps } from "rjsf-bulma";
 import Form, { createIsSmallUiSchema } from "rjsf-bulma";
 import validator from "@rjsf/validator-ajv6";
 import { getSample } from "./sample";
-import type { TemplatesType } from "@rjsf/utils";
+import type { FormContext, TemplatesType } from "@rjsf/utils";
 import clsx from "clsx";
 
 import "rjsf-bulma/scss/bulma.scss";
@@ -51,24 +51,27 @@ function useToggleButton(id: string): [boolean, ReactElement] {
 
 const Preview: FC<PreviewProps> = ({ name }) => {
   const [isSmall, toggleIsSmall] = useToggleButton("isSmall");
+  const [isHorizontal, toggleIsHorizontal] = useToggleButton("isHorizontal");
   const [customFilesInfo, toggleCustomFilesInfo] =
     useToggleButton("customFilesInfo");
-  const formContext = useMemo(
+  const formContext: FormContext = useMemo(
     () => ({
       bulma: {
         // form is-small or not.
         isSmall,
+        isHorizontal,
         // NOTE NO re-rendering on template update.
         // NOTE -> Set to force a re-render on template update.
         dummy: customFilesInfo,
       },
     }),
-    [isSmall, customFilesInfo]
+    [isSmall, isHorizontal, customFilesInfo]
   );
 
   const header = (
     <div>
       {toggleIsSmall}
+      {toggleIsHorizontal}
       {toggleCustomFilesInfo}
     </div>
   );

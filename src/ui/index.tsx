@@ -44,6 +44,10 @@ export function isSmallClass(
   return isSmall(formContext) ? className : undefined;
 }
 
+export function isHorizontal(formContext?: FormContext) {
+  return formContext?.bulma?.isHorizontal === true;
+}
+
 export interface RowProps {
   className?: string;
 }
@@ -75,40 +79,73 @@ export interface RequiredProps {
 export const Required: FC<RequiredProps> = ({ required }) =>
   required ? <span className="required">*</span> : null;
 
+export type FieldGroupProps = PropsWithChildren<
+  Pick<WidgetProps, "formContext">
+>;
+
+export const FieldGroup: FC<FieldGroupProps> = ({ formContext, children }) => {
+  if (isHorizontal(formContext)) {
+    return <div className="field is-horizontal">{children}</div>;
+  }
+  return <div className="field">{children}</div>;
+};
+
 export type FieldLabelProps = Pick<
   WidgetProps,
   "label" | "schema" | "id" | "required" | "uiSchema" | "formContext"
 >;
 
-export const FieldGroup: FC<PropsWithChildren> = ({ children }) => {
-  return <div className="field">{children}</div>;
-};
-
-export const FieldLabel = ({
+export const FieldLabel: FC<FieldLabelProps> = ({
   label,
   schema,
   id,
   required,
   uiSchema,
   formContext,
-}: FieldLabelProps) => {
+}) => {
   const uiOptions = getUiOptions(uiSchema);
   const labelText = uiOptions.title || label || schema.title;
 
   if (!labelText) {
     return null;
   }
-  return (
-    <label
-      className={clsx("label", isSmall(formContext) && "is-small")}
-      htmlFor={id}
-    >
+  const labelEl = (
+    <label className={clsx("label", isSmallClass(formContext))} htmlFor={id}>
       {labelText}
       <Required required={required} />
     </label>
   );
+
+  if (isHorizontal(formContext)) {
+    return (
+      <div className={clsx("field-label", isSmallClass(formContext))}>
+        {labelEl}
+      </div>
+    );
+  }
+
+  return labelEl;
 };
 
-export const FieldControl: FC<PropsWithChildren> = ({ children }) => {
+export type FieldBodyProps = PropsWithChildren<
+  Pick<WidgetProps, "formContext">
+>;
+
+export const FieldBody: FC<FieldControlProps> = ({ formContext, children }) => {
+  if (isHorizontal(formContext)) {
+    return (
+      <div className="field-body">
+        <div className="field">{children}</div>
+      </div>
+    );
+  }
+  return <>{children}</>;
+};
+
+export type FieldControlProps = PropsWithChildren<
+  Pick<WidgetProps, "formContext">
+>;
+
+export const FieldControl: FC<FieldControlProps> = ({ children }) => {
   return <div className="control">{children}</div>;
 };
