@@ -1,4 +1,4 @@
-[rjsf-bulma - v5.0.0-beta.1](../README.md) / FilesInfoTemplateProps
+[rjsf-bulma - v5.0.0-beta.2](../README.md) / FilesInfoTemplateProps
 
 # Interface: FilesInfoTemplateProps
 

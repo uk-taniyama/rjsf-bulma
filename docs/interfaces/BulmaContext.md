@@ -1,4 +1,4 @@
-[rjsf-bulma - v5.0.0-beta.1](../README.md) / BulmaContext
+[rjsf-bulma - v5.0.0-beta.2](../README.md) / BulmaContext
 
 # Interface: BulmaContext
 
@@ -6,9 +6,16 @@
 
 ### Properties
 
+- [isHorizontal](BulmaContext.md#ishorizontal)
 - [isSmall](BulmaContext.md#issmall)
 
 ## Properties
+
+### isHorizontal
+
+• `Optional` **isHorizontal**: `boolean`
+
+___
 
 ### isSmall
 
