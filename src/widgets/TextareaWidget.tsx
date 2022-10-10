@@ -38,7 +38,7 @@ const TextareaWidget: FC<WidgetProps> = ({
           id={id}
           name={id}
           className={clsx(
-            "input",
+            "textarea",
             isSmallClass(formContext),
             isDanger && "is-danger"
           )}
