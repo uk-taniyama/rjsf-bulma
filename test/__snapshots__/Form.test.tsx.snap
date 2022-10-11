@@ -1306,7 +1306,7 @@ exports[`single fields textarea field 1`] = `
       >
         <textarea
           autoFocus={false}
-          className="input"
+          className="textarea"
           disabled={false}
           id="root"
           name="root"

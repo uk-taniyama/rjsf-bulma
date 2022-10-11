@@ -6,7 +6,7 @@ exports[`TextareaWidget simple with errors 1`] = `
 >
   <textarea
     autoFocus={true}
-    className="input is-danger"
+    className="textarea is-danger"
     disabled={false}
     id="_id"
     name="_id"
@@ -28,7 +28,7 @@ exports[`TextareaWidget simple without errors 1`] = `
 >
   <textarea
     autoFocus={true}
-    className="input is-danger"
+    className="textarea is-danger"
     disabled={false}
     id="_id"
     name="_id"
@@ -50,7 +50,7 @@ exports[`TextareaWidget simple without required 1`] = `
 >
   <textarea
     autoFocus={true}
-    className="input is-danger"
+    className="textarea is-danger"
     disabled={false}
     id="_id"
     name="_id"

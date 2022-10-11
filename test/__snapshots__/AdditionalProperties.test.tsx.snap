@@ -29,30 +29,27 @@ exports[`AdditionalProperties tests show add button and fields if additionalProp
                 className="column is-3"
               >
                 <div
-                  className="additional-property-key"
+                  className="field"
                 >
-                  <div
-                    className="field"
+                  <label
+                    className="label"
+                    htmlFor="root-key"
                   >
-                    <label
-                      className="label"
-                      htmlFor="root-key"
-                    >
-                      Key
-                    </label>
-                    <div
-                      className="control"
-                    >
-                      <input
-                        className="input"
-                        defaultValue="additionalProperty"
-                        disabled={false}
-                        id="root-key"
-                        name="root-key"
-                        onBlur={[Function]}
-                        type="text"
-                      />
-                    </div>
+                    Key
+                  </label>
+                  <div
+                    className="control"
+                  >
+                    <input
+                      className="input"
+                      defaultValue="additionalProperty"
+                      disabled={false}
+                      id="root-key"
+                      name="root-key"
+                      onBlur={[Function]}
+                      readOnly={false}
+                      type="text"
+                    />
                   </div>
                 </div>
               </div>
@@ -60,71 +57,63 @@ exports[`AdditionalProperties tests show add button and fields if additionalProp
                 className="column"
               >
                 <div
-                  className="additional-property-value"
+                  className="field"
                 >
-                  <div
-                    className="field"
+                  <label
+                    className="label"
+                    htmlFor="root"
                   >
-                    <label
-                      className="label"
-                      htmlFor="root"
-                    >
-                      additionalProperty
-                    </label>
-                    <div
-                      className="control"
-                    >
-                      <input
-                        autoFocus={false}
-                        className="input"
-                        disabled={false}
-                        id="root"
-                        name="root"
-                        onBlur={[Function]}
-                        onChange={[Function]}
-                        onFocus={[Function]}
-                        placeholder=""
-                        readOnly={false}
-                        required={false}
-                        type="text"
-                        value="should appear"
-                      />
-                    </div>
+                    additionalProperty
+                  </label>
+                  <div
+                    className="control"
+                  >
+                    <input
+                      autoFocus={false}
+                      className="input"
+                      disabled={false}
+                      id="root"
+                      name="root"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                      placeholder=""
+                      readOnly={false}
+                      required={false}
+                      type="text"
+                      value="should appear"
+                    />
                   </div>
                 </div>
               </div>
               <div
                 className="column is-narrow"
               >
-                <div
-                  className="additional-property-toolbar"
+                <button
+                  className="button is-danger"
+                  disabled={false}
+                  onClick={[Function]}
+                  title="Remove"
                 >
-                  <button
-                    className="button is-danger"
-                    disabled={false}
-                    onClick={[Function]}
-                    title="Remove"
-                  >
-                    <svg
-                      fill="currentColor"
-                      height="1em"
-                      stroke="currentColor"
-                      strokeWidth="0"
-                      style={
-                        {
-                          "color": undefined,
-                        }
+                  <svg
+                    fill="currentColor"
+                    height="1em"
+                    stroke="currentColor"
+                    strokeWidth="0"
+                    style={
+                      {
+                        "color": undefined,
                       }
-                      viewBox="0 0 448 512"
-                      width="1em"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"
-                      />
-                    </svg>
-                  </button>
-                </div>
+                    }
+                    viewBox="0 0 448 512"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"
+                    />
+                  </svg>
+                </button>
               </div>
             </div>
           </div>

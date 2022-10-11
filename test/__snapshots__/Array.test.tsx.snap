@@ -613,9 +613,6 @@ exports[`array fields fixed array 1`] = `
                 </div>
               </div>
             </div>
-            <div
-              className="column is-narrow"
-            />
           </div>
         </div>
       </div>
@@ -664,9 +661,6 @@ exports[`array fields fixed array 1`] = `
                 </div>
               </div>
             </div>
-            <div
-              className="column is-narrow"
-            />
           </div>
         </div>
       </div>
