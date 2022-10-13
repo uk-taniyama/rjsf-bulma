@@ -1,6 +1,6 @@
-rjsf-bulma - v5.0.0-beta.2
+rjsf-bulma - v5.0.0-beta.3
 
-# rjsf-bulma - v5.0.0-beta.2
+# rjsf-bulma - v5.0.0-beta.3
 
 ## Table of contents
 

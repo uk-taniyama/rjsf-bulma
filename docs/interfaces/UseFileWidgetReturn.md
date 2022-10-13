@@ -1,4 +1,4 @@
-[rjsf-bulma - v5.0.0-beta.2](../README.md) / UseFileWidgetReturn
+[rjsf-bulma - v5.0.0-beta.3](../README.md) / UseFileWidgetReturn
 
 # Interface: UseFileWidgetReturn
 
