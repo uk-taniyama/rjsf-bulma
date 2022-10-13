@@ -12,10 +12,7 @@ const TitleFieldTemplate: FC<TitleFieldProps> = ({
 }) => (
   <div
     id={id}
-    className={clsx(
-      "title-field",
-      isSmallClass(registry.formContext, "is-size-6")
-    )}
+    className={clsx("title-field", isSmallClass(registry.formContext))}
   >
     {(uiSchema && uiSchema["ui:title"]) || title}
     <Required required={required} />

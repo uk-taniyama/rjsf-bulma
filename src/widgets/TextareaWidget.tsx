@@ -29,7 +29,7 @@ const TextareaWidget: FC<WidgetProps> = ({
     target: { value },
   }: React.FocusEvent<HTMLTextAreaElement>) => onFocus(id, value);
 
-  const isDanger = rawErrors && rawErrors.length > 0;
+  const hasErrors = rawErrors && rawErrors.length > 0;
 
   return (
     <>
@@ -40,7 +40,7 @@ const TextareaWidget: FC<WidgetProps> = ({
           className={clsx(
             "textarea",
             isSmallClass(formContext),
-            isDanger && "is-danger"
+            hasErrors && "is-danger"
           )}
           value={value == null || value === options.emptyValue ? "" : value}
           placeholder={placeholder}

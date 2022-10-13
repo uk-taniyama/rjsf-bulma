@@ -30,7 +30,7 @@ const AdditionalPropertyKeyTemplate: FC<AdditionalPropertyKeyTemplateProps> = ({
   formContext,
 }) => {
   const keyId = `${id}-key`;
-  const keyLabel = "Key"; // i18n ?
+  const keyLabel = "Additional Key"; // i18n ?
   const handleBlur = ({ target }: React.FocusEvent<HTMLInputElement>) =>
     onKeyChange(target.value);
   return (
@@ -69,7 +69,6 @@ const WrapIfAdditionalTemplate: FC<WrapIfAdditionalTemplateProps> = ({
   onDropPropertyClick,
   onKeyChange,
   readonly,
-  required,
   schema,
   uiSchema,
   registry,
@@ -86,7 +85,7 @@ const WrapIfAdditionalTemplate: FC<WrapIfAdditionalTemplateProps> = ({
     <AdditionalPropertyKeyTemplate
       id={id}
       label={label}
-      required={required}
+      required={true}
       disabled={disabled}
       readonly={readonly}
       onKeyChange={onKeyChange}
@@ -95,7 +94,7 @@ const WrapIfAdditionalTemplate: FC<WrapIfAdditionalTemplateProps> = ({
   );
   const buttonEl = (
     <RemoveButton
-      className={isSmallClass(formContext)}
+      className={clsx("object-property-remove", isSmallClass(formContext))}
       disabled={disabled || readonly}
       onClick={onDropPropertyClick(label)}
       uiSchema={uiSchema}
@@ -106,10 +105,14 @@ const WrapIfAdditionalTemplate: FC<WrapIfAdditionalTemplateProps> = ({
     return (
       <div className={clsx(classNames, "additional-property")}>
         <Row>
-          <Col>{keyEl}</Col>
-        </Row>
-        <Row>
-          <Col>{children}</Col>
+          <Col>
+            <Row>
+              <Col>{keyEl}</Col>
+            </Row>
+            <Row>
+              <Col>{children}</Col>
+            </Row>
+          </Col>
           <Col n="narrow">{buttonEl}</Col>
         </Row>
       </div>

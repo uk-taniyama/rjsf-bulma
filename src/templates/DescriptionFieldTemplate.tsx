@@ -4,7 +4,6 @@ import clsx from "clsx";
 import { isSmallClass } from "../ui";
 
 const DescriptionFieldTemplate: FC<DescriptionFieldProps> = ({
-  id,
   description,
   registry,
 }) => {
@@ -14,11 +13,7 @@ const DescriptionFieldTemplate: FC<DescriptionFieldProps> = ({
 
   return (
     <div
-      id={id}
-      className={clsx(
-        "description-field",
-        isSmallClass(registry.formContext, "is-size-7")
-      )}
+      className={clsx("description-field", isSmallClass(registry.formContext))}
     >
       {description}
     </div>

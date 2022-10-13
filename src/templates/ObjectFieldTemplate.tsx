@@ -41,6 +41,7 @@ const ObjectFieldTemplate: FC<ObjectFieldTemplateProps> = ({
           <Col>
             <TitleFieldTemplate
               id={`${idSchema.$id}-title`}
+              schema={schema}
               title={uiOptions.title || title}
               required={required}
               registry={registry}
@@ -54,6 +55,7 @@ const ObjectFieldTemplate: FC<ObjectFieldTemplateProps> = ({
           <Col>
             <DescriptionFieldTemplate
               id={`${idSchema.$id}-description`}
+              schema={schema}
               description={uiOptions.description || description!}
               registry={registry}
             />
@@ -62,7 +64,7 @@ const ObjectFieldTemplate: FC<ObjectFieldTemplateProps> = ({
       )}
       {properties.map((element: any, index: number) => (
         <Row key={index}>
-          <Col> {element.content}</Col>
+          <Col>{element.content}</Col>
         </Row>
       ))}
       {canExpand(schema, uiSchema, formData) ? (

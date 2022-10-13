@@ -11,7 +11,7 @@
     margin-bottom: $s2;
   }
 
-  .column + .column {
+  .column+.column {
     margin-left: $s2;
   }
 
@@ -33,6 +33,14 @@
     border-bottom: 1px solid #0003;
   }
 
+  .title-field.is-small {
+    font-size: $size-6;
+  }
+
+  .description-field.is-small {
+    font-size: $size-7;
+  }
+
   .required {
     padding-left: $s1;
     color: $danger;
@@ -41,8 +49,9 @@
   .checkbox {
     margin-right: $s2;
   }
-  .checkbox > input,
-  .radio > input {
+
+  .checkbox>input,
+  .radio>input {
     margin-right: $s1;
   }
 
@@ -50,7 +59,8 @@
   .radio.is-small {
     font-size: $size-7;
     margin-right: $s2;
-    & > input {
+
+    &>input {
       vertical-align: middle;
       margin-right: $s1;
     }

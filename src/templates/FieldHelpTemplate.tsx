@@ -7,16 +7,11 @@ import clsx from "clsx";
  * @param props - The `FieldHelpProps` to be rendered
  */
 const FieldHelpTemplate: FC<FieldHelpProps> = (props) => {
-  const { idSchema, help, hasErrors } = props;
+  const { help, hasErrors } = props;
   if (!help) {
     return null;
   }
-  const id = `${idSchema.$id}__help`;
-  return (
-    <p className={clsx("help", hasErrors && "is-danger")} id={id}>
-      {help}
-    </p>
-  );
+  return <p className={clsx("help", hasErrors && "is-danger")}>{help}</p>;
 };
 
 export default FieldHelpTemplate;

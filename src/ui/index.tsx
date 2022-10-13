@@ -131,7 +131,7 @@ export type FieldBodyProps = PropsWithChildren<
   Pick<WidgetProps, "formContext">
 >;
 
-export const FieldBody: FC<FieldControlProps> = ({ formContext, children }) => {
+export const FieldBody: FC<FieldBodyProps> = ({ formContext, children }) => {
   if (isHorizontal(formContext)) {
     return (
       <div className="field-body">

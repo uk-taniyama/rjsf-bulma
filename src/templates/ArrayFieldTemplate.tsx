@@ -5,6 +5,7 @@ import type {
 } from "@rjsf/utils";
 import { getTemplate, getUiOptions } from "@rjsf/utils";
 import { Col, Row, isSmallClass } from "../ui";
+import clsx from "clsx";
 
 const ArrayFieldTemplate: FC<ArrayFieldTemplateProps> = (props) => {
   const {
@@ -47,9 +48,10 @@ const ArrayFieldTemplate: FC<ArrayFieldTemplateProps> = (props) => {
       <Row>
         <Col>
           <ArrayFieldTitleTemplate
+            schema={schema}
             idSchema={idSchema}
-            title={uiOptions.title || title}
             uiSchema={uiSchema}
+            title={uiOptions.title || title}
             required={required}
             registry={registry}
           />
@@ -59,9 +61,10 @@ const ArrayFieldTemplate: FC<ArrayFieldTemplateProps> = (props) => {
         <Row>
           <Col>
             <ArrayFieldDescriptionTemplate
+              schema={schema}
               idSchema={idSchema}
-              description={(uiOptions.description || schema.description)!}
               uiSchema={uiSchema}
+              description={(uiOptions.description || schema.description)!}
               registry={registry}
             />
           </Col>
@@ -80,7 +83,7 @@ const ArrayFieldTemplate: FC<ArrayFieldTemplateProps> = (props) => {
           <Col></Col>
           <Col n="narrow">
             <AddButton
-              className={isSmallClass(formContext)}
+              className={clsx("array-item-add", isSmallClass(formContext))}
               onClick={onAddClick}
               disabled={disabled || readonly}
               uiSchema={uiSchema}
