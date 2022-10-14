@@ -32,22 +32,22 @@
     "node": ">=14"
   },
   "scripts": {
-    "dev": "cd example && vite",
+    "dev": "cd sample && vite",
     "clean": "rimraf dist",
-    "build": "npm-run-all -s clean -p build:ts build:css build:typedoc -s build:example",
+    "build": "npm-run-all -s clean -p build:ts build:css build:typedoc -s build:sample",
     "build:ts": "rollup -c",
     "build:css": "sass --no-source-map --load-path=node_modules/ scss/bulma.scss dist/index.css",
     "build:typedoc": "typedoc --tsconfig tsconfig.typedoc.json",
-    "build:example": "cd example && yarn build",
+    "build:sample": "cd sample && yarn build",
     "server": "markserv README.md",
     "e2e": "jest -c jest.e2e.config.js",
     "pree2e:video": "rimraf e2e",
     "e2e:video": "E2E_VIDEO=true jest -c jest.e2e.config.js",
     "format": "npm-run-all -s lint-fix cs-format",
-    "cs-check": "prettier -l \"{src,test,example}/**/*.ts?(x)\"",
-    "cs-format": "prettier \"{src,test,example}/**/*.ts?(x)\" --write",
-    "lint": "eslint src test example/src",
-    "lint-fix": "eslint src test example/src --fix",
+    "cs-check": "prettier -l \"{src,test,sample}/**/*.ts?(x)\"",
+    "cs-format": "prettier \"{src,test,sample}/**/*.ts?(x)\" --write",
+    "lint": "eslint src test sample/src",
+    "lint-fix": "eslint src test sample/src --fix",
     "precommit": "lint-staged",
     "test": "jest",
     "test:update": "jest -u",
@@ -55,7 +55,7 @@
     "rjsf:clone": "git clone --depth 1 https://github.com/rjsf-team/react-jsonschema-form rjsf"
   },
   "lint-staged": {
-    "{src,test,example}/**/*.ts?(x)": [
+    "{src,test,sample}/**/*.ts?(x)": [
       "eslint --fix",
       "prettier --write"
     ]

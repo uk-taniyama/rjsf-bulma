@@ -1,7 +1,7 @@
 import { toMatchImageSnapshot } from "jest-image-snapshot";
 import { chromium } from "playwright";
 
-import { sampleNames } from "../../example/src/preview/sample";
+import { sampleNames } from "../../sample/src/preview/sample";
 
 import type { Browser, Page } from "playwright";
 

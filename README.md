@@ -12,7 +12,7 @@ Bluma theme, fields and widgets for [react-jsonschema-form](https://github.com/m
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
-  - [Example](#example)
+  - [Sample](#sample)
   - [Typedoc](#typedoc)
 - [Usage](#usage)
 - [Contributing](#contributing)
@@ -46,9 +46,9 @@ yarn add @rjsf/core bulma bulma-slider
 yarn add rjsf-bulma
 ```
 
-### Example
+### Sample
 
-[Example](example/out/index.html)
+[Sample](sample/out/bulma.html)
 
 ### Typedoc
 
@@ -88,8 +88,8 @@ import "rjsf-bulma/dist/index.css";
 
 ### Customize FileWidget
 
-- See [example Files](example/out/bulma.html?name=Files) and click "customFilesInfo" button.
-- See [source](https://github.com/uk-taniyama/rjsf-bulma/blob/master/example/src/stories/PreviewBulma.tsx#L13), [FilesInfoProps](docs/interfaces/FilesInfoProps.md)
+- See [Sample Files](sample/out/bulma.html?name=Files) and click "customFilesInfo" button.
+- See [source](https://github.com/uk-taniyama/rjsf-bulma/blob/master/sample/src/stories/PreviewBulma.tsx#L13), [FilesInfoProps](docs/interfaces/FilesInfoProps.md)
 
 ## Contributing
 
