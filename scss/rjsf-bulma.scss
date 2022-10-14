@@ -40,6 +40,10 @@
     }
   }
 
+  button[type=submit] {
+    margin-top: $s3;
+  }
+
   input[type=range].slider {
     border-radius: $radius;
     background-color: $grey-lighter;

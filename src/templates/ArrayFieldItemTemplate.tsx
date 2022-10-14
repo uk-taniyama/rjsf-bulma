@@ -1,5 +1,7 @@
 import type { FC } from "react";
 
+import clsx from "clsx";
+
 import { Col, Row, isSmallClass } from "../ui";
 
 import type { ArrayFieldTemplateItemType } from "@rjsf/utils";
@@ -33,7 +35,7 @@ const ArrayFieldItemTemplate: FC<ArrayFieldTemplateItemType> = (props) => {
           <div className="field has-addons array-toolbar">
             <p className="control">
               <MoveUpButton
-                className={buttonClassName}
+                className={clsx("array-item-up", buttonClassName)}
                 disabled={disabled || readonly || !hasMoveUp}
                 onClick={onReorderClick(index, index - 1)}
                 uiSchema={uiSchema}
@@ -41,7 +43,7 @@ const ArrayFieldItemTemplate: FC<ArrayFieldTemplateItemType> = (props) => {
             </p>
             <p className="control">
               <MoveDownButton
-                className={buttonClassName}
+                className={clsx("array-item-down", buttonClassName)}
                 disabled={disabled || readonly || !hasMoveDown}
                 onClick={onReorderClick(index, index + 1)}
                 uiSchema={uiSchema}
@@ -49,7 +51,7 @@ const ArrayFieldItemTemplate: FC<ArrayFieldTemplateItemType> = (props) => {
             </p>
             <p className="control">
               <RemoveButton
-                className={buttonClassName}
+                className={clsx("array-item-remove", buttonClassName)}
                 disabled={disabled || readonly || !hasRemove}
                 onClick={onDropIndexClick(index)}
                 uiSchema={uiSchema}

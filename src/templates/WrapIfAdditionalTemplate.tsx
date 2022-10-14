@@ -18,7 +18,7 @@ import type { FormContext, WrapIfAdditionalTemplateProps } from "@rjsf/utils";
 
 type AdditionalPropertyKeyTemplateProps = Pick<
   WrapIfAdditionalTemplateProps,
-  "id" | "label" | "required" | "disabled" | "readonly" | "onKeyChange"
+  "id" | "label" | "disabled" | "readonly" | "onKeyChange"
 > & {
   formContext?: FormContext;
 };
@@ -26,7 +26,6 @@ type AdditionalPropertyKeyTemplateProps = Pick<
 const AdditionalPropertyKeyTemplate: FC<AdditionalPropertyKeyTemplateProps> = ({
   id,
   label,
-  required,
   disabled,
   readonly,
   onKeyChange,
@@ -42,7 +41,7 @@ const AdditionalPropertyKeyTemplate: FC<AdditionalPropertyKeyTemplateProps> = ({
         id={keyId}
         label={keyLabel}
         schema={{}}
-        required={required}
+        required={true}
         formContext={formContext}
       />
       <FieldBody formContext={formContext}>
@@ -64,7 +63,7 @@ const AdditionalPropertyKeyTemplate: FC<AdditionalPropertyKeyTemplateProps> = ({
 };
 
 const WrapIfAdditionalTemplate: FC<WrapIfAdditionalTemplateProps> = ({
-  classNames,
+  classNames: _classNames,
   children,
   disabled,
   id,
@@ -80,7 +79,7 @@ const WrapIfAdditionalTemplate: FC<WrapIfAdditionalTemplateProps> = ({
   // Button templates are not overridden in the uiSchema
   const { RemoveButton } = registry.templates.ButtonTemplates;
   const additional = ADDITIONAL_PROPERTY_FLAG in schema;
-
+  const classNames = _classNames?.replace("field ", "");
   if (!additional) {
     return <div className={classNames}>{children}</div>;
   }
@@ -88,7 +87,6 @@ const WrapIfAdditionalTemplate: FC<WrapIfAdditionalTemplateProps> = ({
     <AdditionalPropertyKeyTemplate
       id={id}
       label={label}
-      required={true}
       disabled={disabled}
       readonly={readonly}
       onKeyChange={onKeyChange}
