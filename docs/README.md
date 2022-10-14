@@ -1,6 +1,6 @@
-rjsf-bulma - v5.0.0-beta.3
+rjsf-bulma - v5.0.0-beta.4
 
-# rjsf-bulma - v5.0.0-beta.3
+# rjsf-bulma - v5.0.0-beta.4
 
 ## Table of contents
 
@@ -56,7 +56,7 @@ Renames and re-exports [Form](README.md#form)
 
 ### Form
 
-• `Const` **Form**: `React.ComponentType`<`FormProps`\>
+• `Const` **Form**: `ComponentType`<`FormProps`\>
 
 ___
 

@@ -200,7 +200,6 @@ exports[`single fields field with description 1`] = `
         <div
           className="column"
         >
-           
           <div
             className="form-group field field-string"
           >
@@ -271,7 +270,6 @@ exports[`single fields field with description in uiSchema 1`] = `
         <div
           className="column"
         >
-           
           <div
             className="form-group field field-string"
           >
@@ -511,7 +509,6 @@ exports[`single fields help and error display 1`] = `
       </div>
       <p
         className="help is-danger"
-        id="root__help"
       >
         help me!
       </p>
@@ -545,7 +542,6 @@ exports[`single fields hidden field 1`] = `
         <div
           className="column"
         >
-           
           <div
             className="form-group field field-string"
           >
@@ -983,6 +979,11 @@ exports[`single fields slider field 1`] = `
           onFocus={[Function]}
           placeholder=""
           readOnly={false}
+          style={
+            {
+              "backgroundSize": "56.896551724137936%",
+            }
+          }
           type="range"
           value={75}
         />
@@ -1363,7 +1364,6 @@ exports[`single fields title field 1`] = `
         <div
           className="column"
         >
-           
           <div
             className="form-group field field-string"
           >

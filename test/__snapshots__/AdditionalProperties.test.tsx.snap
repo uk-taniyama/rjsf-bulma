@@ -18,7 +18,6 @@ exports[`AdditionalProperties tests show add button and fields if additionalProp
         <div
           className="column"
         >
-           
           <div
             className="form-group field field-string additional-property"
           >
@@ -35,7 +34,12 @@ exports[`AdditionalProperties tests show add button and fields if additionalProp
                     className="label"
                     htmlFor="root-key"
                   >
-                    Key
+                    Additional Key
+                    <span
+                      className="required"
+                    >
+                      *
+                    </span>
                   </label>
                   <div
                     className="control"
@@ -90,7 +94,7 @@ exports[`AdditionalProperties tests show add button and fields if additionalProp
                 className="column is-narrow"
               >
                 <button
-                  className="button is-danger"
+                  className="button object-property-remove is-danger"
                   disabled={false}
                   onClick={[Function]}
                   title="Remove"

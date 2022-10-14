@@ -29,7 +29,7 @@ exports[`array fields array 1`] = `
           className="column is-narrow"
         >
           <button
-            className="button is-info"
+            className="button array-item-add is-info"
             disabled={false}
             onClick={[Function]}
             title="Add Item"
@@ -380,7 +380,7 @@ exports[`array fields array icons 1`] = `
           className="column is-narrow"
         >
           <button
-            className="button is-info"
+            className="button array-item-add is-info"
             disabled={false}
             onClick={[Function]}
             title="Add Item"
@@ -502,7 +502,6 @@ exports[`array fields empty errors array 1`] = `
         <div
           className="column"
         >
-           
           <div
             className="form-group field field-string"
           >
@@ -694,7 +693,6 @@ exports[`array fields no errors 1`] = `
         <div
           className="column"
         >
-           
           <div
             className="form-group field field-string"
           >
