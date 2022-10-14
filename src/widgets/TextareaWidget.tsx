@@ -1,4 +1,4 @@
-import type { FC } from "react";
+import type { ChangeEvent, FC, FocusEvent } from "react";
 import type { WidgetProps } from "@rjsf/utils";
 import { FieldControl, isSmallClass } from "../ui";
 import clsx from "clsx";
@@ -18,16 +18,12 @@ const TextareaWidget: FC<WidgetProps> = ({
   rawErrors,
   formContext,
 }) => {
-  const _onChange = ({
-    target: { value },
-  }: React.ChangeEvent<HTMLTextAreaElement>) =>
+  const _onChange = ({ target: { value } }: ChangeEvent<HTMLTextAreaElement>) =>
     onChange(value === "" ? options.emptyValue : value);
-  const _onBlur = ({
-    target: { value },
-  }: React.FocusEvent<HTMLTextAreaElement>) => onBlur(id, value);
-  const _onFocus = ({
-    target: { value },
-  }: React.FocusEvent<HTMLTextAreaElement>) => onFocus(id, value);
+  const _onBlur = ({ target: { value } }: FocusEvent<HTMLTextAreaElement>) =>
+    onBlur(id, value);
+  const _onFocus = ({ target: { value } }: FocusEvent<HTMLTextAreaElement>) =>
+    onFocus(id, value);
 
   const hasErrors = rawErrors && rawErrors.length > 0;
 

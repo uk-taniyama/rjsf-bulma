@@ -18,6 +18,7 @@ import TitleFieldTemplate from "./TitleFieldTemplate";
 import WrapIfAdditionalTemplate from "./WrapIfAdditionalTemplate";
 import type { FilesInfoTemplateProps } from "./FilesInfoTemplate";
 import FilesInfoTemplate from "./FilesInfoTemplate";
+import type { ComponentType } from "react";
 
 export { default as IconButton } from "./IconButton";
 export type { FilesInfoTemplateProps } from "./FilesInfoTemplate";
@@ -25,7 +26,7 @@ export type { FilesInfoTemplateProps } from "./FilesInfoTemplate";
 declare module "@rjsf/utils" {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   interface TemplatesType<T = any, F = any> {
-    FilesInfoTemplate: React.ComponentType<FilesInfoTemplateProps>;
+    FilesInfoTemplate: ComponentType<FilesInfoTemplateProps>;
   }
 }
 

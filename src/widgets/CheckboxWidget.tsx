@@ -1,5 +1,5 @@
 // FIXME checkboxを横並びにしている.....
-import type { FC } from "react";
+import type { ChangeEvent, FC, FocusEvent } from "react";
 import type { WidgetProps } from "@rjsf/utils";
 import { FieldControl, isSmallClass } from "../ui";
 import clsx from "clsx";
@@ -20,15 +20,12 @@ const CheckboxWidget: FC<WidgetProps> = (props) => {
     formContext,
   } = props;
 
-  const _onChange = ({
-    target: { checked },
-  }: React.FocusEvent<HTMLInputElement>) => onChange(checked);
-  const _onBlur = ({
-    target: { checked },
-  }: React.FocusEvent<HTMLInputElement>) => onBlur(id, checked);
-  const _onFocus = ({
-    target: { checked },
-  }: React.FocusEvent<HTMLInputElement>) => onFocus(id, checked);
+  const _onChange = ({ target: { checked } }: ChangeEvent<HTMLInputElement>) =>
+    onChange(checked);
+  const _onBlur = ({ target: { checked } }: FocusEvent<HTMLInputElement>) =>
+    onBlur(id, checked);
+  const _onFocus = ({ target: { checked } }: FocusEvent<HTMLInputElement>) =>
+    onFocus(id, checked);
 
   const desc = label || schema.description;
   return (

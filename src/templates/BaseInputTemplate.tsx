@@ -1,4 +1,4 @@
-import type { FC } from "react";
+import type { ChangeEvent, FC, FocusEvent } from "react";
 import type { WidgetProps } from "@rjsf/utils";
 import { getInputProps } from "@rjsf/utils";
 import clsx from "clsx";
@@ -24,15 +24,12 @@ const BaseInputTemplate: FC<WidgetProps> = ({
   extraProps,
 }) => {
   const inputProps = { ...extraProps, ...getInputProps(schema, type, options) };
-  const _onChange = ({
-    target: { value },
-  }: React.ChangeEvent<HTMLInputElement>) =>
+  const _onChange = ({ target: { value } }: ChangeEvent<HTMLInputElement>) =>
     onChange(value === "" ? options.emptyValue : value);
-  const _onBlur = ({ target: { value } }: React.FocusEvent<HTMLInputElement>) =>
+  const _onBlur = ({ target: { value } }: FocusEvent<HTMLInputElement>) =>
     onBlur(id, value);
-  const _onFocus = ({
-    target: { value },
-  }: React.FocusEvent<HTMLInputElement>) => onFocus(id, value);
+  const _onFocus = ({ target: { value } }: FocusEvent<HTMLInputElement>) =>
+    onFocus(id, value);
 
   const isDanger = rawErrors && rawErrors.length > 0;
 

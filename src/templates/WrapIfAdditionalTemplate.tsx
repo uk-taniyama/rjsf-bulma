@@ -1,4 +1,4 @@
-import type { FC } from "react";
+import type { FC, FocusEvent } from "react";
 import type { FormContext, WrapIfAdditionalTemplateProps } from "@rjsf/utils";
 import { ADDITIONAL_PROPERTY_FLAG } from "@rjsf/utils";
 import clsx from "clsx";
@@ -31,7 +31,7 @@ const AdditionalPropertyKeyTemplate: FC<AdditionalPropertyKeyTemplateProps> = ({
 }) => {
   const keyId = `${id}-key`;
   const keyLabel = "Additional Key"; // i18n ?
-  const handleBlur = ({ target }: React.FocusEvent<HTMLInputElement>) =>
+  const handleBlur = ({ target }: FocusEvent<HTMLInputElement>) =>
     onKeyChange(target.value);
   return (
     <FieldGroup formContext={formContext}>

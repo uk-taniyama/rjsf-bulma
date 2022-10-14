@@ -1,5 +1,5 @@
 // FIXME checkboxを横並びにしている.....
-import type { FC } from "react";
+import type { ChangeEvent, FC, FocusEvent } from "react";
 import type { WidgetProps } from "@rjsf/utils";
 import { FieldControl, isSmallClass } from "../ui";
 import clsx from "clsx";
@@ -34,7 +34,7 @@ const CheckboxesWidget: FC<WidgetProps> = ({
 
   const _onChange =
     (option: any) =>
-    ({ target: { checked } }: React.ChangeEvent<HTMLInputElement>) => {
+    ({ target: { checked } }: ChangeEvent<HTMLInputElement>) => {
       const all = (enumOptions as any).map(({ value }: any) => value);
 
       if (checked) {
@@ -44,11 +44,10 @@ const CheckboxesWidget: FC<WidgetProps> = ({
       }
     };
 
-  const _onBlur = ({ target: { value } }: React.FocusEvent<HTMLInputElement>) =>
+  const _onBlur = ({ target: { value } }: FocusEvent<HTMLInputElement>) =>
     onBlur(id, value);
-  const _onFocus = ({
-    target: { value },
-  }: React.FocusEvent<HTMLInputElement>) => onFocus(id, value);
+  const _onFocus = ({ target: { value } }: FocusEvent<HTMLInputElement>) =>
+    onFocus(id, value);
 
   return (
     <>

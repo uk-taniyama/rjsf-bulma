@@ -1,4 +1,4 @@
-import type { FC } from "react";
+import type { ChangeEvent, FC, FocusEvent } from "react";
 import type { WidgetProps } from "@rjsf/utils";
 import { processSelectValue } from "@rjsf/utils";
 import clsx from "clsx";
@@ -26,7 +26,7 @@ const SelectWidget: FC<WidgetProps> = ({
   const emptyValue = multiple ? [] : "";
 
   function getValue(
-    event: React.FocusEvent | React.ChangeEvent | any,
+    event: FocusEvent<HTMLSelectElement> | ChangeEvent<HTMLSelectElement>,
     multiple?: boolean
   ) {
     if (multiple) {
@@ -60,19 +60,19 @@ const SelectWidget: FC<WidgetProps> = ({
             autoFocus={autofocus}
             onBlur={
               onBlur &&
-              ((event: React.FocusEvent) => {
+              ((event) => {
                 const newValue = getValue(event, multiple);
                 onBlur(id, processSelectValue(schema, newValue, options));
               })
             }
             onFocus={
               onFocus &&
-              ((event: React.FocusEvent) => {
+              ((event) => {
                 const newValue = getValue(event, multiple);
                 onFocus(id, processSelectValue(schema, newValue, options));
               })
             }
-            onChange={(event: React.ChangeEvent) => {
+            onChange={(event) => {
               const newValue = getValue(event, multiple);
               onChange(processSelectValue(schema, newValue, options));
             }}
