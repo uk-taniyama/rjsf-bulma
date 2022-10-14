@@ -1,11 +1,30 @@
-import type { ChangeEvent, FC, FocusEvent } from "react";
+import type { CSSProperties, ChangeEvent, FC, FocusEvent } from "react";
 
 import { getInputProps } from "@rjsf/utils";
 import clsx from "clsx";
 
 import { FieldControl, isSmallClass } from "../ui";
 
-import type { WidgetProps } from "@rjsf/utils";
+import type { InputPropsType, WidgetProps } from "@rjsf/utils";
+
+export function getStyle(
+  inputProps: InputPropsType,
+  value: any
+): CSSProperties | undefined {
+  if (inputProps.type !== "range") {
+    return undefined;
+  }
+  const min = inputProps.min || 0;
+  const max = inputProps.max || 100;
+  const val = value || min;
+  const v = ((val - min) / (max - min)) * 100;
+  if (v >= 0 && v <= 100) {
+    return {
+      backgroundSize: v + "%",
+    };
+  }
+  return undefined;
+}
 
 const BaseInputTemplate: FC<WidgetProps> = ({
   id,
@@ -35,6 +54,7 @@ const BaseInputTemplate: FC<WidgetProps> = ({
     onFocus(id, value);
 
   const isDanger = rawErrors && rawErrors.length > 0;
+  const style = getStyle(inputProps, value);
 
   return (
     <>
@@ -58,6 +78,7 @@ const BaseInputTemplate: FC<WidgetProps> = ({
           onChange={_onChange}
           onBlur={_onBlur}
           onFocus={_onFocus}
+          style={style}
         />
         {type === "range" && (
           <output className={clsx(isSmallClass(formContext))}>{value}</output>

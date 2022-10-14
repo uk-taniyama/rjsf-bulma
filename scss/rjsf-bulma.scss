@@ -15,35 +15,9 @@
     margin-left: $s2;
   }
 
-  input[type=range].slider:not([orient=vertical]) {
-    min-height: auto !important;
-  }
-
-  input[type=range].slider.is-small {
-    margin: $s3 0;
-  }
-
   // oneOf anyOf
   .panel.panel-default.panel-body {
     padding: $s2 $s3;
-  }
-
-  .title-field {
-    font-weight: bold;
-    border-bottom: 1px solid #0003;
-  }
-
-  .title-field.is-small {
-    font-size: $size-6;
-  }
-
-  .description-field.is-small {
-    font-size: $size-7;
-  }
-
-  .required {
-    padding-left: $s1;
-    color: $danger;
   }
 
   .checkbox {
@@ -64,6 +38,45 @@
       vertical-align: middle;
       margin-right: $s1;
     }
+  }
+
+  input[type=range].slider {
+    border-radius: $radius;
+    background-color: $grey-lighter;
+    background-image: linear-gradient($info, $info);
+    background-repeat: no-repeat;
+    min-height: auto !important;
+
+    &.is-small {
+      margin: $s3 0;
+    }
+    &::-moz-range-track {
+      background: transparent !important;
+    }
+    &::-webkit-slider-runnable-track {
+      background: transparent !important;
+    }
+    &::-ms-track {
+      background: transparent !important;
+    }
+  }
+
+  .title-field {
+    font-weight: bold;
+    border-bottom: 1px solid #0003;
+  }
+
+  .title-field.is-small {
+    font-size: $size-6;
+  }
+
+  .description-field.is-small {
+    font-size: $size-7;
+  }
+
+  .required {
+    padding-left: $s1;
+    color: $danger;
   }
 
   .placeholder {
