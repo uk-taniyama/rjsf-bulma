@@ -1,9 +1,10 @@
 // copy from @rjsf/core 4adf86a1a633ae25fbeae2f9ca3e419716e5a3d2
-import type { ChangeEvent, DragEvent, DragEventHandler, UIEvent } from "react";
 import { useCallback, useMemo, useRef, useState } from "react";
+import type { ChangeEvent, DragEvent, DragEventHandler, UIEvent } from "react";
+
+import { dataURItoBlob } from "@rjsf/utils";
 
 import type { WidgetProps } from "@rjsf/utils";
-import { dataURItoBlob } from "@rjsf/utils";
 
 function addNameToDataURL(dataURL: string, name: string) {
   if (dataURL === null) {

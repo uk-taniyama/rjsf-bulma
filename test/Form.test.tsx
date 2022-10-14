@@ -1,9 +1,11 @@
 import React from "react";
-import type { ErrorSchema, RJSFSchema, UiSchema } from "@rjsf/utils";
+
 import validator from "@rjsf/validator-ajv6";
 import renderer from "react-test-renderer";
 
 import Form from "../src/index";
+
+import type { ErrorSchema, RJSFSchema, UiSchema } from "@rjsf/utils";
 
 describe("single fields", () => {
   describe("string field", () => {

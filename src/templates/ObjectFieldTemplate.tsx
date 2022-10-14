@@ -1,8 +1,11 @@
 import type { FC } from "react";
-import type { ObjectFieldTemplateProps } from "@rjsf/utils";
+
 import { canExpand, getTemplate, getUiOptions } from "@rjsf/utils";
-import { Col, Row, isSmallClass } from "../ui";
 import clsx from "clsx";
+
+import { Col, Row, isSmallClass } from "../ui";
+
+import type { ObjectFieldTemplateProps } from "@rjsf/utils";
 
 const ObjectFieldTemplate: FC<ObjectFieldTemplateProps> = ({
   description,

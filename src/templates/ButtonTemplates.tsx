@@ -1,11 +1,14 @@
 import type { FC } from "react";
-import type { IconButtonProps } from "@rjsf/utils";
-import { FaPlus } from "@react-icons/all-files/fa/FaPlus";
-import { FaMinus } from "@react-icons/all-files/fa/FaMinus";
-import { FaArrowUp } from "@react-icons/all-files/fa/FaArrowUp";
+
 import { FaArrowDown } from "@react-icons/all-files/fa/FaArrowDown";
+import { FaArrowUp } from "@react-icons/all-files/fa/FaArrowUp";
+import { FaMinus } from "@react-icons/all-files/fa/FaMinus";
+import { FaPlus } from "@react-icons/all-files/fa/FaPlus";
 import clsx from "clsx";
+
 import IconButton from "./IconButton";
+
+import type { IconButtonProps } from "@rjsf/utils";
 
 export const AddButton: FC<IconButtonProps> = ({ className, ...props }) => (
   <IconButton

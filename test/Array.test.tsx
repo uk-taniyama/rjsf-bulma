@@ -1,9 +1,11 @@
 import React from "react";
-import type { ErrorSchema, RJSFSchema } from "@rjsf/utils";
+
 import validator from "@rjsf/validator-ajv6";
 import renderer from "react-test-renderer";
 
 import Form from "../src/index";
+
+import type { ErrorSchema, RJSFSchema } from "@rjsf/utils";
 
 describe("array fields", () => {
   test("array", () => {

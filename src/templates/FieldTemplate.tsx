@@ -1,7 +1,10 @@
 import type { FC } from "react";
-import type { FieldTemplateProps } from "@rjsf/utils";
+
 import { getTemplate, getUiOptions } from "@rjsf/utils";
+
 import { FieldBody, FieldGroup, FieldLabel } from "../ui";
+
+import type { FieldTemplateProps } from "@rjsf/utils";
 
 const FieldTemplate: FC<FieldTemplateProps> = ({
   id,

@@ -1,7 +1,10 @@
 import type { ChangeEvent, FC, FocusEvent } from "react";
-import type { WidgetProps } from "@rjsf/utils";
-import { FieldControl, isSmallClass } from "../ui";
+
 import clsx from "clsx";
+
+import { FieldControl, isSmallClass } from "../ui";
+
+import type { WidgetProps } from "@rjsf/utils";
 
 const TextareaWidget: FC<WidgetProps> = ({
   id,

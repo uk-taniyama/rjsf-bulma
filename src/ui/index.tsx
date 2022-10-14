@@ -1,7 +1,9 @@
 import type { FC, PropsWithChildren } from "react";
-import type { FormContext, UiSchema, WidgetProps } from "@rjsf/utils";
+
 import { getUiOptions } from "@rjsf/utils";
 import clsx from "clsx";
+
+import type { FormContext, UiSchema, WidgetProps } from "@rjsf/utils";
 
 export const isSmallUiSchema = {
   "ui:submitButtonOptions": {

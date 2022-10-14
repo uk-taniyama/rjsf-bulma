@@ -1,7 +1,10 @@
 import React from "react";
-import TextareaWidget from "../src/widgets/TextareaWidget";
-import { makeWidgetMockProps } from "./helpers/createMocks";
+
 import renderer from "react-test-renderer";
+
+import TextareaWidget from "../src/widgets/TextareaWidget";
+
+import { makeWidgetMockProps } from "./helpers/createMocks";
 
 describe("TextareaWidget", () => {
   test("simple without errors", () => {

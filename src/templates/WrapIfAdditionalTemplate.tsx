@@ -1,7 +1,8 @@
 import type { FC, FocusEvent } from "react";
-import type { FormContext, WrapIfAdditionalTemplateProps } from "@rjsf/utils";
+
 import { ADDITIONAL_PROPERTY_FLAG } from "@rjsf/utils";
 import clsx from "clsx";
+
 import {
   Col,
   FieldBody,
@@ -12,6 +13,8 @@ import {
   isHorizontal,
   isSmallClass,
 } from "../ui";
+
+import type { FormContext, WrapIfAdditionalTemplateProps } from "@rjsf/utils";
 
 type AdditionalPropertyKeyTemplateProps = Pick<
   WrapIfAdditionalTemplateProps,

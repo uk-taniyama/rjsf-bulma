@@ -1,7 +1,10 @@
 import type { FC } from "react";
-import type { DescriptionFieldProps } from "@rjsf/utils";
+
 import clsx from "clsx";
+
 import { isSmallClass } from "../ui";
+
+import type { DescriptionFieldProps } from "@rjsf/utils";
 
 const DescriptionFieldTemplate: FC<DescriptionFieldProps> = ({
   description,

@@ -1,11 +1,14 @@
 import type { FC } from "react";
+
+import { getTemplate, getUiOptions } from "@rjsf/utils";
+import clsx from "clsx";
+
+import { Col, Row, isSmallClass } from "../ui";
+
 import type {
   ArrayFieldTemplateItemType,
   ArrayFieldTemplateProps,
 } from "@rjsf/utils";
-import { getTemplate, getUiOptions } from "@rjsf/utils";
-import { Col, Row, isSmallClass } from "../ui";
-import clsx from "clsx";
 
 const ArrayFieldTemplate: FC<ArrayFieldTemplateProps> = (props) => {
   const {

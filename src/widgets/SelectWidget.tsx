@@ -1,8 +1,11 @@
 import type { ChangeEvent, FC, FocusEvent } from "react";
-import type { WidgetProps } from "@rjsf/utils";
+
 import { processSelectValue } from "@rjsf/utils";
 import clsx from "clsx";
+
 import { FieldControl, isSmallClass } from "../ui";
+
+import type { WidgetProps } from "@rjsf/utils";
 
 const SelectWidget: FC<WidgetProps> = ({
   id,

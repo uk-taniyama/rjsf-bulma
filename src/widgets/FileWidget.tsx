@@ -1,8 +1,11 @@
 import type { FC } from "react";
-import type { WidgetProps } from "@rjsf/utils";
+
 import clsx from "clsx";
+
 import { useFileWidget } from "../rjsf-core/useFileWidget";
 import { isSmallClass } from "../ui";
+
+import type { WidgetProps } from "@rjsf/utils";
 
 const FileWidget: FC<WidgetProps> = (props) => {
   const { readonly, disabled, multiple, formContext, registry } = props;

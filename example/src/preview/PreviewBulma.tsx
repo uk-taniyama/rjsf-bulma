@@ -1,12 +1,14 @@
+import { useCallback, useMemo, useState } from "react";
 import type { FC, ReactElement } from "react";
-import { useMemo } from "react";
-import { useCallback, useState } from "react";
-import type { FilesInfoTemplateProps } from "rjsf-bulma";
-import Form, { createIsSmallUiSchema } from "rjsf-bulma";
+
 import validator from "@rjsf/validator-ajv6";
-import { getSample } from "./sample";
-import type { FormContext, TemplatesType } from "@rjsf/utils";
 import clsx from "clsx";
+import Form, { createIsSmallUiSchema } from "rjsf-bulma";
+
+import { getSample } from "./sample";
+
+import type { FormContext, TemplatesType } from "@rjsf/utils";
+import type { FilesInfoTemplateProps } from "rjsf-bulma";
 
 import "rjsf-bulma/scss/bulma.scss";
 

@@ -1,7 +1,10 @@
 import type { FC } from "react";
-import type { ErrorListProps } from "@rjsf/utils";
+
 import clsx from "clsx";
+
 import { isSmallClass } from "../ui";
+
+import type { ErrorListProps } from "@rjsf/utils";
 
 const ErrorListTemplate: FC<ErrorListProps> = ({ errors, formContext }) => (
   <article className={clsx("message is-danger", isSmallClass(formContext))}>

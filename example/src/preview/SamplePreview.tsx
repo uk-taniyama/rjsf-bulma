@@ -1,5 +1,6 @@
-import type { FC } from "react";
 import { useEffect, useState } from "react";
+import type { FC } from "react";
+
 import { sampleNames } from "./sample";
 
 export interface PreviewProps {

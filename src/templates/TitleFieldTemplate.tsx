@@ -1,7 +1,10 @@
 import type { FC } from "react";
-import type { TitleFieldProps } from "@rjsf/utils";
+
 import clsx from "clsx";
+
 import { Required, isSmallClass } from "../ui";
+
+import type { TitleFieldProps } from "@rjsf/utils";
 
 const TitleFieldTemplate: FC<TitleFieldProps> = ({
   id,

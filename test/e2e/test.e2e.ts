@@ -1,7 +1,9 @@
-import type { Browser, Page } from "playwright";
-import { chromium } from "playwright";
 import { toMatchImageSnapshot } from "jest-image-snapshot";
+import { chromium } from "playwright";
+
 import { sampleNames } from "../../example/src/preview/sample";
+
+import type { Browser, Page } from "playwright";
 
 expect.extend({ toMatchImageSnapshot });
 

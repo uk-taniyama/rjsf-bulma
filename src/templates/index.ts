@@ -1,24 +1,26 @@
+import type { ComponentType } from "react";
+
 import ArrayFieldItemTemplate from "./ArrayFieldItemTemplate";
 import ArrayFieldTemplate from "./ArrayFieldTemplate";
 import BaseInputTemplate from "./BaseInputTemplate";
-import DescriptionFieldTemplate from "./DescriptionFieldTemplate";
-import ErrorListTemplate from "./ErrorListTemplate";
 import {
   AddButton,
   MoveDownButton,
   MoveUpButton,
   RemoveButton,
 } from "./ButtonTemplates";
+import DescriptionFieldTemplate from "./DescriptionFieldTemplate";
+import ErrorListTemplate from "./ErrorListTemplate";
 import FieldErrorTemplate from "./FieldErrorTemplate";
 import FieldHelpTemplate from "./FieldHelpTemplate";
 import FieldTemplate from "./FieldTemplate";
+import FilesInfoTemplate from "./FilesInfoTemplate";
 import ObjectFieldTemplate from "./ObjectFieldTemplate";
 import SubmitButton from "./SubmitButton";
 import TitleFieldTemplate from "./TitleFieldTemplate";
 import WrapIfAdditionalTemplate from "./WrapIfAdditionalTemplate";
+
 import type { FilesInfoTemplateProps } from "./FilesInfoTemplate";
-import FilesInfoTemplate from "./FilesInfoTemplate";
-import type { ComponentType } from "react";
 
 export { default as IconButton } from "./IconButton";
 export type { FilesInfoTemplateProps } from "./FilesInfoTemplate";

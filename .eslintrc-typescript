@@ -38,6 +38,21 @@
     "no-prototype-builtins": "error",
     "@typescript-eslint/no-empty-function": "warn",
     "@typescript-eslint/no-var-requires": "warn",
+    "import/order": [ "error", {
+      "groups": ["builtin", "external", "internal", "parent", "sibling", "index", "object", "type"],
+      "pathGroups": [
+        {
+          "pattern": "react",
+          "group": "builtin",
+          "position": "before"
+        }
+      ],
+      "pathGroupsExcludedImportTypes": ["react"],
+      "alphabetize": {
+        "order": "asc"
+      },
+      "newlines-between": "always"
+    } ],
     "sort-imports": [
       "error",
       {
@@ -48,6 +63,7 @@
         "allowSeparatedGroups": true
       }
     ],
+    "import/no-duplicates": "error",
     "@typescript-eslint/consistent-type-imports": ["error", { "prefer": "type-imports" }],
     "@typescript-eslint/type-annotation-spacing": "error",
     "@typescript-eslint/ban-ts-comment": ["error", { "ts-expect-error": { "descriptionFormat": "^: TS\\d+" } }]

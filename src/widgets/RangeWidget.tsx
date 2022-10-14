@@ -1,7 +1,8 @@
 import type { FC } from "react";
 
-import type { WidgetProps } from "@rjsf/utils";
 import { getTemplate } from "@rjsf/utils";
+
+import type { WidgetProps } from "@rjsf/utils";
 
 const RangeWidget: FC<WidgetProps> = (props) => {
   const { options, registry } = props;

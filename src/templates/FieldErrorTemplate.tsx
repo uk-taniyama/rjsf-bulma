@@ -1,4 +1,5 @@
 import type { FC } from "react";
+
 import type { FieldErrorProps } from "@rjsf/utils";
 
 /** The `FieldErrorTemplate` component renders the errors local to the particular field

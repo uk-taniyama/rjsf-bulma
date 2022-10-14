@@ -1,4 +1,5 @@
 import type { FC } from "react";
+
 import type { FileInfoType } from "../rjsf-core/useFileWidget";
 
 export interface FilesInfoTemplateProps {

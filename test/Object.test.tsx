@@ -1,9 +1,11 @@
 import React from "react";
-import type { RJSFSchema } from "@rjsf/utils";
+
 import validator from "@rjsf/validator-ajv6";
 import renderer from "react-test-renderer";
 
 import Form from "../src/index";
+
+import type { RJSFSchema } from "@rjsf/utils";
 
 describe("object fields", () => {
   test("object", () => {

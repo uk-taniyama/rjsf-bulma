@@ -1,6 +1,8 @@
 import React from "react";
-import { AddButton } from "../src/templates/ButtonTemplates";
+
 import renderer from "react-test-renderer";
+
+import { AddButton } from "../src/templates/ButtonTemplates";
 
 describe("AddButton", () => {
   test("simple", () => {
