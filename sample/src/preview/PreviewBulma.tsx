@@ -3,6 +3,7 @@ import type { FC, ReactElement } from "react";
 
 import validator from "@rjsf/validator-ajv6";
 import clsx from "clsx";
+import stringify from "json-stringify-pretty-compact";
 import Form, { createIsSmallUiSchema } from "rjsf-bulma";
 
 import { getSample } from "./sample";
@@ -22,7 +23,7 @@ const CustomFilesInfoTemplate: FC<FilesInfoTemplateProps> = (props) => {
         maxWidth: "80vw",
       }}
     >
-      {JSON.stringify(props)}
+      {stringify(props)}
     </pre>
   );
 };
