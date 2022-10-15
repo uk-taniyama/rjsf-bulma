@@ -132,6 +132,9 @@ export default {
     },
     multipleChoicesList: {
       "ui:widget": "checkboxes",
+      "ui:options": {
+        enumDisabled: ["fuzz"]
+      }
     },
     fixedItemsList: {
       items: [{ "ui:widget": "textarea" }, { "ui:widget": "select" }],

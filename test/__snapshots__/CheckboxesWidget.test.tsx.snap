@@ -4,23 +4,26 @@ exports[`CheckboxesWidget inline 1`] = `
 <div
   className="control"
 >
-  <label
-    className="checkbox"
+  <fieldset
+    disabled={true}
   >
-    <input
-      autoFocus={true}
-      checked="value"
-      disabled={true}
-      id="_id"
-      name="_id"
-      onBlur={[Function]}
-      onChange={[Function]}
-      onFocus={[Function]}
-      required={true}
-      type="checkbox"
-    />
-    Some simple label
-  </label>
+    <label
+      className="checkbox"
+    >
+      <input
+        autoFocus={true}
+        checked="value"
+        id="_id"
+        name="_id"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        required={true}
+        type="checkbox"
+      />
+      Some simple label
+    </label>
+  </fieldset>
 </div>
 `;
 
@@ -28,22 +31,25 @@ exports[`CheckboxesWidget simple 1`] = `
 <div
   className="control"
 >
-  <label
-    className="checkbox"
+  <fieldset
+    disabled={true}
   >
-    <input
-      autoFocus={true}
-      checked="value"
-      disabled={true}
-      id="_id"
-      name="_id"
-      onBlur={[Function]}
-      onChange={[Function]}
-      onFocus={[Function]}
-      required={true}
-      type="checkbox"
-    />
-    Some simple label
-  </label>
+    <label
+      className="checkbox"
+    >
+      <input
+        autoFocus={true}
+        checked="value"
+        id="_id"
+        name="_id"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        required={true}
+        type="checkbox"
+      />
+      Some simple label
+    </label>
+  </fieldset>
 </div>
 `;

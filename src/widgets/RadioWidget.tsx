@@ -1,4 +1,3 @@
-// TODO FIXME??? inlineがデフォルト......
 import type { ChangeEvent, FC, FocusEvent } from "react";
 
 import clsx from "clsx";
@@ -30,26 +29,26 @@ const RadioWidget: FC<WidgetProps> = ({
     onFocus(id, value);
 
   return (
-    <>
-      <FieldControl>
-        {Array.isArray(enumOptions) &&
-          enumOptions.map((option) => {
-            const checked = option.value == value;
-            const itemDisabled =
-              Array.isArray(enumDisabled) &&
-              enumDisabled.indexOf(option.value) !== -1;
+    <FieldControl>
+      {Array.isArray(enumOptions) &&
+        enumOptions.map((option) => {
+          const checked = option.value == value;
+          const itemDisabled =
+            Array.isArray(enumDisabled) &&
+            enumDisabled.indexOf(option.value) !== -1;
 
-            return (
-              <label
-                key={option.value}
-                className={clsx("radio", isSmallClass(formContext))}
-              >
+          return (
+            <fieldset
+              key={option.value}
+              className="inline"
+              disabled={disabled || itemDisabled || readonly}
+            >
+              <label className={clsx("radio", isSmallClass(formContext))}>
                 <input
                   name={id}
                   type="radio"
                   checked={checked}
                   required={required}
-                  disabled={disabled || itemDisabled || readonly}
                   value={option.value}
                   onChange={_onChange}
                   onBlur={_onBlur}
@@ -57,10 +56,10 @@ const RadioWidget: FC<WidgetProps> = ({
                 />
                 {option.label}
               </label>
-            );
-          })}
-      </FieldControl>
-    </>
+            </fieldset>
+          );
+        })}
+    </FieldControl>
   );
 };
 

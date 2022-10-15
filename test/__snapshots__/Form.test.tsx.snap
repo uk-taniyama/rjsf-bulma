@@ -15,21 +15,24 @@ exports[`single fields checkbox field 1`] = `
       <div
         className="control"
       >
-        <label
-          className="checkbox"
+        <fieldset
+          disabled={false}
         >
-          <input
-            autoFocus={false}
-            checked={false}
-            disabled={false}
-            id="root"
-            name="root"
-            onBlur={[Function]}
-            onChange={[Function]}
-            onFocus={[Function]}
-            type="checkbox"
-          />
-        </label>
+          <label
+            className="checkbox"
+          >
+            <input
+              autoFocus={false}
+              checked={false}
+              id="root"
+              name="root"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              type="checkbox"
+            />
+          </label>
+        </fieldset>
       </div>
     </div>
   </div>
@@ -58,21 +61,24 @@ exports[`single fields checkbox field 2`] = `
       <div
         className="control"
       >
-        <label
-          className="checkbox"
+        <fieldset
+          disabled={false}
         >
-          <input
-            autoFocus={false}
-            checked={false}
-            disabled={false}
-            id="root"
-            name="root"
-            onBlur={[Function]}
-            onChange={[Function]}
-            onFocus={[Function]}
-            type="checkbox"
-          />
-        </label>
+          <label
+            className="checkbox"
+          >
+            <input
+              autoFocus={false}
+              checked={false}
+              id="root"
+              name="root"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              type="checkbox"
+            />
+          </label>
+        </fieldset>
       </div>
     </div>
   </div>
@@ -101,70 +107,86 @@ exports[`single fields checkboxes field 1`] = `
       <div
         className="control"
       >
-        <label
-          className="checkbox"
+        <fieldset
+          className="inline"
+          disabled={false}
         >
-          <input
-            autoFocus={false}
-            checked={false}
-            disabled={false}
-            name="root"
-            onBlur={[Function]}
-            onChange={[Function]}
-            onFocus={[Function]}
-            required={false}
-            type="checkbox"
-          />
-          foo
-        </label>
-        <label
-          className="checkbox"
+          <label
+            className="checkbox"
+          >
+            <input
+              autoFocus={false}
+              checked={false}
+              name="root"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              required={false}
+              type="checkbox"
+            />
+            foo
+          </label>
+        </fieldset>
+        <fieldset
+          className="inline"
+          disabled={false}
         >
-          <input
-            autoFocus={false}
-            checked={false}
-            disabled={false}
-            name="root"
-            onBlur={[Function]}
-            onChange={[Function]}
-            onFocus={[Function]}
-            required={false}
-            type="checkbox"
-          />
-          bar
-        </label>
-        <label
-          className="checkbox"
+          <label
+            className="checkbox"
+          >
+            <input
+              autoFocus={false}
+              checked={false}
+              name="root"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              required={false}
+              type="checkbox"
+            />
+            bar
+          </label>
+        </fieldset>
+        <fieldset
+          className="inline"
+          disabled={false}
         >
-          <input
-            autoFocus={false}
-            checked={false}
-            disabled={false}
-            name="root"
-            onBlur={[Function]}
-            onChange={[Function]}
-            onFocus={[Function]}
-            required={false}
-            type="checkbox"
-          />
-          fuzz
-        </label>
-        <label
-          className="checkbox"
+          <label
+            className="checkbox"
+          >
+            <input
+              autoFocus={false}
+              checked={false}
+              name="root"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              required={false}
+              type="checkbox"
+            />
+            fuzz
+          </label>
+        </fieldset>
+        <fieldset
+          className="inline"
+          disabled={false}
         >
-          <input
-            autoFocus={false}
-            checked={false}
-            disabled={false}
-            name="root"
-            onBlur={[Function]}
-            onChange={[Function]}
-            onFocus={[Function]}
-            required={false}
-            type="checkbox"
-          />
-          qux
-        </label>
+          <label
+            className="checkbox"
+          >
+            <input
+              autoFocus={false}
+              checked={false}
+              name="root"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              required={false}
+              type="checkbox"
+            />
+            qux
+          </label>
+        </fieldset>
       </div>
     </div>
   </div>
@@ -780,36 +802,44 @@ exports[`single fields radio field 1`] = `
       <div
         className="control"
       >
-        <label
-          className="radio"
+        <fieldset
+          className="inline"
+          disabled={false}
         >
-          <input
-            checked={false}
-            disabled={false}
-            name="root"
-            onBlur={[Function]}
-            onChange={[Function]}
-            onFocus={[Function]}
-            type="radio"
-            value={true}
-          />
-          Yes
-        </label>
-        <label
-          className="radio"
+          <label
+            className="radio"
+          >
+            <input
+              checked={false}
+              name="root"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              type="radio"
+              value={true}
+            />
+            Yes
+          </label>
+        </fieldset>
+        <fieldset
+          className="inline"
+          disabled={false}
         >
-          <input
-            checked={false}
-            disabled={false}
-            name="root"
-            onBlur={[Function]}
-            onChange={[Function]}
-            onFocus={[Function]}
-            type="radio"
-            value={false}
-          />
-          No
-        </label>
+          <label
+            className="radio"
+          >
+            <input
+              checked={false}
+              name="root"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              type="radio"
+              value={false}
+            />
+            No
+          </label>
+        </fieldset>
       </div>
     </div>
   </div>

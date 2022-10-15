@@ -1,4 +1,3 @@
-// FIXME checkboxを横並びにしている.....
 import type { ChangeEvent, FC, FocusEvent } from "react";
 
 import clsx from "clsx";
@@ -32,8 +31,8 @@ const CheckboxWidget: FC<WidgetProps> = (props) => {
 
   const desc = label || schema.description;
   return (
-    <>
-      <FieldControl>
+    <FieldControl>
+      <fieldset disabled={disabled || readonly}>
         <label className={clsx("checkbox", isSmallClass(formContext))}>
           <input
             id={id}
@@ -41,7 +40,6 @@ const CheckboxWidget: FC<WidgetProps> = (props) => {
             type="checkbox"
             checked={value == null ? false : value}
             required={required}
-            disabled={disabled || readonly}
             autoFocus={autofocus}
             onChange={_onChange}
             onBlur={_onBlur}
@@ -49,8 +47,8 @@ const CheckboxWidget: FC<WidgetProps> = (props) => {
           />
           {desc}
         </label>
-      </FieldControl>
-    </>
+      </fieldset>
+    </FieldControl>
   );
 };
 

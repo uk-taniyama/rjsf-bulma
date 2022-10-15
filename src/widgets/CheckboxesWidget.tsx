@@ -52,30 +52,26 @@ const CheckboxesWidget: FC<WidgetProps> = ({
     onFocus(id, value);
 
   return (
-    <>
-      <FieldControl>
-        {Array.isArray(enumOptions) &&
-          enumOptions.map((option, index: number) => {
-            const checked = value.indexOf(option.value) !== -1;
-            const itemDisabled =
-              Array.isArray(enumDisabled) &&
-              enumDisabled.indexOf(option.value) !== -1;
+    <FieldControl>
+      {Array.isArray(enumOptions) &&
+        enumOptions.map((option, index: number) => {
+          const checked = value.indexOf(option.value) !== -1;
+          const itemDisabled =
+            Array.isArray(enumDisabled) &&
+            enumDisabled.indexOf(option.value) !== -1;
 
-            return (
-              <label
-                key={option.value}
-                className={clsx(
-                  "checkbox",
-                  isSmallClass(formContext),
-                  inline === false && "no-inline"
-                )}
-              >
+          return (
+            <fieldset
+              key={option.value}
+              disabled={disabled || itemDisabled || readonly}
+              className={clsx(inline !== false && "inline")}
+            >
+              <label className={clsx("checkbox", isSmallClass(formContext))}>
                 <input
                   name={id}
                   type="checkbox"
                   checked={checked}
                   required={required}
-                  disabled={disabled || itemDisabled || readonly}
                   autoFocus={autofocus && index === 0}
                   onChange={_onChange(option)}
                   onBlur={_onBlur}
@@ -83,10 +79,10 @@ const CheckboxesWidget: FC<WidgetProps> = ({
                 />
                 {option.label}
               </label>
-            );
-          })}
-      </FieldControl>
-    </>
+            </fieldset>
+          );
+        })}
+    </FieldControl>
   );
 };
 
