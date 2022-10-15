@@ -8,8 +8,8 @@ import { Col, Row, isSmallClass } from "../ui";
 import type { ObjectFieldTemplateProps } from "@rjsf/utils";
 
 const ObjectFieldTemplate: FC<ObjectFieldTemplateProps> = ({
-  description,
-  title,
+  description: _description,
+  title: _title,
   properties,
   required,
   uiSchema,
@@ -37,15 +37,17 @@ const ObjectFieldTemplate: FC<ObjectFieldTemplateProps> = ({
   const {
     ButtonTemplates: { AddButton },
   } = registry.templates;
+  const title = uiOptions.title || _title;
+  const description = uiOptions.description || _description;
   return (
     <>
-      {(uiOptions.title || title) && (
+      {title && (
         <Row>
           <Col>
             <TitleFieldTemplate
               id={`${idSchema.$id}-title`}
               schema={schema}
-              title={uiOptions.title || title}
+              title={title}
               required={required}
               registry={registry}
               uiSchema={uiSchema}
@@ -53,13 +55,13 @@ const ObjectFieldTemplate: FC<ObjectFieldTemplateProps> = ({
           </Col>
         </Row>
       )}
-      {(uiOptions.description || description) && (
+      {description && (
         <Row>
           <Col>
             <DescriptionFieldTemplate
               id={`${idSchema.$id}-description`}
               schema={schema}
-              description={uiOptions.description || description!}
+              description={description}
               registry={registry}
             />
           </Col>

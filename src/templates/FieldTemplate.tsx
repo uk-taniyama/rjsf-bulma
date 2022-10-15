@@ -10,9 +10,9 @@ const FieldTemplate: FC<FieldTemplateProps> = ({
   id,
   children,
   displayLabel,
+  description,
   errors,
   help,
-  rawDescription,
   classNames,
   disabled,
   label,
@@ -31,6 +31,7 @@ const FieldTemplate: FC<FieldTemplateProps> = ({
     registry,
     uiOptions
   );
+  const displayDescription = schema.type !== "object";
   return (
     <WrapIfAdditionalTemplate
       classNames={classNames}
@@ -58,9 +59,7 @@ const FieldTemplate: FC<FieldTemplateProps> = ({
         )}
         <FieldBody formContext={formContext}>
           {children}
-          {displayLabel && rawDescription && (
-            <div className="help">{rawDescription}</div>
-          )}
+          {displayDescription && description}
           {errors}
           {help}
         </FieldBody>

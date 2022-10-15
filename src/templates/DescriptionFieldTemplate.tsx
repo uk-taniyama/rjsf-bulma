@@ -7,6 +7,7 @@ import { isSmallClass } from "../ui";
 import type { DescriptionFieldProps } from "@rjsf/utils";
 
 const DescriptionFieldTemplate: FC<DescriptionFieldProps> = ({
+  schema: { type },
   description,
   registry,
 }) => {
@@ -16,7 +17,10 @@ const DescriptionFieldTemplate: FC<DescriptionFieldProps> = ({
 
   return (
     <div
-      className={clsx("description-field", isSmallClass(registry.formContext))}
+      className={clsx(
+        type === "object" ? "description-field" : "help",
+        isSmallClass(registry.formContext)
+      )}
     >
       {description}
     </div>
