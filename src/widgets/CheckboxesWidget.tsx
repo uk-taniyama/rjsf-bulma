@@ -1,4 +1,3 @@
-// FIXME checkboxを横並びにしている.....
 import type { ChangeEvent, FC, FocusEvent } from "react";
 
 import clsx from "clsx";
@@ -33,7 +32,7 @@ const CheckboxesWidget: FC<WidgetProps> = ({
   onFocus,
   formContext,
 }) => {
-  const { enumOptions, enumDisabled } = options;
+  const { enumOptions, enumDisabled, inline } = options;
 
   const _onChange =
     (option: any) =>
@@ -65,7 +64,11 @@ const CheckboxesWidget: FC<WidgetProps> = ({
             return (
               <label
                 key={option.value}
-                className={clsx("checkbox", isSmallClass(formContext))}
+                className={clsx(
+                  "checkbox",
+                  isSmallClass(formContext),
+                  inline === false && "no-inline"
+                )}
               >
                 <input
                   id={`${id}-${option.value}`}

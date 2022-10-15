@@ -24,6 +24,10 @@
     margin-right: $s2;
   }
 
+  label.checkbox.no-inline {
+    display: block;
+  }
+
   .checkbox>input,
   .radio>input {
     margin-right: $s1;
