@@ -34,10 +34,10 @@ const RadioWidget: FC<WidgetProps> = ({
       <FieldControl>
         {Array.isArray(enumOptions) &&
           enumOptions.map((option) => {
+            const checked = option.value == value;
             const itemDisabled =
               Array.isArray(enumDisabled) &&
               enumDisabled.indexOf(option.value) !== -1;
-            const checked = option.value == value;
 
             return (
               <label

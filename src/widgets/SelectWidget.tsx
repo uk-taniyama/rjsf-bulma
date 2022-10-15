@@ -86,7 +86,8 @@ const SelectWidget: FC<WidgetProps> = ({
             {(enumOptions as any).map(({ value, label }: any, i: number) => {
               const disabled: any =
                 Array.isArray(enumDisabled) &&
-                (enumDisabled as any).indexOf(value) != -1;
+                enumDisabled.indexOf(value) != -1;
+              // TODO remove id
               return (
                 <option key={i} id={label} value={value} disabled={disabled}>
                   {label}
