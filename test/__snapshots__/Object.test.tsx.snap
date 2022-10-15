@@ -7,7 +7,7 @@ exports[`object fields additionalProperties 1`] = `
   onSubmit={[Function]}
 >
   <div
-    className="form-group field field-object"
+    className="form-group field-object"
   >
     <div
       className="field"
@@ -19,7 +19,7 @@ exports[`object fields additionalProperties 1`] = `
           className="column"
         >
           <div
-            className="form-group field field-string additional-property"
+            className="form-group field-string additional-property"
           >
             <div
               className="columns is-gapless"
@@ -178,7 +178,7 @@ exports[`object fields object 1`] = `
   onSubmit={[Function]}
 >
   <div
-    className="form-group field field-object"
+    className="form-group field-object"
   >
     <div
       className="field"
@@ -190,7 +190,7 @@ exports[`object fields object 1`] = `
           className="column"
         >
           <div
-            className="form-group field field-string"
+            className="form-group field-string"
           >
             <div
               className="field"
@@ -231,7 +231,7 @@ exports[`object fields object 1`] = `
           className="column"
         >
           <div
-            className="form-group field field-number"
+            className="form-group field-number"
           >
             <div
               className="field"

@@ -7,7 +7,7 @@ exports[`array fields array 1`] = `
   onSubmit={[Function]}
 >
   <div
-    className="form-group field field-array"
+    className="form-group field-array"
   >
     <div
       className="field"
@@ -74,7 +74,7 @@ exports[`array fields array icons 1`] = `
   onSubmit={[Function]}
 >
   <div
-    className="form-group field field-array"
+    className="form-group field-array"
   >
     <div
       className="field"
@@ -102,7 +102,7 @@ exports[`array fields array icons 1`] = `
                 className="array-value"
               >
                 <div
-                  className="form-group field field-string"
+                  className="form-group field-string"
                 >
                   <div
                     className="field"
@@ -140,7 +140,7 @@ exports[`array fields array icons 1`] = `
                   className="control"
                 >
                   <button
-                    className="button"
+                    className="button array-item-up"
                     disabled={true}
                     onClick={[Function]}
                     title="Move up"
@@ -169,7 +169,7 @@ exports[`array fields array icons 1`] = `
                   className="control"
                 >
                   <button
-                    className="button"
+                    className="button array-item-down"
                     disabled={false}
                     onClick={[Function]}
                     title="Move down"
@@ -198,7 +198,7 @@ exports[`array fields array icons 1`] = `
                   className="control"
                 >
                   <button
-                    className="button is-danger"
+                    className="button array-item-remove is-danger"
                     disabled={false}
                     onClick={[Function]}
                     title="Remove"
@@ -244,7 +244,7 @@ exports[`array fields array icons 1`] = `
                 className="array-value"
               >
                 <div
-                  className="form-group field field-string"
+                  className="form-group field-string"
                 >
                   <div
                     className="field"
@@ -282,7 +282,7 @@ exports[`array fields array icons 1`] = `
                   className="control"
                 >
                   <button
-                    className="button"
+                    className="button array-item-up"
                     disabled={false}
                     onClick={[Function]}
                     title="Move up"
@@ -311,7 +311,7 @@ exports[`array fields array icons 1`] = `
                   className="control"
                 >
                   <button
-                    className="button"
+                    className="button array-item-down"
                     disabled={true}
                     onClick={[Function]}
                     title="Move down"
@@ -340,7 +340,7 @@ exports[`array fields array icons 1`] = `
                   className="control"
                 >
                   <button
-                    className="button is-danger"
+                    className="button array-item-remove is-danger"
                     disabled={false}
                     onClick={[Function]}
                     title="Remove"
@@ -425,7 +425,7 @@ exports[`array fields checkboxes 1`] = `
   onSubmit={[Function]}
 >
   <div
-    className="form-group field field-array"
+    className="form-group field-array"
   >
     <div
       className="field"
@@ -450,21 +450,18 @@ exports[`array fields checkboxes 1`] = `
           >
             <option
               disabled={false}
-              id="a"
               value="a"
             >
               a
             </option>
             <option
               disabled={false}
-              id="b"
               value="b"
             >
               b
             </option>
             <option
               disabled={false}
-              id="c"
               value="c"
             >
               c
@@ -491,7 +488,7 @@ exports[`array fields empty errors array 1`] = `
   onSubmit={[Function]}
 >
   <div
-    className="form-group field field-object"
+    className="form-group field-object"
   >
     <div
       className="field"
@@ -503,7 +500,7 @@ exports[`array fields empty errors array 1`] = `
           className="column"
         >
           <div
-            className="form-group field field-string"
+            className="form-group field-string"
           >
             <div
               className="field"
@@ -556,7 +553,7 @@ exports[`array fields fixed array 1`] = `
   onSubmit={[Function]}
 >
   <div
-    className="form-group field field-array"
+    className="form-group field-array"
   >
     <div
       className="field"
@@ -584,7 +581,7 @@ exports[`array fields fixed array 1`] = `
                 className="array-value"
               >
                 <div
-                  className="form-group field field-string"
+                  className="form-group field-string"
                 >
                   <div
                     className="field"
@@ -631,7 +628,7 @@ exports[`array fields fixed array 1`] = `
                 className="array-value"
               >
                 <div
-                  className="form-group field field-number"
+                  className="form-group field-number"
                 >
                   <div
                     className="field"
@@ -682,7 +679,7 @@ exports[`array fields no errors 1`] = `
   onSubmit={[Function]}
 >
   <div
-    className="form-group field field-object"
+    className="form-group field-object"
   >
     <div
       className="field"
@@ -694,7 +691,7 @@ exports[`array fields no errors 1`] = `
           className="column"
         >
           <div
-            className="form-group field field-string"
+            className="form-group field-string"
           >
             <div
               className="field"

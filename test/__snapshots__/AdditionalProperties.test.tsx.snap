@@ -7,7 +7,7 @@ exports[`AdditionalProperties tests show add button and fields if additionalProp
   onSubmit={[Function]}
 >
   <div
-    className="form-group field field-undefined"
+    className="form-group field-undefined"
   >
     <div
       className="field"
@@ -19,7 +19,7 @@ exports[`AdditionalProperties tests show add button and fields if additionalProp
           className="column"
         >
           <div
-            className="form-group field field-string additional-property"
+            className="form-group field-string additional-property"
           >
             <div
               className="columns is-gapless"

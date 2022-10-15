@@ -71,7 +71,6 @@ const CheckboxesWidget: FC<WidgetProps> = ({
                 )}
               >
                 <input
-                  id={`${id}-${option.value}`}
                   name={id}
                   type="checkbox"
                   checked={checked}

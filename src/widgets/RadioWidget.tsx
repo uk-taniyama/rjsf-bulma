@@ -45,7 +45,6 @@ const RadioWidget: FC<WidgetProps> = ({
                 className={clsx("radio", isSmallClass(formContext))}
               >
                 <input
-                  id={`${id}-${option.value}`}
                   name={id}
                   type="radio"
                   checked={checked}

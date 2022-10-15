@@ -7,7 +7,7 @@ exports[`single fields checkbox field 1`] = `
   onSubmit={[Function]}
 >
   <div
-    className="form-group field field-boolean"
+    className="form-group field-boolean"
   >
     <div
       className="field"
@@ -50,7 +50,7 @@ exports[`single fields checkbox field 2`] = `
   onSubmit={[Function]}
 >
   <div
-    className="form-group field field-boolean"
+    className="form-group field-boolean"
   >
     <div
       className="field"
@@ -93,7 +93,7 @@ exports[`single fields checkboxes field 1`] = `
   onSubmit={[Function]}
 >
   <div
-    className="form-group field field-array"
+    className="form-group field-array"
   >
     <div
       className="field"
@@ -108,7 +108,6 @@ exports[`single fields checkboxes field 1`] = `
             autoFocus={false}
             checked={false}
             disabled={false}
-            id="root-foo"
             name="root"
             onBlur={[Function]}
             onChange={[Function]}
@@ -125,7 +124,6 @@ exports[`single fields checkboxes field 1`] = `
             autoFocus={false}
             checked={false}
             disabled={false}
-            id="root-bar"
             name="root"
             onBlur={[Function]}
             onChange={[Function]}
@@ -142,7 +140,6 @@ exports[`single fields checkboxes field 1`] = `
             autoFocus={false}
             checked={false}
             disabled={false}
-            id="root-fuzz"
             name="root"
             onBlur={[Function]}
             onChange={[Function]}
@@ -159,7 +156,6 @@ exports[`single fields checkboxes field 1`] = `
             autoFocus={false}
             checked={false}
             disabled={false}
-            id="root-qux"
             name="root"
             onBlur={[Function]}
             onChange={[Function]}
@@ -189,7 +185,7 @@ exports[`single fields field with description 1`] = `
   onSubmit={[Function]}
 >
   <div
-    className="form-group field field-object"
+    className="form-group field-object"
   >
     <div
       className="field"
@@ -201,7 +197,7 @@ exports[`single fields field with description 1`] = `
           className="column"
         >
           <div
-            className="form-group field field-string"
+            className="form-group field-string"
           >
             <div
               className="field"
@@ -259,7 +255,7 @@ exports[`single fields field with description in uiSchema 1`] = `
   onSubmit={[Function]}
 >
   <div
-    className="form-group field field-object"
+    className="form-group field-object"
   >
     <div
       className="field"
@@ -271,7 +267,7 @@ exports[`single fields field with description in uiSchema 1`] = `
           className="column"
         >
           <div
-            className="form-group field field-string"
+            className="form-group field-string"
           >
             <div
               className="field"
@@ -329,7 +325,7 @@ exports[`single fields format color 1`] = `
   onSubmit={[Function]}
 >
   <div
-    className="form-group field field-string"
+    className="form-group field-string"
   >
     <div
       className="field"
@@ -371,7 +367,7 @@ exports[`single fields format date 1`] = `
   onSubmit={[Function]}
 >
   <div
-    className="form-group field field-string"
+    className="form-group field-string"
   >
     <div
       className="field"
@@ -413,7 +409,7 @@ exports[`single fields format datetime 1`] = `
   onSubmit={[Function]}
 >
   <div
-    className="form-group field field-string"
+    className="form-group field-string"
   >
     <div
       className="field"
@@ -475,7 +471,7 @@ exports[`single fields help and error display 1`] = `
     </div>
   </article>
   <div
-    className="form-group field field-string field-error has-error has-danger"
+    className="form-group field-string field-error has-error has-danger"
   >
     <div
       className="field"
@@ -531,7 +527,7 @@ exports[`single fields hidden field 1`] = `
   onSubmit={[Function]}
 >
   <div
-    className="form-group field field-object"
+    className="form-group field-object"
   >
     <div
       className="field"
@@ -543,7 +539,7 @@ exports[`single fields hidden field 1`] = `
           className="column"
         >
           <div
-            className="form-group field field-string"
+            className="form-group field-string"
           >
             <div
               className="field"
@@ -583,7 +579,7 @@ exports[`single fields hidden label 1`] = `
   onSubmit={[Function]}
 >
   <div
-    className="form-group field field-string"
+    className="form-group field-string"
   >
     <div
       className="field"
@@ -625,7 +621,7 @@ exports[`single fields null field 1`] = `
   onSubmit={[Function]}
 >
   <div
-    className="form-group field field-null"
+    className="form-group field-null"
   >
     <div
       className="field"
@@ -648,7 +644,7 @@ exports[`single fields number field 0 1`] = `
   onSubmit={[Function]}
 >
   <div
-    className="form-group field field-number"
+    className="form-group field-number"
   >
     <div
       className="field"
@@ -691,7 +687,7 @@ exports[`single fields number field 1`] = `
   onSubmit={[Function]}
 >
   <div
-    className="form-group field field-number"
+    className="form-group field-number"
   >
     <div
       className="field"
@@ -734,7 +730,7 @@ exports[`single fields password field 1`] = `
   onSubmit={[Function]}
 >
   <div
-    className="form-group field field-string"
+    className="form-group field-string"
   >
     <div
       className="field"
@@ -776,7 +772,7 @@ exports[`single fields radio field 1`] = `
   onSubmit={[Function]}
 >
   <div
-    className="form-group field field-boolean"
+    className="form-group field-boolean"
   >
     <div
       className="field"
@@ -790,7 +786,6 @@ exports[`single fields radio field 1`] = `
           <input
             checked={false}
             disabled={false}
-            id="root-true"
             name="root"
             onBlur={[Function]}
             onChange={[Function]}
@@ -806,7 +801,6 @@ exports[`single fields radio field 1`] = `
           <input
             checked={false}
             disabled={false}
-            id="root-false"
             name="root"
             onBlur={[Function]}
             onChange={[Function]}
@@ -836,7 +830,7 @@ exports[`single fields schema examples 1`] = `
   onSubmit={[Function]}
 >
   <div
-    className="form-group field field-string"
+    className="form-group field-string"
   >
     <div
       className="field"
@@ -898,7 +892,7 @@ exports[`single fields select field 1`] = `
   onSubmit={[Function]}
 >
   <div
-    className="form-group field field-string"
+    className="form-group field-string"
   >
     <div
       className="field"
@@ -924,14 +918,12 @@ exports[`single fields select field 1`] = `
             />
             <option
               disabled={false}
-              id="foo"
               value="foo"
             >
               foo
             </option>
             <option
               disabled={false}
-              id="bar"
               value="bar"
             >
               bar
@@ -958,7 +950,7 @@ exports[`single fields slider field 1`] = `
   onSubmit={[Function]}
 >
   <div
-    className="form-group field field-integer"
+    className="form-group field-integer"
   >
     <div
       className="field"
@@ -1012,7 +1004,7 @@ exports[`single fields string field format data-url 1`] = `
   onSubmit={[Function]}
 >
   <div
-    className="form-group field field-string"
+    className="form-group field-string"
   >
     <div
       className="field"
@@ -1129,7 +1121,7 @@ exports[`single fields string field format email 1`] = `
   onSubmit={[Function]}
 >
   <div
-    className="form-group field field-string"
+    className="form-group field-string"
   >
     <div
       className="field"
@@ -1171,7 +1163,7 @@ exports[`single fields string field format uri 1`] = `
   onSubmit={[Function]}
 >
   <div
-    className="form-group field field-string"
+    className="form-group field-string"
   >
     <div
       className="field"
@@ -1213,7 +1205,7 @@ exports[`single fields string field regular 1`] = `
   onSubmit={[Function]}
 >
   <div
-    className="form-group field field-string"
+    className="form-group field-string"
   >
     <div
       className="field"
@@ -1255,7 +1247,7 @@ exports[`single fields string field with placeholder 1`] = `
   onSubmit={[Function]}
 >
   <div
-    className="form-group field field-string"
+    className="form-group field-string"
   >
     <div
       className="field"
@@ -1297,7 +1289,7 @@ exports[`single fields textarea field 1`] = `
   onSubmit={[Function]}
 >
   <div
-    className="form-group field field-string"
+    className="form-group field-string"
   >
     <div
       className="field"
@@ -1339,7 +1331,7 @@ exports[`single fields title field 1`] = `
   onSubmit={[Function]}
 >
   <div
-    className="form-group field field-object"
+    className="form-group field-object"
   >
     <div
       className="field"
@@ -1365,7 +1357,7 @@ exports[`single fields title field 1`] = `
           className="column"
         >
           <div
-            className="form-group field field-string"
+            className="form-group field-string"
           >
             <div
               className="field"
@@ -1418,7 +1410,7 @@ exports[`single fields unsupported field 1`] = `
   onSubmit={[Function]}
 >
   <div
-    className="form-group field field-undefined"
+    className="form-group field-undefined"
   >
     <div
       className="field"
@@ -1464,7 +1456,7 @@ exports[`single fields up/down field 1`] = `
   onSubmit={[Function]}
 >
   <div
-    className="form-group field field-number"
+    className="form-group field-number"
   >
     <div
       className="field"
@@ -1506,7 +1498,7 @@ exports[`single fields using custom tagName 1`] = `
   onSubmit={[Function]}
 >
   <div
-    className="form-group field field-string"
+    className="form-group field-string"
   >
     <div
       className="field"
