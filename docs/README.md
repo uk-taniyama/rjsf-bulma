@@ -1,6 +1,6 @@
-rjsf-bulma - v5.0.0-beta.4
+rjsf-bulma - v5.0.0-beta.5
 
-# rjsf-bulma - v5.0.0-beta.4
+# rjsf-bulma - v5.0.0-beta.5
 
 ## Table of contents
 
@@ -29,7 +29,13 @@ rjsf-bulma - v5.0.0-beta.4
 
 - [IconButton](README.md#iconbutton)
 - [createIsSmallUiSchema](README.md#createissmalluischema)
+- [useBaseInputTemplate](README.md#usebaseinputtemplate)
+- [useCheckboxWidget](README.md#usecheckboxwidget)
+- [useCheckboxesWidget](README.md#usecheckboxeswidget)
 - [useFileWidget](README.md#usefilewidget)
+- [useRadioWidget](README.md#useradiowidget)
+- [useSelectWidget](README.md#useselectwidget)
+- [useTextareaWidget](README.md#usetextareawidget)
 
 ## References
 
@@ -146,6 +152,75 @@ ___
 
 ___
 
+### useBaseInputTemplate
+
+▸ **useBaseInputTemplate**(`props`): `Object`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `props` | `WidgetProps`<`any`, `any`\> |
+
+#### Returns
+
+`Object`
+
+| Name | Type |
+| :------ | :------ |
+| `hasErrors` | `boolean` |
+| `inputProps` | {} |
+| `onBlur` | (`__namedParameters`: `FocusEvent`<`HTMLInputElement`, `Element`\>) => `void` |
+| `onChange` | (`__namedParameters`: `ChangeEvent`<`HTMLInputElement`\>) => `void` |
+| `onFocus` | (`__namedParameters`: `FocusEvent`<`HTMLInputElement`, `Element`\>) => `void` |
+| `value` | `any` |
+
+___
+
+### useCheckboxWidget
+
+▸ **useCheckboxWidget**(`props`): `Object`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `props` | `WidgetProps`<`any`, `any`\> |
+
+#### Returns
+
+`Object`
+
+| Name | Type |
+| :------ | :------ |
+| `onBlur` | (`__namedParameters`: `FocusEvent`<`HTMLInputElement`, `Element`\>) => `void` |
+| `onChange` | (`__namedParameters`: `ChangeEvent`<`HTMLInputElement`\>) => `void` |
+| `onFocus` | (`__namedParameters`: `FocusEvent`<`HTMLInputElement`, `Element`\>) => `void` |
+| `value` | `any` |
+
+___
+
+### useCheckboxesWidget
+
+▸ **useCheckboxesWidget**(`props`): `Object`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `props` | `WidgetProps`<`any`, `any`\> |
+
+#### Returns
+
+`Object`
+
+| Name | Type |
+| :------ | :------ |
+| `enumOptions` | `EnumOptionsType`[] |
+| `getCheckboxProps` | (`option`: `EnumOptionsType`) => { `checked`: `boolean` ; `disabled`: `boolean` ; `onBlur`: (`__namedParameters`: `FocusEvent`<`HTMLInputElement`, `Element`\>) => `void` = handleBlur; `onChange`: (`__namedParameters`: `ChangeEvent`<`HTMLInputElement`\>) => `void` ; `onFocus`: (`__namedParameters`: `FocusEvent`<`HTMLInputElement`, `Element`\>) => `void` = handleFocus } |
+
+___
+
 ### useFileWidget
 
 ▸ **useFileWidget**<`T`, `F`\>(`__namedParameters`): [`UseFileWidgetReturn`](interfaces/UseFileWidgetReturn.md)
@@ -166,3 +241,78 @@ ___
 #### Returns
 
 [`UseFileWidgetReturn`](interfaces/UseFileWidgetReturn.md)
+
+___
+
+### useRadioWidget
+
+▸ **useRadioWidget**(`props`): `Object`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `props` | `WidgetProps`<`any`, `any`\> |
+
+#### Returns
+
+`Object`
+
+| Name | Type |
+| :------ | :------ |
+| `enumOptions` | `EnumOptionsType`[] |
+| `isChecked` | (`v`: `any`) => `boolean` |
+| `isDisabled` | (`v`: `any`) => `boolean` |
+| `onBlur` | (`__namedParameters`: `FocusEvent`<`HTMLInputElement`, `Element`\>) => `void` |
+| `onChange` | (`__namedParameters`: `ChangeEvent`<`HTMLInputElement`\>) => `void` |
+| `onFocus` | (`__namedParameters`: `FocusEvent`<`HTMLInputElement`, `Element`\>) => `void` |
+
+___
+
+### useSelectWidget
+
+▸ **useSelectWidget**(`props`): `Object`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `props` | `WidgetProps`<`any`, `any`\> |
+
+#### Returns
+
+`Object`
+
+| Name | Type |
+| :------ | :------ |
+| `enumOptions` | `EnumOptionsType`[] |
+| `hasErrors` | `boolean` |
+| `isDisabled` | (`value`: `any`) => `boolean` |
+| `onBlur` | (`event`: `FocusEvent`<`HTMLSelectElement`, `Element`\>) => `void` |
+| `onChange` | (`event`: `ChangeEvent`<`HTMLSelectElement`\>) => `void` |
+| `onFocus` | (`event`: `FocusEvent`<`HTMLSelectElement`, `Element`\>) => `void` |
+| `value` | `any` |
+
+___
+
+### useTextareaWidget
+
+▸ **useTextareaWidget**(`props`): `Object`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `props` | `WidgetProps`<`any`, `any`\> |
+
+#### Returns
+
+`Object`
+
+| Name | Type |
+| :------ | :------ |
+| `hasErrors` | `boolean` |
+| `onBlur` | (`__namedParameters`: `FocusEvent`<`HTMLTextAreaElement`, `Element`\>) => `void` |
+| `onChange` | (`__namedParameters`: `ChangeEvent`<`HTMLTextAreaElement`\>) => `void` |
+| `onFocus` | (`__namedParameters`: `FocusEvent`<`HTMLTextAreaElement`, `Element`\>) => `void` |
+| `value` | `any` |

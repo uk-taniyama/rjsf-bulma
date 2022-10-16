@@ -1,4 +1,4 @@
-[rjsf-bulma - v5.0.0-beta.4](../README.md) / BulmaContext
+[rjsf-bulma - v5.0.0-beta.5](../README.md) / BulmaContext
 
 # Interface: BulmaContext
 
