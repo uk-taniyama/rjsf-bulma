@@ -1,8 +1,8 @@
-import type { CSSProperties, ChangeEvent, FC, FocusEvent } from "react";
+import type { CSSProperties, FC } from "react";
 
-import { getInputProps } from "@rjsf/utils";
 import clsx from "clsx";
 
+import { useBaseInputTemplate } from "../hooks";
 import { FieldControl, isSmallClass } from "../ui";
 
 import type { InputPropsType, WidgetProps } from "@rjsf/utils";
@@ -26,34 +26,21 @@ export function getStyle(
   return undefined;
 }
 
-const BaseInputTemplate: FC<WidgetProps> = ({
-  id,
-  placeholder,
-  required,
-  readonly,
-  disabled,
-  type,
-  value,
-  onChange,
-  onBlur,
-  onFocus,
-  autofocus,
-  options,
-  schema,
-  rawErrors,
-  children,
-  formContext,
-  extraProps,
-}) => {
-  const inputProps = { ...extraProps, ...getInputProps(schema, type, options) };
-  const _onChange = ({ target: { value } }: ChangeEvent<HTMLInputElement>) =>
-    onChange(value === "" ? options.emptyValue : value);
-  const _onBlur = ({ target: { value } }: FocusEvent<HTMLInputElement>) =>
-    onBlur(id, value);
-  const _onFocus = ({ target: { value } }: FocusEvent<HTMLInputElement>) =>
-    onFocus(id, value);
-
-  const isDanger = rawErrors && rawErrors.length > 0;
+const BaseInputTemplate: FC<WidgetProps> = (props) => {
+  const {
+    id,
+    placeholder,
+    required,
+    readonly,
+    disabled,
+    type,
+    autofocus,
+    schema,
+    children,
+    formContext,
+  } = props;
+  const { inputProps, value, hasErrors, onChange, onBlur, onFocus } =
+    useBaseInputTemplate(props);
   const style = getStyle(inputProps, value);
 
   return (
@@ -63,7 +50,7 @@ const BaseInputTemplate: FC<WidgetProps> = ({
           className={clsx(
             type === "range" ? "slider is-fullwidth has-output" : "input",
             isSmallClass(formContext),
-            isDanger && "is-danger"
+            hasErrors && "is-danger"
           )}
           id={id}
           name={id}
@@ -74,10 +61,10 @@ const BaseInputTemplate: FC<WidgetProps> = ({
           readOnly={readonly}
           list={schema.examples ? `examples_${id}` : undefined}
           {...inputProps}
-          value={value || value === 0 ? value : ""}
-          onChange={_onChange}
-          onBlur={_onBlur}
-          onFocus={_onFocus}
+          value={value}
+          onChange={onChange}
+          onBlur={onBlur}
+          onFocus={onFocus}
           style={style}
         />
         {type === "range" && (

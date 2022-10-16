@@ -1,7 +1,8 @@
-import type { ChangeEvent, FC, FocusEvent } from "react";
+import type { FC } from "react";
 
 import clsx from "clsx";
 
+import { useCheckboxWidget } from "../hooks";
 import { FieldControl, isSmallClass } from "../ui";
 
 import type { WidgetProps } from "@rjsf/utils";
@@ -9,25 +10,15 @@ import type { WidgetProps } from "@rjsf/utils";
 const CheckboxWidget: FC<WidgetProps> = (props) => {
   const {
     id,
-    value,
     required,
     disabled,
     readonly,
     label,
     schema,
     autofocus,
-    onChange,
-    onBlur,
-    onFocus,
     formContext,
   } = props;
-
-  const _onChange = ({ target: { checked } }: ChangeEvent<HTMLInputElement>) =>
-    onChange(checked);
-  const _onBlur = ({ target: { checked } }: FocusEvent<HTMLInputElement>) =>
-    onBlur(id, checked);
-  const _onFocus = ({ target: { checked } }: FocusEvent<HTMLInputElement>) =>
-    onFocus(id, checked);
+  const { value, onChange, onBlur, onFocus } = useCheckboxWidget(props);
 
   const desc = label || schema.description;
   return (
@@ -38,12 +29,12 @@ const CheckboxWidget: FC<WidgetProps> = (props) => {
             id={id}
             name={id}
             type="checkbox"
-            checked={value == null ? false : value}
+            checked={value}
             required={required}
             autoFocus={autofocus}
-            onChange={_onChange}
-            onBlur={_onBlur}
-            onFocus={_onFocus}
+            onChange={onChange}
+            onBlur={onBlur}
+            onFocus={onFocus}
           />
           {desc}
         </label>

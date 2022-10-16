@@ -1,6 +1,6 @@
 import Form from "./Form";
 
-export * from "./rjsf-core";
+export * from "./hooks";
 
 export { default as Form } from "./Form";
 export { default as Templates, IconButton } from "./templates";

@@ -1,6 +1,6 @@
 import type { FC } from "react";
 
-import type { FileInfoType } from "../rjsf-core/useFileWidget";
+import type { FileInfoType } from "../hooks";
 
 export interface FilesInfoTemplateProps {
   filesInfo: FileInfoType[];

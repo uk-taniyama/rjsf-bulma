@@ -2,7 +2,7 @@ import type { FC } from "react";
 
 import clsx from "clsx";
 
-import { useFileWidget } from "../rjsf-core/useFileWidget";
+import { useFileWidget } from "../hooks";
 import { isSmallClass } from "../ui";
 
 import type { WidgetProps } from "@rjsf/utils";

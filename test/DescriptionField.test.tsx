@@ -13,6 +13,7 @@ describe("DescriptionField", () => {
     const tree = renderer
       .create(
         <DescriptionFieldTemplate
+          schema={{}}
           id="testid"
           description=""
           registry={registry}
@@ -22,10 +23,25 @@ describe("DescriptionField", () => {
     expect(tree).toBe(null);
   });
 
-  test("should return h2 element when description is being passed as props", () => {
+  test("should return element when description is being passed as props", () => {
     const tree = renderer
       .create(
         <DescriptionFieldTemplate
+          schema={{}}
+          id="testid"
+          description="SOME THING"
+          registry={registry}
+        />
+      )
+      .toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  test("should return element when description is being passed as props for object", () => {
+    const tree = renderer
+      .create(
+        <DescriptionFieldTemplate
+          schema={{ type: "object" }}
           id="testid"
           description="SOME THING"
           registry={registry}

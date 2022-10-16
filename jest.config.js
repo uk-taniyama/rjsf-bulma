@@ -23,7 +23,7 @@ module.exports = {
     '<rootDir>/test',
   ],
   testEnvironment: 'jsdom',
-  testMatch: ['**/*.test.tsx'],
+  testMatch: ['**/*.test.(tsx|ts)',],
   setupFilesAfterEnv: ['jest-extended/all', 'expect-playwright'],
   transformIgnorePatterns: [
     `node_modules/(?!(${esmodules})/)`,
