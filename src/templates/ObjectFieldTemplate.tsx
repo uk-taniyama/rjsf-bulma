@@ -67,12 +67,12 @@ const ObjectFieldTemplate: FC<ObjectFieldTemplateProps> = ({
           </Col>
         </Row>
       )}
-      {properties.map((element: any, index: number) => (
+      {properties.map((element, index) => (
         <Row key={index}>
           <Col>{element.content}</Col>
         </Row>
       ))}
-      {canExpand(schema, uiSchema, formData) ? (
+      {canExpand(schema, uiSchema, formData) && (
         <Row>
           <Col></Col>
           <Col n="narrow">
@@ -87,7 +87,7 @@ const ObjectFieldTemplate: FC<ObjectFieldTemplateProps> = ({
             />
           </Col>
         </Row>
-      ) : null}
+      )}
     </>
   );
 };
